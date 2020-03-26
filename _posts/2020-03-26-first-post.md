@@ -1,0 +1,62 @@
+---
+title: "Welcome to Yaki World!"
+date: 2020-03-26 08:26:28 +0900
+categories: Yaki Update
+---
+
+# Korea Bible University Course
+
+### 1 학년
+- 1학기 C 언어
+- 2학기 Java
+
+### 2 학년
+- 1학기
+  - 인터넷 보안
+  - 공학 윤리
+  - 객체지향프로그래밍
+  - 이산수학
+  - 네트워크와 데이터 통신
+- 2학년
+  - 컴퓨터 구조
+  - 자료 구조
+  - 데이터베이스
+  - 객체지향 프로그래밍2
+  - 컴퓨터 네트워크 설계
+
+### 3 학년
+- 1학기
+  - 알고리즘설계 및 분석
+  - 웹시스템 설계 및 개발
+  - 머신러닝 프로그래밍
+  - 운영체제
+  - 소프트웨어 공학
+- 2학기
+  - 네트워크프로그래밍
+  - 무선 및 모바일 통신
+  - 데이터마이닝과 통계
+  - 인터넷 보안과 응용
+
+### 4 학년
+- 1학기
+  - 빅 데이터 기술
+  - 프로젝트 관리론
+  - 종합설계(졸업작품)
+- 2학기
+  - 교육기관 교육과정 이수
+***
+
+### 교육기관 교육과정
+1. Network
+2. Operation System
+3. Service
+4. C 언어
+5. Database
+6. Network Hacking DoS, Information Gathering
+7. Web Hacking
+8. Security Solutions
+9. Malware
+10. Software Security Build
+11. Network Redundancy
+12. Windows Registry
+13. Reverse Engineering
