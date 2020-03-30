@@ -22,7 +22,7 @@ categories: Yaki Introduce
 
 <center><img src="_images/SQLInjection.png" width="600" height="500"></center>
 
-
+***
 ### Building a Secure Network Infrastructure
 
 - VLAN을 이용하여 내부 네트워크 분할
@@ -41,8 +41,9 @@ categories: Yaki Introduce
     - Site - to - Site VPN 사용
     - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
 
+<center><img src="_images/SemiTopology.PNG" width="650" height="400"></center>
 
-
+***
 ### Web Hacking Web Tutorial Site
 
 - 웹 해킹을 연습할 수 있는 튜토리얼 홈페이지 구현
@@ -50,23 +51,18 @@ categories: Yaki Introduce
 - 위 공격에 따른 보안 적용
 
 
-
+***
 ### Graduation Project (LEGO)
 
 - Blockchain을 이용한 회계장부
-
 - 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
-
 - O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
-
 - Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
-
 - 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
-
 - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
 
   
-
+***
 ### BigData Project
 
 - 업무의 마감에 대한 스트래스 해소에 관련된 Dataset을 사용
@@ -76,7 +72,7 @@ categories: Yaki Introduce
 - 스트레스가 증가하여 헬스 코치가 필요하다는 것을 예측하기 위한 Machine Learning 수행
 
 
-
+***
 ### World Cloud Project
 
 - Python Flask Web Server기반의 데이터 송/수신
@@ -85,7 +81,7 @@ categories: Yaki Introduce
 - PC 웹 브라우저 화면과 모바일 웹 브라우저 화면에서 호환되도록 디자인 구성
 
 
-
+***
 ### .NET Project
 
 - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
