@@ -50,6 +50,7 @@ categories: Yaki Introduce
 - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
 - 위 공격에 따른 보안 적용
 
+<center><img src="_images/TestSite.png" width="500" height="400"></center>
 
 ***
 ### Graduation Project (LEGO)
