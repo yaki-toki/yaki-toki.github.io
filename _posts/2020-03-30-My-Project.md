@@ -4,8 +4,6 @@ date: 2020-03-30 15:00:00 +0900
 categories: Yaki Introduce
 ---
 
-# My Project List
-
 ### Penetration Test Security Network
 
 - 사내 네트워크의 안전과 웹 서버의 보안이 적절한가를 테스트 하기 위한 모의 해킹 망 구축 및 운영
