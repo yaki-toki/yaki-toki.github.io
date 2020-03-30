@@ -18,8 +18,8 @@ categories: Yaki Introduce
   - WAF(Web Application Firewall)
   - NAC(Network Access Control)
   - ESM(Enterprise Security Management)
-  - Server & Network Monitoring
-
+  - Server & Network Monitoring  
+![Blind SQL Injection](_images/Final SQL Injection.png)
 
 
 ### Building a Secure Network Infrastructure
