@@ -21,7 +21,9 @@ categories: Yaki Introduce
   - Server & Network Monitoring
 
 
-![SQLInjection](/assets/images/SQLInjection.png)
+
+<img src="../assets/images/SQLInjection.png" alt="Blind SQL Injection결과"  width="50%" height="40%" />
+
 
 
 ***
