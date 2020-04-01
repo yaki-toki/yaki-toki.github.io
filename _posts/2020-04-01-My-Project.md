@@ -22,7 +22,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/SQLInjection.png" alt="Blind SQL Injection결과" style="zoom: 67%;" />
+<img src="_images/SQLInjection.png" alt="Blind SQL Injection결과"  width="50%" height="40%" />
 
 
 
@@ -62,7 +62,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/TestSite.png" alt="TestSite" style="zoom:50%;" />
+<img src="_images/TestSite.png" alt="TestSite"  width="50%" height="40%"/>
 
 
 
@@ -84,7 +84,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/Block.png" alt="Block" style="zoom:48%;" />
+<img src="_images/Block.png" alt="Block" width="50%" height="40%" />
 
 
 
@@ -134,7 +134,7 @@ categories: Yaki Introduce
 
 <img src="_images/Socket.png" alt="통신 과정" style="zoom:50%;" />
 
-<img src="_images/Socket1.png" alt="암호화 데이터" style="zoom:60%;" />
+<img src="_images/Socket1.png" alt="암호화 데이터" width="50%" height="40%" />
 
 
 
@@ -148,7 +148,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/Altable.png" alt="Altable" style="width:100px; height:200px;" />
+<img src="_images/Altable.png" alt="Altable" width="200px" height="350px" />
 
 
 
@@ -162,7 +162,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/DotNetProject.png" alt="회원가입 관리" style="zoom: 50%;" />
+<img src="_images/DotNetProject.png" alt="회원가입 관리" width="50%" height="40%" />
 
 
 
@@ -179,7 +179,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/CarNumber.png" alt="CarNumber" style="zoom: 67%;" />
+<img src="_images/CarNumber.png" alt="CarNumber"  width="30%" height="20%" />
 
 
 
@@ -195,4 +195,4 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/InternetSecurity1.png" alt="공격 구상도" style="zoom: 67%;" />
+<img src="_images/InternetSecurity1.png" alt="공격 구상도" width="90%" height="50%" />
