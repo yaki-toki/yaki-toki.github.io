@@ -93,7 +93,7 @@ analytics:
 author:
   name             : "Jiha Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "My Research Interests is **Security, Reversing and Big Data.**"
+  bio              : "My Research Interests is <br/>**Security, Reversing and Big Data.**"
   location         : "Korea, Republic of"
   email            :
   links:
