@@ -6,6 +6,8 @@ categories: Yaki Introduce
 
 ### Penetration Test Security Network
 
+- 프로젝트 명 : Drop the Packet
+  - 기간 : 2019.12.04 ~ 2020.01.02
 - 사내 네트워크의 안전과 웹 서버의 보안이 적절한가를 테스트 하기 위한 모의 해킹 망 구축 및 운영
 - 모의 해킹 수행
   - Scanning
@@ -30,6 +32,8 @@ categories: Yaki Introduce
 
 ### Building a Secure Network Infrastructure
 
+- 프로젝트 명 : KH Architectural Firm
+  - 기간 : 2019.10.14 ~ 2019.10.22
 - VLAN을 이용하여 내부 네트워크 분할
 - 이중화
   - VRRP : 게이트웨이 이중화 프로토콜 사용
@@ -56,6 +60,8 @@ categories: Yaki Introduce
 
 ### Web Hacking Web Tutorial Site
 
+- 프로젝트 명 : Hacking Tutorial Site
+  - 기간 : 2019.11.12 ~ 2019.11.24
 - 웹 해킹을 연습할 수 있는 튜토리얼 홈페이지 구현
 - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
 - 위 공격에 따른 보안 적용
@@ -70,16 +76,13 @@ categories: Yaki Introduce
 
 ### Graduation Project (LEGO)
 
+- 프로젝트 명 : LEGO
+  - 기간 : 2018.12.27 ~ 2019.06.24
 - Blockchain을 이용한 회계장부
-
 - 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
-
 - O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
-
 - Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
-
 - 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
-
 - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
 
 
@@ -92,12 +95,19 @@ categories: Yaki Introduce
 
 ### BigData Project
 
+- 프로젝트 명 : How is your Stress?
+  - 기간 : 2019.05.15 ~ 2019.05.27
 - 업무의 마감에 대한 스트래스에 관련된 Dataset을 사용
 - 일반적인 사무 업무를 할당하여 25명의 피험자에 대하여 데이터를 수집
 - 컴퓨터 로깅, 표정, 자세, ECG(심전도) 신호 및 피부 전도도 등의 데이터를 수집
 - 업무를 하며 스트레스를 확인하여 스트레스가 없을(no_stress) 경우는 헬스 코치가 필요하지 않지만 그 외의 경우에는 사용자의 스트레스 수치가 증가하게 됨
 - 피험자의 데이터를 참조하여 현재 진행되는 업무의 상태가 시간의 압박을 받는지(time_presure), 업무 중간에 메일을 받아 다른 업무가 생겼는지(interruption)를 확인할 수 있음
-- 결론 : 실제 상황으로 본다면 사원의 상태를 파악하고 그에 따른 업무를 전달하여 업무의 능률을 높일 수 있을 것으로 보임
+- 사용된 알고리즘
+  - Clissifier : K-NN, Decision Tree, Random Forest, Gradient Boosting
+  - Accuracy : accuracy_score, F1 Score
+- 결론
+  - 가장 적절한 알고리즘은 Random Forest이 되며, 적절한 트리의 깊이는 24
+  - 실제 상황으로 본다면 사원의 상태를 파악하고 그에 따른 업무를 전달하여 업무의 능률을 높일 수 있을 것으로 보임
 - [참조링크][https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb]
 
 
