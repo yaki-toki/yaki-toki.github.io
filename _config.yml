@@ -91,9 +91,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yaki"
+  name             : "Jiha Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am **Studying** Security"
+  bio              : "My Research Interests is **BigData, Security and Reversing.**"
   location         : "Korea, Republic of"
   email            :
   links:
