@@ -22,7 +22,7 @@ categories: Yaki Introduce
 
 
 
-<img src="_images/SQLInjection.png" alt="Blind SQL Injection결과"  width="50%" height="40%" />
+<img src="https://github.com/yaki-toki/yaki-toki.github.io/blob/master/_posts/_images/SQLInjection.png" alt="Blind SQL Injection결과"  width="50%" height="40%" />
 
 
 
