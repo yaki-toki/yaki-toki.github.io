@@ -100,9 +100,6 @@ author:
     - label: "First Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:rlawlgk23@email.com
-    - label: "Second Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:yaki-toki5896@email.com
     - label: "Tistory"
       icon: "fas fa-fw fa-link"
       url: "https://kimunderground.tistory.com/"
