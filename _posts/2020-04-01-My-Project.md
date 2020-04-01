@@ -116,7 +116,7 @@ categories: Yaki Introduce
 
 
 
-<img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60% />
+<img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
 
 
 ***
