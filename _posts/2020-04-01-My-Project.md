@@ -24,9 +24,10 @@ categories: Yaki Introduce
   - ESM(Enterprise Security Management)
   - Server & Network Monitoring
 
-<div style="float:center;">
-<img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
-&#60;Blind SQL-Injection 결과&#62;
+<div style="text-align:center;">
+  <img style="margin: 0px auto;" src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
+  <br/>
+  <div style="font-size:10px;">&#60;Blind SQL-Injection 결과&#62;</div>
 </div>
 
 ***
@@ -51,9 +52,11 @@ categories: Yaki Introduce
     - Site - to - Site VPN 사용
     - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
 
-
-<img src="/assets/images/SemiTopology.PNG" alt="Network Topology" style="zoom: 50%;" />
-
+<div style="text-align:center;">
+  <img src="/assets/images/SemiTopology.PNG" alt="Network Topology" style="zoom: 50%;" />
+  <br/>
+  <div style="font-size:10px;">&#60;Security Network Topology&#62;</div>
+</div>
 
 ***
 
