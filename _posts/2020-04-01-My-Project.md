@@ -52,10 +52,10 @@ categories: Yaki Introduce
     - Site - to - Site VPN 사용
     - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
 
-<div style="text-align:center;">
+<div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/SemiTopology.PNG" alt="Network Topology"/>
   <br/>
-  <div style="font-size:20px;">&lt;Security Network Topology&gt;</div>
+  &lt;Security Network Topology&gt;
 </div>
 
 ***
@@ -68,12 +68,11 @@ categories: Yaki Introduce
 - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
 - 위 공격에 따른 보안 적용
 
-<div style="text-align:center;">
+<div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/TestSite.png" alt="TestSite" />
   <br/>
-  <div style="font-size:20px;">&lt;Security Network Topology&gt;</div>
+  &lt;Web Hack Site&gt;
 </div>
-
 ***
 
 ### BigData Project
@@ -94,9 +93,11 @@ categories: Yaki Introduce
 - [참조링크][https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb]
 
 
-
-<img src="/assets/images/BigData.png" alt="데이터 상관관계" style="zoom: 25%;" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/BigData.png" alt="데이터 상관관계" style="zoom: 25%;" />
+  <br/>
+  &lt;Data Correlation&gt;
+</div>
 
 ***
 
@@ -113,9 +114,11 @@ categories: Yaki Introduce
 - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
 
 
-
-<img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
+  <br/>
+  &lt;Data 출력 화면&gt;
+</div>
 
 ***
 
@@ -134,11 +137,14 @@ categories: Yaki Introduce
   - Arduino는 사용자가 전송한 메시지를 확인하고 해당 기능을 수행
     - 서버와 Arduino가 통신하는 통신 방식은 GET 방식으로 수행
 
-
-<img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
-
-<img src="/assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
+  <br/>
+  &lt;설계도 화면&gt;
+  <img src="/assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
+  <br/>
+  &lt;실제 모듈 구현 화면&gt;
+</div>
 
 ***
 
@@ -149,9 +155,11 @@ categories: Yaki Introduce
 - 사용자들은 본인의 요청이 어떤 상태인지 실시간으로 확인할 수 있음
 
 
-
-<img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
+  <br/>
+  &lt;PC 지원 요청 부품 비율&gt;
+</div>
 
 ***
 
@@ -164,12 +172,14 @@ categories: Yaki Introduce
   - 이 부분을 수정하면 MITM공격이 없는 한 안전한 암호화 통신이 가능할 수 있을 것으로 보임
 
 
-
-<img src="/assets/images/Socket.png" alt="통신 과정" style="zoom:50%;" />
-
-<img src="/assets/images/Socket1.png" alt="암호화 데이터" width="70%" height="60%" />
-
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/Socket.png" alt="통신 과정" style="zoom:50%;" />
+  <br/>
+  &lt;통신 과정&gt;
+  <img src="/assets/images/Socket1.png" alt="암호화 데이터" width="70%" height="60%" />
+  <br/>
+  &lt;Wireshark Packet Capture&gt;
+</div>
 
 ***
 
@@ -180,9 +190,11 @@ categories: Yaki Introduce
 - 어플 내에서 타이머를 수정 하는 경우 이벤트를 발생시켜 진행 중이던 타이머를 종료 시키고 새로운 타이머를 수행
 
 
-
-<img src="/assets/images/Altable.png" alt="Altable" width="200px" height="350px" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/Altable.png" alt="Altable" width="200px" height="350px" />
+  <br/>
+  &lt;Altable 어플 화면&gt;
+</div>
 
 
 ***
@@ -194,9 +206,11 @@ categories: Yaki Introduce
 - MVVM(Model - View - View Model) 구현 방식 사용
 
 
-
-<img src="/assets/images/DotNetProject.png" alt="회원가입 관리" width="60%" height="50%" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/DotNetProject.png" alt="회원가입 관리" width="60%" height="50%" />
+  <br/>
+  &lt;회원가입 관리 화면&gt;
+</div>
 
 
 ***
@@ -211,9 +225,11 @@ categories: Yaki Introduce
 - 등록된 정보는 서버에 존재하는 DB내에 기록 됨
 
 
-
-<img src="/assets/images/CarNumber.png" alt="CarNumber"  width="50%" height="40%" />
-
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/CarNumber.png" alt="CarNumber"  width="50%" height="40%" />
+  <br/>
+  &lt;차량 소유자 조회 화면&gt;
+</div>
 
 
 ***
@@ -227,5 +243,8 @@ categories: Yaki Introduce
 - 공격에 사용된 기법은 SYN Flooding으로 공격 대상은 SYN패킷을 받은 후 ACK패킷을 받기 까지 대기하며 새로운 요청에 대한 응답을 못 하게 만듬
 
 
-
-<img src="/assets/images/InternetSecurity1.png" alt="공격 구상도" width="100%" height="50%" />
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/InternetSecurity1.png" alt="공격 구상도" width="100%" height="50%" />
+  <br/>
+  &lt;DDoS 공격 구상도&gt;
+</div>
