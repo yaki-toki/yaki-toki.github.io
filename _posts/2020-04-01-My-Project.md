@@ -25,7 +25,7 @@ categories: Yaki Introduce
   - Server & Network Monitoring
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img style="margin: 0px auto;" src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
+  <img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
   <br/>
   &lt;Blind SQL-Injection 결과&gt;
 </div>
