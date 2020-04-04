@@ -141,7 +141,7 @@ categories: Yaki Introduce
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
   <br/>
-  &lt;설계도 화면&gt;
+  &lt;설계도 화면&gt;<br/>
   <img src="/assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
   <br/>
   &lt;실제 모듈 구현 화면&gt;
@@ -177,7 +177,7 @@ categories: Yaki Introduce
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/Socket.png" alt="통신 과정" style="zoom:50%;" />
   <br/>
-  &lt;통신 과정&gt;
+  &lt;통신 과정&gt;<br/>
   <img src="/assets/images/Socket1.png" alt="암호화 데이터" width="70%" height="60%" />
   <br/>
   &lt;Wireshark Packet Capture&gt;
