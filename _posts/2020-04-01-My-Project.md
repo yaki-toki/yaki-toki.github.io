@@ -23,9 +23,7 @@ categories: Yaki Introduce
   - Server & Network Monitoring
 
 
-
 <img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
-
 
 
 ***
@@ -51,9 +49,7 @@ categories: Yaki Introduce
     - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
 
 
-
 <img src="/assets/images/SemiTopology.PNG" alt="Network Topology" style="zoom: 50%;" />
-
 
 
 ***
@@ -67,28 +63,7 @@ categories: Yaki Introduce
 - 위 공격에 따른 보안 적용
 
 
-
 <img src="/assets/images/TestSite.png" alt="TestSite" />
-
-
-
-***
-
-### Graduation Project (LEGO)
-
-- 프로젝트 명 : LEGO
-  - 기간 : 2018.12.27 ~ 2019.06.24
-- Blockchain을 이용한 회계장부
-- 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
-- O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
-- Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
-- 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
-- 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
-
-
-
-<img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
-
 
 
 ***
@@ -114,6 +89,47 @@ categories: Yaki Introduce
 
 <img src="/assets/images/BigData.png" alt="데이터 상관관계" style="zoom: 25%;" />
 
+
+***
+
+
+### Graduation Project (LEGO)
+
+- 프로젝트 명 : LEGO
+  - 기간 : 2018.12.27 ~ 2019.06.24
+- Blockchain을 이용한 회계장부
+- 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
+- O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
+- Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
+- 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
+- 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
+
+
+
+<img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
+
+
+***
+
+### Arduino Project
+
+- 프로젝트 명 : 올락낼락! 블라인드!
+  - 기간 : 2018.11.03 ~ 2018.12.03
+- 사용자는 Web 혹은 Bluetooth 중 어떤 통신을 할지 선정
+- Bluetooth
+  - Android에서 제공하는 App인 'Arduino Bluetooth Controller'를 이용하여 Arduino와 연결
+  - 미리 지정된 키워드 1 혹은 0의 메시지를 Bluetooth를 통해 BLE 통신을 수행
+  - Bluetooth에서는 전송 받은 메시지를 확인하고 해당 메시지에 맞는 작업을 수행 (1. 블라인드 상승 / 0.. 블라인드 하강)
+- Web Service
+  - 사용자는 미리 포트 포워딩으로 정의된 '210.123.254.245:9001' 서버로 접속
+  - Web Browser에 UP, DOWN 글자를 클릭
+  - Arduino는 사용자가 전송한 메시지를 확인하고 해당 기능을 수행
+    - 서버와 Arduino가 통신하는 통신 방식은 GET 방식으로 수행
+
+
+<img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
+
+<img src="/assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
 
 
 ***
