@@ -95,7 +95,6 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "My Research Interests is <br/>**Security, Reversing and Big Data.**"
   location         : "Korea, Republic of"
-  email            : "rlawlgk23@email.com"
   links:
     - label: "rlawlgk23@email.com"
       icon: "fas fa-fw fa-envelope-square"
