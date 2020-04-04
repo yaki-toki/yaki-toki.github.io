@@ -96,9 +96,9 @@ author:
   bio              : "My Research Interests is <br/>**Security, Reversing and Big Data.**"
   location         : "Korea, Republic of"
   links:
-    - label: "rlawlgk23@email.com"
+    - label: "rlawlgk23@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:rlawlgk23@email.com
+      url: mailto:rlawlgk23@gmail.com
     - label: "Tistory"
       icon: "fas fa-fw fa-link"
       url: "https://kimunderground.tistory.com/"
