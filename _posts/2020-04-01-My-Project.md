@@ -24,9 +24,10 @@ categories: Yaki Introduce
   - ESM(Enterprise Security Management)
   - Server & Network Monitoring
 
-
+<div style="float:center;">
 <img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
-
+&#60;Blind SQL-Injection 결과&#62;
+</div>
 
 ***
 
