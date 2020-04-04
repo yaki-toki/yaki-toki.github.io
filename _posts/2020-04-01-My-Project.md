@@ -24,10 +24,10 @@ categories: Yaki Introduce
   - ESM(Enterprise Security Management)
   - Server & Network Monitoring
 
-<div style="text-align:center;">
+<div style="text-align:center; margin:0px auto; font-size:20px;">
   <img style="margin: 0px auto;" src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
   <br/>
-  <div style="font-size:10px;">&#60;Blind SQL-Injection 결과&#62;</div>
+  &lt;Blind SQL-Injection 결과&gt;
 </div>
 
 ***
@@ -53,9 +53,9 @@ categories: Yaki Introduce
     - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
 
 <div style="text-align:center;">
-  <img src="/assets/images/SemiTopology.PNG" alt="Network Topology" style="zoom: 50%;" />
+  <img src="/assets/images/SemiTopology.PNG" alt="Network Topology"/>
   <br/>
-  <div style="font-size:10px;">&#60;Security Network Topology&#62;</div>
+  <div style="font-size:20px;">&lt;Security Network Topology&gt;</div>
 </div>
 
 ***
@@ -68,9 +68,11 @@ categories: Yaki Introduce
 - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
 - 위 공격에 따른 보안 적용
 
-
-<img src="/assets/images/TestSite.png" alt="TestSite" />
-
+<div style="text-align:center;">
+  <img src="/assets/images/TestSite.png" alt="TestSite" />
+  <br/>
+  <div style="font-size:20px;">&lt;Security Network Topology&gt;</div>
+</div>
 
 ***
 
