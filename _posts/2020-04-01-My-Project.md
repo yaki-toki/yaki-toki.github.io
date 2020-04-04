@@ -67,6 +67,7 @@ categories: Yaki Introduce
 - 웹 해킹을 연습할 수 있는 튜토리얼 홈페이지 구현
 - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
 - 위 공격에 따른 보안 적용
+- [Github Repository](https://github.com/yaki-toki/AttackWeb)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/TestSite.png" alt="TestSite" />
@@ -153,7 +154,7 @@ categories: Yaki Introduce
 - PC의 주요 부품별로 문제가 있거나 문의가 필요한 부분을 하나의 홈페이지 에서 해결할 수 있음
 - 관리자는 어떤 부품에대한 문의가 얼마나 있는지 그래프를 이용하여 확인할 수 있음
 - 사용자들은 본인의 요청이 어떤 상태인지 실시간으로 확인할 수 있음
-
+- [Github Repository](https://github.com/yaki-toki/WebProject/tree/master/FinalyTest)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
@@ -170,6 +171,7 @@ categories: Yaki Introduce
 - 통신간의 데이터는 대칭키 암호화 방식인 AES 암호화 방식을 적용
   - Key를 전달할 방식을 찾지 못 하여 지정된 Key로 암/복호화를 수행
   - 이 부분을 수정하면 MITM공격이 없는 한 안전한 암호화 통신이 가능할 수 있을 것으로 보임
+- [Github Repository](https://github.com/yaki-toki/C-NetworkProgramming/tree/master/ChatClient)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -199,7 +201,7 @@ categories: Yaki Introduce
 
 ***
 
-### .NET Project
+### Intranet Member Management
 
 - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
 - 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원 가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
@@ -223,6 +225,7 @@ categories: Yaki Introduce
 - PyQt로 제작된 윈도우 응용 프로그램
 - 사용자가 직접 등록 할 수 있음
 - 등록된 정보는 서버에 존재하는 DB내에 기록 됨
+- [Github Repository](https://github.com/yaki-toki/Python)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
