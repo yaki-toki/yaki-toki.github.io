@@ -90,7 +90,7 @@ categories: Yaki Introduce
 - 결론
   - 가장 적절한 알고리즘은 Random Forest이 되며, 적절한 트리의 깊이는 24
   - 실제 상황으로 본다면 사원의 상태를 파악하고 그에 따른 업무를 전달하여 업무의 능률을 높일 수 있을 것으로 보임
-- [참조링크][https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb]
+- [참조링크](https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
