@@ -6,9 +6,9 @@ categories: Yaki Introduce
 
 # My Portfolio
 
-### Penetration Test Security Network
+### KH Final Project
 
-- 프로젝트 명 : Drop the Packet
+- 프로젝트 명 : Penetration Test Security Network
   - 기간 : 2019.12.04 ~ 2020.01.02
 - 사내 네트워크의 안전과 웹 서버의 보안이 적절한가를 테스트 하기 위한 모의 해킹 망 구축 및 운영
 - 모의 해킹 수행
@@ -32,9 +32,9 @@ categories: Yaki Introduce
 
 ***
 
-### Building a Secure Network Infrastructure
+### KH SEMI Project
 
-- 프로젝트 명 : KH Architectural Firm
+- 프로젝트 명 : Building a Secure Network Infrastructure
   - 기간 : 2019.10.14 ~ 2019.10.22
 - VLAN을 이용하여 내부 네트워크 분할
 - 이중화
