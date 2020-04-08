@@ -6,7 +6,7 @@ categories: Yaki Introduce
 
 # My Portfolio
 
-### KH Final Project
+### Company Security Network Testing Project
 
 - 프로젝트 명 : Penetration Test Security Network
   - 기간 : 2019.12.04 ~ 2020.01.02
@@ -32,7 +32,7 @@ categories: Yaki Introduce
 
 ***
 
-### KH SEMI Project
+### Network Security Project
 
 - 프로젝트 명 : Building a Secure Network Infrastructure
   - 기간 : 2019.10.14 ~ 2019.10.22
