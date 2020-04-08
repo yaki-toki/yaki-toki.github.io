@@ -6,7 +6,7 @@ categories: Yaki Introduce
 
 # My Portfolio
 
-### Company Security Network Testing Project
+### Pentetration Testing Project
 
 - 프로젝트 명 : Penetration Test Security Network
   - 기간 : 2019.12.04 ~ 2020.01.02
