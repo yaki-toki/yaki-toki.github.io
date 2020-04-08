@@ -6,7 +6,7 @@ categories: Yaki Introduce
 
 # My Portfolio
 
-### Pentetration Testing Project
+### Penetration Testing Project
 
 - 프로젝트 명 : Penetration Test Security Network
   - 기간 : 2019.12.04 ~ 2020.01.02
@@ -32,7 +32,7 @@ categories: Yaki Introduce
 
 ***
 
-### Network Security Project
+### Security Network Construction Project
 
 - 프로젝트 명 : Building a Secure Network Infrastructure
   - 기간 : 2019.10.14 ~ 2019.10.22
@@ -60,7 +60,7 @@ categories: Yaki Introduce
 
 ***
 
-### Web Hacking Web Tutorial Site
+### Web Hacking Tutorial Site
 
 - 프로젝트 명 : Hacking Tutorial Site
   - 기간 : 2019.11.12 ~ 2019.11.24
@@ -76,7 +76,7 @@ categories: Yaki Introduce
 </div>
 ***
 
-### BigData Project
+### Big Data Project
 
 - 프로젝트 명 : How is your Stress?
   - 기간 : 2019.05.15 ~ 2019.05.27
@@ -103,7 +103,7 @@ categories: Yaki Introduce
 ***
 
 
-### Graduation Project (LEGO)
+### Graduation Project (with Blockchain)
 
 - 프로젝트 명 : LEGO
   - 기간 : 2018.12.27 ~ 2019.06.24
@@ -149,7 +149,7 @@ categories: Yaki Introduce
 
 ***
 
-### PC Supporter Homepage
+### PC Supporter Homepage Project
 
 - PC의 주요 부품별로 문제가 있거나 문의가 필요한 부분을 하나의 홈페이지 에서 해결할 수 있음
 - 관리자는 어떤 부품에대한 문의가 얼마나 있는지 그래프를 이용하여 확인할 수 있음
@@ -164,7 +164,7 @@ categories: Yaki Introduce
 
 ***
 
-### Simple Encrypted Socket Communication
+### Simple Encrypted Socket Communication Project
 
 - 소켓 통신을 이용한 사용자 간의 통신
 - 7계층 프로토콜을 설계하여 적용시킨 통신 프로그램
@@ -185,7 +185,7 @@ categories: Yaki Introduce
 
 ***
 
-### Study Alarm Table
+### Study Alarm Table Application Project
 
 - 각 사람마다 자신의 공부 흐름이 다양하기 때문에 스스로 인지할 수 있을 정도의 타이머를 어플로 제공
 - 사용자는 공부 시간, 휴식 시간등을 지정하여 타이머를 설정할 수 있음
@@ -201,7 +201,7 @@ categories: Yaki Introduce
 
 ***
 
-### Intranet Member Management
+### Intranet Member Management Project
 
 - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
 - 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원 가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
@@ -217,7 +217,7 @@ categories: Yaki Introduce
 
 ***
 
-### Car Owner Inquiry System
+### Car Owner Inquiry System Project
 
 - 주차 공간이 좁은 상태에서 차량이 길을 막아서고 있으면 나가는 데에 어려움이 생김
 - 차량 주인이 자신의 번호를 적어두지 않은 경우 곤란한 상황이 발생 됨
@@ -237,7 +237,7 @@ categories: Yaki Introduce
 
 ***
 
-### DDoS Attack Simulation
+### D-DoS Attack Simulation Project
 
 - 수업 프로젝트로 진행된 모의 해킹
 - 공격자는 여러 대의 Zombie PC를 만들어 하나의 서버를 공격
