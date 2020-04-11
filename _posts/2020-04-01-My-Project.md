@@ -10,13 +10,20 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : Penetration Test Security Network
   - 기간 : 2019.12.04 ~ 2020.01.02
-- 사내 네트워크의 안전과 웹 서버의 보안이 적절한가를 테스트 하기 위한 모의 해킹 망 구축 및 운영
-- 모의 해킹 수행
+- 기술
+  - 네트워크 가상화 및 이중화
+  - 보안 장비 운용
+  - 언어 : Python (Blind SQL Injection Tool 개발용)
+- 프로젝트 내용
+  - 사내 네트워크의 안전과 웹 서버의 보안이 적절한가를 테스트 하기 위한 모의 해킹 망 구축 및 운영
+  - 보안 관제 센터를 구축하여 해킹 공격에 대한 네트워크 트래픽을 수집하며 대응할 수 있도록 설계
+  - 보안이 취약한 서버에 대한 피드백과 해결 방안 및 버전 업데이트에 대한 방법을 제안
+- 모의 해킹
   - Scanning
   - Network Hacking
   - Web Hacking
   - Metasploit Vulnerability Exploit
-- 보안 장비 운영
+- 사용된 보안 장비
   - IDS(Instruction Detection System), IPS(Intrusion Prevention System)
   - Anti - DDoS
   - WAF(Web Application Firewall)
@@ -36,21 +43,28 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : Building a Secure Network Infrastructure
   - 기간 : 2019.10.14 ~ 2019.10.22
-- VLAN을 이용하여 내부 네트워크 분할
-- 이중화
-  - VRRP : 게이트웨이 이중화 프로토콜 사용
-    - Master-backup 방식 사용
-  - PVST : 각 VLAN 별로 루트 스위치를 따로 지정
-    - VLAN 스패닝트리가 동작하기 때문에 부하분산 효과로 인한 VLAN별 최적의 경로 유지
-  - 스패닝 트리(Spanning-Tree) : 스패닝 트리 프로토콜(STP) 이용
-    - Switch를 이중화 하기 위한 프로토콜
-    - 최적의 경로만 활성화 시키고 장애 발생 시 백업 경로를 활성화
-- 보안망
-  - UTM(Unified Threat Management) : 통합 위협 관리 시스템
-    - 스테이트풀 인트팩션 방화벽과 침입 방지 및 안티바이러스 솔루션의 기능을 결합시킨 장비로 운영
-  - VPN(Virtual Private Network)
-    - Site - to - Site VPN 사용
-    - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
+- 기술
+  - VLAN을 이용하여 내부 네트워크 분할
+  - 네트워크 이중화
+    - VRRP : 게이트웨이 이중화 프로토콜 사용
+      - Master-backup 방식 사용
+    - PVST : 각 VLAN 별로 루트 스위치를 따로 지정
+      - VLAN 스패닝트리가 동작하기 때문에 부하분산 효과로 인한 VLAN별 최적의 경로 유지
+    - 스패닝 트리(Spanning-Tree) : 스패닝 트리 프로토콜(STP) 이용
+      - Switch를 이중화 하기 위한 프로토콜
+      - 최적의 경로만 활성화 시키고 장애 발생 시 백업 경로를 활성화
+  - 보안망
+    - UTM(Unified Threat Management) : 통합 위협 관리 시스템
+      - 스테이트풀 인트팩션 방화벽과 침입 방지 및 안티바이러스 솔루션의 기능을 결합시킨 장비로 운영
+    - VPN(Virtual Private Network)
+      - Site - to - Site VPN 사용
+      - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
+- 프레임워크
+  - 가상 머신 : VMware Workstation 15, GNS 3
+- 프로젝트 내용
+  - 본사의 네트워크를 이중화 시켜 장애 발생에 대비하며, 지사와의 VPN 서버를 구축
+  - Packet의 통제는 Stateful Inspection으로 운용하며 올바르지 않은 요청에 대해서는 즉각 차단 가능
+  - 본사와 지사를 연결하는 네트워크는 Site-to-Site VPN을 사용하며, IPsec(Internet Protocol Security)를 이용하여 통신을 수행
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/SemiTopology.PNG" alt="Network Topology"/>
