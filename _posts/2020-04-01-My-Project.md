@@ -59,7 +59,7 @@ categories: Yaki Introduce
     - VPN(Virtual Private Network)
       - Site - to - Site VPN 사용
       - 사용되는 프로토콜은 IPsec(Internet Protocol Security)
-- 프레임워크
+- Framework
   - 가상 머신 : VMware Workstation 15, GNS 3
 - 프로젝트 내용
   - 본사의 네트워크를 이중화 시켜 장애 발생에 대비하며, 지사와의 VPN 서버를 구축
@@ -94,18 +94,24 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : How is your Stress?
   - 기간 : 2019.05.15 ~ 2019.05.27
-- 업무의 마감에 대한 스트래스에 관련된 Dataset을 사용
-- 일반적인 사무 업무를 할당하여 25명의 피험자에 대하여 데이터를 수집
-- 컴퓨터 로깅, 표정, 자세, ECG(심전도) 신호 및 피부 전도도 등의 데이터를 수집
-- 업무를 하며 스트레스를 확인하여 스트레스가 없을(no_stress) 경우는 헬스 코치가 필요하지 않지만 그 외의 경우에는 사용자의 스트레스 수치가 증가하게 됨
-- 피험자의 데이터를 참조하여 현재 진행되는 업무의 상태가 시간의 압박을 받는지(time_presure), 업무 중간에 메일을 받아 다른 업무가 생겼는지(interruption)를 확인할 수 있음
-- 사용된 알고리즘
-  - Clissifier : K-NN, Decision Tree, Random Forest, Gradient Boosting
+- 기술
+  - 언어 : Python
+  - Supervised Machine Learning
+- Framework
+  - Visualization : Seaborn
+  - Supervised Machine Learning : Sklearn
+  - Clissifier Algorithm: K-NN, Decision Tree, Random Forest, Gradient Boosting
   - Accuracy : accuracy_score, F1 Score
-- 결론
-  - 가장 적절한 알고리즘은 Random Forest이 되며, 적절한 트리의 깊이는 24
-  - 실제 상황으로 본다면 사원의 상태를 파악하고 그에 따른 업무를 전달하여 업무의 능률을 높일 수 있을 것으로 보임
-- [참조링크](https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb)
+- 프로젝트 내용
+  - 업무의 마감에 대한 스트래스에 관련된 Dataset을 사용
+  - 일반적인 사무 업무를 할당하여 25명의 피험자에 대하여 데이터를 수집
+  - 컴퓨터 로깅, 표정, 자세, ECG(심전도) 신호 및 피부 전도도 등의 데이터를 수집
+  - 업무를 하며 스트레스를 확인하여 스트레스가 없을(no_stress) 경우는 헬스 코치가 필요하지 않지만 그 외의 경우에는 사용자의 스트레스 수치가 증가하게 됨
+  - 피험자의 데이터를 참조하여 현재 진행되는 업무의 상태가 시간의 압박을 받는지(time_presure), 업무 중간에 메일을 받아 다른 업무가 생겼는지(interruption)를 확인할 수 있음
+  - 결론
+    - 가장 적절한 알고리즘은 Random Forest이 되며, 적절한 트리의 깊이는 24
+    - 실제 상황으로 본다면 사원의 상태를 파악하고 그에 따른 업무를 전달하여 업무의 능률을 높일 수 있을 것으로 보임
+- [Github Repository](https://github.com/yaki-toki/JupyterBigDataExercise/blob/master/NewBigDataProject.ipynb)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -121,12 +127,21 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : LEGO
   - 기간 : 2018.12.27 ~ 2019.06.24
-- Blockchain을 이용한 회계장부
-- 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
-- O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
-- Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
-- 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
-- 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
+- 기술
+  - 언어 : Java 8
+  - Private Blockchain
+  - O-Auth 2.0
+  - Json Communication
+- Framework
+  - Spring
+  - Hyperledger Composer
+- 프로젝트 내용
+  - Blockchain을 이용한 회계장부
+  - 서비스는 웹으로 제공되며, 핸드폰으로도 확인 가능하도록 사용자 UI를 제공
+  - O-Auth를 이용하여 회원가입 및 사용자 식별에 대한 편의성 제공
+  - Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
+  - 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
+  - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -141,16 +156,26 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : 올락낼락! 블라인드!
   - 기간 : 2018.11.03 ~ 2018.12.03
-- 사용자는 Web 혹은 Bluetooth 중 어떤 통신을 할지 선정
-- Bluetooth
-  - Android에서 제공하는 App인 'Arduino Bluetooth Controller'를 이용하여 Arduino와 연결
-  - 미리 지정된 키워드 1 혹은 0의 메시지를 Bluetooth를 통해 BLE 통신을 수행
-  - Bluetooth에서는 전송 받은 메시지를 확인하고 해당 메시지에 맞는 작업을 수행 (1. 블라인드 상승 / 0.. 블라인드 하강)
-- Web Service
-  - 사용자는 미리 포트 포워딩으로 정의된 '210.123.254.245:9001' 서버로 접속
-  - Web Browser에 UP, DOWN 글자를 클릭
-  - Arduino는 사용자가 전송한 메시지를 확인하고 해당 기능을 수행
-    - 서버와 Arduino가 통신하는 통신 방식은 GET 방식으로 수행
+- 기술
+  - Bluetooth 통신
+  - Arduino 회로 설계
+- Using Modules
+  - 네트워크 장비 : Arduino Ethernet Shield W5100 A07
+  - LCD화면 모듈 : LCD IIC/I2C Interface Adapter Plate Board
+  - 모터 : 5V Stepper Motor
+  - 블루투스 모듈 : HC-06 Bluetooth 3.0 Module
+  - 미세먼지 농도 센서 : MQ-135 Gas Sensor
+- 프로젝트 내용
+  - 사용자는 Web 혹은 Bluetooth 중 어떤 통신을 할지 선정
+  - Bluetooth
+    - Android에서 제공하는 App인 'Arduino Bluetooth Controller'를 이용하여 Arduino와 연결
+    - 미리 지정된 키워드 1 혹은 0의 메시지를 Bluetooth를 통해 BLE 통신을 수행
+    - Bluetooth에서는 전송 받은 메시지를 확인하고 해당 메시지에 맞는 작업을 수행 (1. 블라인드 상승 / 0.. 블라인드 하강)
+  - Web Service
+    - 사용자는 미리 포트 포워딩으로 정의된 '210.123.254.245:9001' 서버로 접속
+    - Web Browser에 UP, DOWN 글자를 클릭
+    - Arduino는 사용자가 전송한 메시지를 확인하고 해당 기능을 수행
+      - 서버와 Arduino가 통신하는 통신 방식은 GET 방식으로 수행
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
@@ -167,10 +192,17 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : PC 지원 홈페이지
   - 기간 : 2018.11.03 ~ 2018.12.14
-- PC의 주요 부품별로 문제가 있거나 문의가 필요한 부분을 하나의 홈페이지 에서 해결할 수 있음
-- 관리자는 어떤 부품에대한 문의가 얼마나 있는지 그래프를 이용하여 확인할 수 있음
-- 사용자들은 본인의 요청이 어떤 상태인지 실시간으로 확인할 수 있음
-- [Github Repository](https://github.com/yaki-toki/WebProject/tree/master/FinalyTest)
+- 기술
+  - 언어 : Java 8
+  - Jakarta DBCP API
+  - MD5 Hash Password 암호화
+- Framework
+  - JSTL(Java Server Tag Library), EL(Expression Language)
+- 프로젝트 내용
+  - PC의 주요 부품별로 문제가 있거나 문의가 필요한 부분을 하나의 홈페이지 에서 해결할 수 있음
+  - 관리자는 어떤 부품에대한 문의가 얼마나 있는지 그래프를 이용하여 확인할 수 있음
+  - 사용자들은 본인의 요청이 어떤 상태인지 실시간으로 확인할 수 있음
+  - [Github Repository](https://github.com/yaki-toki/WebProject/tree/master/FinalyTest)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
@@ -184,12 +216,19 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : 암호화 소켓 통신!
   - 기간 : 2018.11.02 ~ 2018.12.12
-- 소켓 통신을 이용한 사용자 간의 통신
-- 7계층 프로토콜을 설계하여 적용시킨 통신 프로그램
-- 통신간의 데이터는 대칭키 암호화 방식인 AES 암호화 방식을 적용
-  - Key를 전달할 방식을 찾지 못 하여 지정된 Key로 암/복호화를 수행
-  - 이 부분을 수정하면 MITM공격이 없는 한 안전한 암호화 통신이 가능할 수 있을 것으로 보임
-- [Github Repository](https://github.com/yaki-toki/C-NetworkProgramming/tree/master/ChatClient)
+- 기술
+  - 언어 : C#
+  - Asynchronous Socket Communication
+  - AES 대칭키 암호화 알고리즘
+- Framework
+  - .Net Framework
+- 프로젝트 내용
+  - 소켓 통신을 이용한 사용자 간의 통신
+  - 7계층 프로토콜을 설계하여 적용시킨 통신 프로그램
+  - 통신간의 데이터는 대칭키 암호화 방식인 AES 암호화 방식을 적용
+    - Key를 전달할 방식을 찾지 못 하여 지정된 Key로 암/복호화를 수행
+    - 이 부분을 수정하면 MITM공격이 없는 한 안전한 암호화 통신이 가능할 수 있을 것으로 보임
+  - [Github Repository](https://github.com/yaki-toki/C-NetworkProgramming/tree/master/ChatClient)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -207,9 +246,15 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : AlTable(알테이블)
   - 기간 : 2018.07.02 ~ 2018.10.06
-- 각 사람마다 자신의 공부 흐름이 다양하기 때문에 스스로 인지할 수 있을 정도의 타이머를 어플로 제공
-- 사용자는 공부 시간, 휴식 시간등을 지정하여 타이머를 설정할 수 있음
-- 어플 내에서 타이머를 수정 하는 경우 이벤트를 발생시켜 진행 중이던 타이머를 종료 시키고 새로운 타이머를 수행
+- 기술
+  - 언어 : Java 8
+  - Android Runtime
+- Framework
+  - Application Framework
+- 프로젝트 내용
+  - 각 사람마다 자신의 공부 흐름이 다양하기 때문에 스스로 인지할 수 있을 정도의 타이머를 어플로 제공
+  - 사용자는 공부 시간, 휴식 시간등을 지정하여 타이머를 설정할 수 있음
+  - 어플 내에서 타이머를 수정 하는 경우 이벤트를 발생시켜 진행 중이던 타이머를 종료 시키고 새로운 타이머를 수행
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -223,7 +268,7 @@ categories: Yaki Introduce
 
 ### Intranet Member Management Project
 
-- 프로젝트 명 : AlTable(알테이블)
+- 프로젝트 명 : Intranet Member Management
   - 기간 : 2018.07.02 ~ 2018.10.06
 - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
 - 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원 가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
