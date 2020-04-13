@@ -78,10 +78,18 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : Hacking Tutorial Site
   - 기간 : 2019.11.12 ~ 2019.11.24
-- 웹 해킹을 연습할 수 있는 튜토리얼 홈페이지 구현
-- SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
-- 위 공격에 따른 보안 적용
-- [Github Repository](https://github.com/yaki-toki/AttackWeb)
+- 기술
+  - 언어 : PHP
+  - SQL Injection을 대비한 정규 표현식 적용
+  - 서버 보안 패치(버전 업데이트, 설정파일 보안 패치 등등)
+- Tool
+  - Atom Web Remote Server Connection
+- 프로젝트 내용
+  - 웹 해킹을 연습할 수 있는 튜토리얼 홈페이지 구현
+  - SQL Injection, XSS, CSRF, ByPass 등의 해킹 기법을 테스트 할 수 있음
+  - Webshell 업로드를 통한 서버에 권한 상승 Backdoor 파일 생성
+  - Backdoor를 통한 웹 서버가 존재하는 장소의 네트워크망을 예측할 수 있음
+  - [Github Repository](https://github.com/yaki-toki/AttackWeb)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
   <img src="/assets/images/TestSite.png" alt="TestSite" />
@@ -97,10 +105,10 @@ categories: Yaki Introduce
 - 기술
   - 언어 : Python
   - Supervised Machine Learning
+  - Clissifier Algorithm: K-NN, Decision Tree, Random Forest, Gradient Boosting
 - Framework
   - Visualization : Seaborn
   - Supervised Machine Learning : Sklearn
-  - Clissifier Algorithm: K-NN, Decision Tree, Random Forest, Gradient Boosting
   - Accuracy : accuracy_score, F1 Score
 - 프로젝트 내용
   - 업무의 마감에 대한 스트래스에 관련된 Dataset을 사용
@@ -269,9 +277,9 @@ categories: Yaki Introduce
 ### Intranet Member Management Project
 
 - 프로젝트 명 : Intranet Member Management
-  - 기간 : 2018.07.02 ~ 2018.10.06
+  - 기간 : 2018.05.02 ~ 2018.06.05
 - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
-- 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원 가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
+- 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
 - MVVM(Model - View - View Model) 구현 방식 사용
 
 
@@ -290,7 +298,7 @@ categories: Yaki Introduce
   - 기간 : 2017.10.12 ~ 2017.12.04
 - 주차 공간이 좁은 상태에서 차량이 길을 막아서고 있으면 나가는 데에 어려움이 생김
 - 차량 주인이 자신의 번호를 적어두지 않은 경우 곤란한 상황이 발생 됨
-- 차량의 번호를 이용하여 차주의 번호(안심번호)를 이용할 수 있도록 조희를 해 주는 시스템
+- 차량의 번호를 이용하여 차주의 번호(안심번호)를 이용할 수 있도록 조회를 해 주는 시스템
 - PyQt로 제작된 윈도우 응용 프로그램
 - 사용자가 직접 등록 할 수 있음
 - 등록된 정보는 서버에 존재하는 DB내에 기록 됨
