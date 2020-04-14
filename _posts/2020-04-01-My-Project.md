@@ -164,7 +164,7 @@ categories: Yaki Introduce
   - Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
   - 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
   - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
-  - [Hyperledger Composer 구축 코드](https://github.com/yaki-toki/HyperledgerComposer)
+  - [Hyperledger Composer 서버설치 스크립트](https://github.com/yaki-toki/HyperledgerComposer)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
