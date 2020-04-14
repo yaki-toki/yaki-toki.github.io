@@ -32,9 +32,14 @@ categories: Yaki Introduce
   - Server & Network Monitoring
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/InjectionSimulation.png" alt="Blind SQL Injection 구상도"/>
+  <br/>
+  &lt;Blind SQL Injection 구상도&gt;
+
+  <br/>
   <img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
   <br/>
-  &lt;Blind SQL-Injection 결과&gt;
+  &lt;Blind SQL Injection 결과&gt;
 </div>
 
 ***
@@ -70,6 +75,11 @@ categories: Yaki Introduce
   <img src="/assets/images/SemiTopology.PNG" alt="Network Topology"/>
   <br/>
   &lt;Security Network Topology&gt;
+
+  <br/>
+  <img src="/assets/images/MonitoringWindow.png" alt="Monitoring Window"/>
+  <br/>
+  &lt;Monitoring Window&gt;
 </div>
 
 ***
@@ -126,6 +136,10 @@ categories: Yaki Introduce
   <img src="/assets/images/BigData.png" alt="데이터 상관관계" style="zoom: 25%;" />
   <br/>
   &lt;Data Correlation&gt;
+  <br/>
+  <img src="/assets/images/RandomForestClassifier.png" alt="Random Forest"/>
+  <br/>
+  &lt;Random Forest 예측 정확도&gt;
 </div>
 
 ***
@@ -150,9 +164,14 @@ categories: Yaki Introduce
   - Hyperledger Fabric의 Private기반의 Blockchain을 이용하여 데이터는 일반적으로 공개되지 않은 서버에서 작성
   - 특정 그룹에 속한 회원들만 해당 그룹의 장부를 확인할 수 있음
   - 사용자들은 자신에게 지급된 Hash 값을 이용하여 실제 데이터가 올바르게 작성 되었는가를 확인할 수 있음
+  - [Hyperledger Composer 구축 코드](https://github.com/yaki-toki/HyperledgerComposer)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assets/images/LEGO.png" alt="Login" width="60%" height="50%"/>
+  <br/>
+  &lt;Login 화면&gt;
+  <br/>
   <img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
   <br/>
   &lt;Data 출력 화면&gt;
@@ -278,9 +297,15 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : Intranet Member Management
   - 기간 : 2018.05.02 ~ 2018.06.05
-- 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
-- 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
-- MVVM(Model - View - View Model) 구현 방식 사용
+- 기술
+  - 언어 : C#
+  - MVVM 개발 패턴 적용
+- Framework
+  - .NetFramework
+- 프로젝트 내용
+  - 사내 사원들의 인트라넷 회원가입을 관리하는 솔루션
+  - 특정 사원이 자신의 사번을 이용하여 인트라넷에 회원가입을 요청하면 인사팀에서 옳바른 사원인지를 확인하여 등록 해 주는 시스템
+  - MVVM(Model - View - View Model) 구현 방식 사용
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
@@ -296,13 +321,18 @@ categories: Yaki Introduce
 
 - 프로젝트 명 : 너의 주인은 어디있니...?
   - 기간 : 2017.10.12 ~ 2017.12.04
-- 주차 공간이 좁은 상태에서 차량이 길을 막아서고 있으면 나가는 데에 어려움이 생김
-- 차량 주인이 자신의 번호를 적어두지 않은 경우 곤란한 상황이 발생 됨
-- 차량의 번호를 이용하여 차주의 번호(안심번호)를 이용할 수 있도록 조회를 해 주는 시스템
-- PyQt로 제작된 윈도우 응용 프로그램
-- 사용자가 직접 등록 할 수 있음
-- 등록된 정보는 서버에 존재하는 DB내에 기록 됨
-- [Github Repository](https://github.com/yaki-toki/Python)
+- 기술
+  - 언어 : Python
+- Framework
+  - PyQt (Python GUI 개발 Framework)
+- 프로젝트 내용
+  - 주차 공간이 좁은 상태에서 차량이 길을 막아서고 있으면 나가는 데에 어려움이 생김
+  - 차량 주인이 자신의 번호를 적어두지 않은 경우 곤란한 상황이 발생 됨
+  - 차량의 번호를 이용하여 차주의 번호(안심번호)를 이용할 수 있도록 조회를 해 주는 시스템
+  - PyQt로 제작된 윈도우 응용 프로그램
+  - 사용자가 직접 등록 할 수 있음
+  - 등록된 정보는 서버에 존재하는 DB내에 기록 됨
+  - [Github Repository](https://github.com/yaki-toki/Python)
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
