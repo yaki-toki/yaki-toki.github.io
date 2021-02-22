@@ -1,5 +1,5 @@
 ---
-title: "My Project List"
+title: "Undergraduate Project List"
 date: 2020-04-01 10:00:00 +0900
 categories: Yaki Introduce
 ---
