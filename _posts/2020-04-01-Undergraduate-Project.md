@@ -30,12 +30,12 @@ categories: Yaki Introduce
   - Server & Network Monitoring
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/InjectionSimulation.png" alt="Blind SQL Injection 구상도"/>
+  <img src="../assets/images/InjectionSimulation.png" alt="Blind SQL Injection 구상도"/>
   <br/>
   &lt;Blind SQL Injection 구상도&gt;
 
   <br/>
-  <img src="/assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
+  <img src="../assets/images/SQLInjection.png" alt="Blind SQL Injection결과"/>
   <br/>
   &lt;Blind SQL Injection 결과&gt;
 </div>
@@ -70,12 +70,12 @@ categories: Yaki Introduce
   - 본사와 지사를 연결하는 네트워크는 Site-to-Site VPN을 사용하며, IPsec(Internet Protocol Security)를 이용하여 통신을 수행
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/SemiTopology.PNG" alt="Network Topology"/>
+  <img src="../assets/images/SemiTopology.PNG" alt="Network Topology"/>
   <br/>
   &lt;Security Network Topology&gt;
 
   <br/>
-  <img src="/assets/images/MonitoringWindow.png" alt="Monitoring Window"/>
+  <img src="../assets/images/MonitoringWindow.png" alt="Monitoring Window"/>
   <br/>
   &lt;Monitoring Window&gt;
 </div>
@@ -100,7 +100,7 @@ categories: Yaki Introduce
   - [Github Repository](https://github.com/yaki-toki/AttackWeb)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/TestSite.png" alt="TestSite" />
+  <img src="../assets/images/TestSite.png" alt="TestSite" />
   <br/>
   &lt;Web Hack Site&gt;
 </div>
@@ -135,7 +135,7 @@ categories: Yaki Introduce
   <br/>
   &lt;Data Correlation&gt;
   <br/>
-  <img src="/assets/images/RandomForestClassifier.png" alt="Random Forest"/>
+  <img src="../assets/images/RandomForestClassifier.png" alt="Random Forest"/>
   <br/>
   &lt;Random Forest 예측 정확도&gt;
 </div>
@@ -170,7 +170,7 @@ categories: Yaki Introduce
   <br/>
   &lt;Login 화면&gt;
   <br/>
-  <img src="/assets/images/Block.png" alt="Block" width="80%" height="70%" />
+  <img src="../assets/images/Block.png" alt="Block" width="80%" height="70%" />
   <br/>
   &lt;Data 출력 화면&gt;
 </div>
@@ -206,7 +206,7 @@ categories: Yaki Introduce
   <img src="/assets/images/BlindArduino.PNG" alt="설계도면" width="80%" height="70%" />
   <br/>
   &lt;설계도 화면&gt;<br/>
-  <img src="/assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
+  <img src="../assets/images/RealArduino.png" alt="실제모습" width="80%" height="70%" />
   <br/>
   &lt;실제 모듈 구현 화면&gt;
 </div>
@@ -230,7 +230,7 @@ categories: Yaki Introduce
   - [Github Repository](https://github.com/yaki-toki/WebProject/tree/master/FinalyTest)
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
+  <img src="../assets/images/PCSuppoter.png" alt="PCSuppoter" width="80%" height="60%" />
   <br/>
   &lt;PC 지원 요청 부품 비율&gt;
 </div>
@@ -260,7 +260,7 @@ categories: Yaki Introduce
   <img src="/assets/images/Socket.png" alt="통신 과정" style="zoom:50%;" />
   <br/>
   &lt;통신 과정&gt;<br/>
-  <img src="/assets/images/Socket1.png" alt="암호화 데이터" width="70%" height="60%" />
+  <img src="../assets/images/Socket1.png" alt="암호화 데이터" width="70%" height="60%" />
   <br/>
   &lt;Wireshark Packet Capture&gt;
 </div>
@@ -283,7 +283,7 @@ categories: Yaki Introduce
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/Altable.png" alt="Altable" width="200px" height="350px" />
+  <img src="../assets/images/Altable.png" alt="Altable" width="200px" height="350px" />
   <br/>
   &lt;Altable 어플 화면&gt;
 </div>
@@ -307,7 +307,7 @@ categories: Yaki Introduce
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/DotNetProject.png" alt="회원가입 관리" width="60%" height="50%" />
+  <img src="../assets/images/DotNetProject.png" alt="회원가입 관리" width="60%" height="50%" />
   <br/>
   &lt;회원가입 관리 화면&gt;
 </div>
@@ -334,7 +334,7 @@ categories: Yaki Introduce
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/CarNumber.png" alt="CarNumber"  width="50%" height="40%" />
+  <img src="../assets/images/CarNumber.png" alt="CarNumber"  width="50%" height="40%" />
   <br/>
   &lt;차량 소유자 조회 화면&gt;
 </div>
@@ -352,7 +352,7 @@ categories: Yaki Introduce
 
 
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="/assets/images/InternetSecurity1.png" alt="공격 구상도" width="100%" height="50%" />
+  <img src="../assets/images/InternetSecurity1.png" alt="공격 구상도" width="100%" height="50%" />
   <br/>
   &lt;DDoS 공격 구상도&gt;
 </div>
