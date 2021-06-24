@@ -26,12 +26,12 @@ categories: Yaki Introduce
     - 해당 투구 시점 내에 점수의 변화가 있는 경우를 로그로 기록
     - GUI 화면으로 서비스 제공
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="../assetsMasterCourse/images/그림3.png" alt="시스템 구성"/>
+  <img src="/assetsMasterCourse/images/그림3.png" alt="시스템 구성"/>
   <br/>
   &lt;시스템 구성&gt;
 
   <br/>
-  <img src="../assetsMasterCourse/images/그림4.png" alt="분석 결과 출력"/>
+  <img src="/assetsMasterCourse/images/그림4.png" alt="분석 결과 출력"/>
   <br/>
   &lt;분석 결과 출력&gt;
 </div>
@@ -58,12 +58,12 @@ categories: Yaki Introduce
     - 사용자의 얼굴을 인식하여 연령과 성별을 예측하고 그에 맞는 서비스를 제공
     - 10대 남,여 ~ 60대 남,여로 총 12개의 분류 클래스를 사용
 <div style="text-align:center; margin:0px auto; font-size:20px;">
-  <img src="../assetsMasterCourse/images/그림1.png" alt="사용자 촬영"/>
+  <img src="/assetsMasterCourse/images/그림1.png" alt="사용자 촬영"/>
   <br/>
   &lt;사용자 촬영&gt;
 
   <br/>
-  <img src="../assetsMasterCourse/images/그림2.png" alt="분석 결과 출력"/>
+  <img src="/assetsMasterCourse/images/그림2.png" alt="분석 결과 출력"/>
   <br/>
   &lt;분석 결과 출력&gt;
 </div>
