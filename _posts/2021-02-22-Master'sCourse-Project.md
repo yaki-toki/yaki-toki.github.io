@@ -4,12 +4,36 @@ date: 2021-02-22 10:40:00 +0900
 categories: Yaki Introduce
 ---
 
+## 빅데이터 기술 발전전략
+
+- 프로젝트 명: 세컨드 스크린 광고 노출도 인식 개선
+    - 기간: 2021.09 ~ 2021.11
+- 기술
+    - 언어: Java
+    - OpenCV
+        - Haarcascade: 고양이 및 얼굴 인식 모델
+- 프로젝트 내용
+    - 기존 로고 인식 애플리케이션 개선
+    - 컨텐츠 내에서 로고를 인식 후 세컨드 스크린에서 해당 로고의 광고를 출력
+    - 광고가 출력되면 해당 시점에서 사진 촬영
+    - 촬영된 이미지를 분석하여 해당 광고의 정보와 시청중인 인원 수를 기록
+<div style="text-align:center; margin:0px auto; font-size:20px;">
+  <img src="/assetsMasterCourse/images/그림5.png" alt="시스템 구성"/>
+  <br/>
+  &lt;시스템 구성&gt;
+
+  <br/>
+  <img src="/assetsMasterCourse/images/그림6.png" alt="분석 결과 기록"/>
+  <br/>
+  &lt;분석 결과 기록&gt;
+</div>
+
 ## 딥러닝 알고리즘을 이용한 특정 동영상 컨텐츠 내 포즈 및 인식 시점 알고리즘 개발
 
-- 프로젝트 명 : 동영상 하이라이트 시점 태깅
-    - 기간 : 2021.01 ~ 2021.05
+- 프로젝트 명: 동영상 하이라이트 시점 태깅
+    - 기간: 2021.01 ~ 2021.05
 - 기술
-    - 언어 : Python 3.8
+    - 언어: Python 3.8
     - Deep learning
         - Object detection
         - Pose recognition
