@@ -15,12 +15,12 @@ remote_theme           : mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Security Jiha!"
+locale                   : "ko-KR"
+title                    : "데이터 없는 딥러닝 이야기"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kim Jiha"
-description              : "My Security Life!"
+description              : "My DeepLearning & Communication Life!"
 url                      : "https://yaki-toki.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -93,18 +93,21 @@ analytics:
 author:
   name             : "Jiha Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "My Research Interests is <br/>**Security, Reversing and Big Data.**"
+  bio              : "My Research Interests is <br/>**DeepLearning, Mobile and Wireless Communication.**"
   location         : "Korea, Republic of"
   links:
-    - label: "rlawlgk23@gmail.com"
+    - label: "yaki5896@mju.ac.kr"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:rlawlgk23@gmail.com
+      url: mailto:mju.ac.kr
     - label: "Tistory"
       icon: "fas fa-fw fa-link"
       url: "https://kimunderground.tistory.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yaki-toki/"
+    - label: "DAN Lab."
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://danlab.mju.ac.kr/"
 
 # Reading Files
 include:

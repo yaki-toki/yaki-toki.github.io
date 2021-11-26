@@ -1,6 +1,6 @@
 ---
 title: "Master's Course Project List"
-date: 2021-02-22 10:40:00 +0900
+date: 2021-11-26 12:00:00 +0900
 categories: Yaki Introduce
 ---
 
