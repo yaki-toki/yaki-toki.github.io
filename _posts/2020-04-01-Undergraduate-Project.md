@@ -1,6 +1,7 @@
 ---
 title: "Undergraduate Project List"
 date: 2020-04-01 10:00:00 +0900
+marp: true
 categories: Yaki Introduce
 ---
 
