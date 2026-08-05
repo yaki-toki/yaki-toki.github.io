@@ -1,4 +1,750 @@
----
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiha Kim — Wireless MAC &amp; Video Understanding</title>
+<meta name="description" content="Jiha Kim (김지하) — Integrated MS–PhD candidate at Myongji University, DAN Lab. Research on IEEE 802.11bn/Wi-Fi 8 multi-link MAC, reinforcement learning for wireless networks, and attention-based video understanding.">
+<meta name="author" content="Jiha Kim">
+<link rel="canonical" href="https://yaki-toki.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jiha Kim — Wireless MAC &amp; Video Understanding">
+<meta property="og:description" content="Integrated MS–PhD candidate at Myongji University, DAN Lab. IEEE 802.11bn multi-link MAC, reinforcement learning for wireless networks, attention-based video understanding.">
+<meta property="og:url" content="https://yaki-toki.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Noto+Serif+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='88'%20font-family='Georgia,serif'%3EK%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jiha Kim",
+  "alternateName": "김지하",
+  "url": "https://yaki-toki.github.io/",
+  "email": "yaki5896@mju.ac.kr",
+  "identifier": "https://orcid.org/0000-0002-6711-6812",
+  "jobTitle": "Integrated MS–PhD Candidate",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Myongji University",
+    "department": "Department of Information and Communication Engineering"
+  },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Korea Bible University" },
+  "knowsAbout": ["IEEE 802.11 WLAN", "Multi-Link Operation", "Medium Access Control",
+                 "Deep Reinforcement Learning", "Video Understanding", "Vision Transformers"],
+  "sameAs": ["https://github.com/yaki-toki", "https://orcid.org/0000-0002-6711-6812",
+             "https://kimunderground.tistory.com"]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main"><span data-l="en">Skip to content</span><span data-l="ko">본문으로 건너뛰기</span></a>
+
+<div class="shell">
+
+  <header class="masthead">
+    <a class="masthead__name" href="#main">Jiha Kim<span data-l="ko"> · 김지하</span></a>
+    <div class="masthead__tools">
+      <button class="pill" id="lang-toggle" type="button" aria-pressed="false">
+        <span data-l="en">한국어</span><span data-l="ko">English</span>
+      </button>
+      <button class="pill" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+        <span data-l="en">Theme</span><span data-l="ko">테마</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <p class="hero__eyebrow">
+        <span data-l="en">Myongji University · DAN Lab · Integrated MS–PhD</span>
+        <span data-l="ko">명지대학교 · DAN 연구실 · 석·박사 통합과정</span>
+      </p>
+
+      <h1 class="hero__name">
+        Jiha <em>Kim</em>
+        <span class="hero__ko" data-l="ko">김지하</span>
+      </h1>
+
+      <div class="hero__grid">
+        <div>
+          <p class="hero__lead" data-l="en">
+            I design <strong>medium access control</strong> for the next generation of
+            Wi-Fi, and <strong>attention models</strong> that keep working when the
+            network underneath them does not. Both halves of that sentence are the
+            same problem: deciding what to spend scarce capacity on, and when.
+          </p>
+          <p class="hero__lead" data-l="ko">
+            차세대 Wi-Fi의 <strong>매체 접근 제어(MAC)</strong>를 설계하고,
+            그 네트워크가 흔들릴 때도 견디는 <strong>어텐션 모델</strong>을 연구합니다.
+            두 주제는 결국 하나의 문제입니다 — 한정된 자원을 무엇에, 언제 쓸 것인가.
+          </p>
+
+          <p data-l="en">
+            My current work centres on IEEE 802.11bn (Wi-Fi 8) ultra-high reliability:
+            Markov/fixed-point analysis of EMLSR multi-link contention, and constrained
+            multi-agent reinforcement learning that holds p99 deadline guarantees across
+            dense overlapping BSSs. In parallel I build video models — anomaly
+            anticipation, action recognition, WiFi-CSI pose estimation — under the
+            degradation real links actually produce.
+          </p>
+          <p data-l="ko">
+            현재는 IEEE 802.11bn(Wi-Fi 8) 초고신뢰성(UHR)에 집중하고 있습니다.
+            EMLSR 멀티링크 경쟁의 Markov/고정점 해석, 그리고 밀집 OBSS 환경에서 p99 지연
+            보장을 유지하는 제약 기반 다중 에이전트 강화학습이 중심입니다. 동시에 이상 예측,
+            행동 인식, WiFi-CSI 자세 추정 등 실제 링크 열화를 견디는 비디오 모델을 만듭니다.
+          </p>
+        </div>
+
+        <div class="identity">
+          <div class="identity__row">
+            <span class="identity__key" data-l="en">Position</span>
+            <span class="identity__key" data-l="ko">과정</span>
+            <span class="identity__val">
+              <span data-l="en">Integrated MS–PhD Candidate, 2020–present</span>
+              <span data-l="ko">석·박사 통합과정, 2020–현재</span>
+            </span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key" data-l="en">Dept.</span>
+            <span class="identity__key" data-l="ko">학과</span>
+            <span class="identity__val">
+              <span data-l="en">Information &amp; Communication Engineering</span>
+              <span data-l="ko">정보통신공학과</span>
+            </span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key" data-l="en">Lab</span>
+            <span class="identity__key" data-l="ko">연구실</span>
+            <span class="identity__val">
+              <a href="https://danlab.mju.ac.kr">DAN Lab</a>
+              <span data-l="en"> — Data Analysis &amp; Networking</span>
+              <span data-l="ko"> — 데이터분석 및 네트워킹</span>
+            </span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key" data-l="en">Advisor</span>
+            <span class="identity__key" data-l="ko">지도교수</span>
+            <span class="identity__val">
+              <span data-l="en">Prof. Hyunhee Park</span>
+              <span data-l="ko">박현희 교수</span>
+            </span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key">Email</span>
+            <span class="identity__val"><a href="mailto:yaki5896@mju.ac.kr">yaki5896@mju.ac.kr</a></span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key">ORCID</span>
+            <span class="identity__val"><a href="https://orcid.org/0000-0002-6711-6812">0000-0002-6711-6812</a></span>
+          </div>
+          <div class="identity__row">
+            <span class="identity__key" data-l="en">Elsewhere</span>
+            <span class="identity__key" data-l="ko">링크</span>
+            <span class="identity__val">
+              <a href="https://github.com/yaki-toki">GitHub</a> ·
+              <a href="https://kimunderground.tistory.com">Blog</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="section reveal" id="research" aria-labelledby="h-research">
+      <div class="section__head">
+        <h2 class="section__title" id="h-research">
+          <span data-l="en">Research</span><span data-l="ko">연구 분야</span>
+        </h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <span class="pillar__num">01</span>
+          <h3 class="pillar__title">
+            <span data-l="en">Reliability-oriented MAC for Wi-Fi 8</span>
+            <span data-l="ko">Wi-Fi 8 신뢰성 중심 MAC</span>
+          </h3>
+          <p class="pillar__body" data-l="en">
+            Multi-link contention resists closed-form analysis once the EMLSR
+            single-active-radio constraint couples queues across bands. I build
+            Markov/fixed-point closures that stay analytically auditable, then
+            drive contention windows from MAC observables inside the standard
+            EDCA loop.
+          </p>
+          <p class="pillar__body" data-l="ko">
+            EMLSR의 단일 활성 라디오 제약이 대역 간 큐를 결합시키면 멀티링크 경쟁은
+            닫힌 형태로 풀리지 않습니다. 분석 가능성을 유지하는 Markov/고정점 폐형을
+            세우고, 표준 EDCA 루프 안에서 MAC 관측값으로 경쟁 윈도우를 제어합니다.
+          </p>
+          <div class="pillar__tags">
+            <span class="tag">802.11bn</span><span class="tag">MLO / EMLSR</span><span class="tag">Markov</span>
+          </div>
+        </article>
+
+        <article class="pillar">
+          <span class="pillar__num">02</span>
+          <h3 class="pillar__title">
+            <span data-l="en">Constrained RL for network control</span>
+            <span data-l="ko">제약 기반 강화학습 네트워크 제어</span>
+          </h3>
+          <p class="pillar__body" data-l="en">
+            Ultra-high reliability is a tail problem, not a mean problem. I use
+            Lyapunov drift-plus-penalty to put p99 and p99.9 violation rates
+            directly into the learning signal, with federated aggregation weighted
+            by measured interference rather than plain averaging.
+          </p>
+          <p class="pillar__body" data-l="ko">
+            초고신뢰성은 평균이 아니라 꼬리 분위의 문제입니다. Lyapunov
+            drift-plus-penalty로 p99·p99.9 위반율을 학습 신호에 직접 넣고,
+            단순 평균 대신 측정된 간섭에 비례한 가중치로 연합 집성을 수행합니다.
+          </p>
+          <div class="pillar__tags">
+            <span class="tag">MARL</span><span class="tag">Lyapunov</span><span class="tag">Federated</span>
+          </div>
+        </article>
+
+        <article class="pillar">
+          <span class="pillar__num">03</span>
+          <h3 class="pillar__title">
+            <span data-l="en">Video understanding under degradation</span>
+            <span data-l="ko">열화 환경에서의 비디오 이해</span>
+          </h3>
+          <p class="pillar__body" data-l="en">
+            Packet loss, jitter and aggressive compression are the normal operating
+            condition for deployed video, not an edge case. My doctoral work makes
+            attention degradation-aware and explainable, spanning anomaly
+            anticipation, action recognition and device-free CSI sensing.
+          </p>
+          <p class="pillar__body" data-l="ko">
+            패킷 손실, 지터, 강한 압축은 예외가 아니라 실제 운용 환경의 기본값입니다.
+            학위 연구는 어텐션을 열화 인지적이고 설명 가능하게 만드는 데 있으며,
+            이상 예측·행동 인식·비접촉 CSI 센싱을 포함합니다.
+          </p>
+          <div class="pillar__tags">
+            <span class="tag">ViT</span><span class="tag">WVAD</span><span class="tag">WiFi-CSI</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section class="section reveal" id="publications" aria-labelledby="h-pubs">
+      <div class="section__head">
+        <h2 class="section__title" id="h-pubs">
+          <span data-l="en">Publications</span><span data-l="ko">논문</span>
+        </h2>
+        <span class="section__rule"></span>
+        <span class="section__count">08 + 05</span>
+      </div>
+
+      <!-- ---- Journals ---- -->
+      <div class="pubgroup">
+        <h3 class="subhead">
+          <span data-l="en">Journal Articles</span><span data-l="ko">학술지 논문</span>
+        </h3>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2024</span><span>Journal</span></div>
+          <div>
+            <h4 class="entry__title">Dynamic Transmission and Delay Optimization Random Access for Reduced Power Consumption</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, Y. Kim, S. Park, and H. Park</p>
+            <p class="entry__venue"><b>IEEE Access</b>, vol. 12, pp. 55033–55050, April 2024</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2024</span><span>Journal</span></div>
+          <div>
+            <h4 class="entry__title">Energy Optimization and Age of Information Enhancement in Multi-UAV Networks Using Deep Reinforcement Learning</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, S. Park, and H. Park</p>
+            <p class="entry__venue"><b>IET Electronics Letters</b>, vol. 60, no. 20, October 2024</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2022</span><span>Journal</span></div>
+          <div>
+            <h4 class="entry__title">Limited Discriminator GAN using explainable AI model for overfitting problem</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <p class="entry__venue"><b>ICT Express</b>, December 2022</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- ---- International conferences ---- -->
+      <div class="pubgroup">
+        <h3 class="subhead">
+          <span data-l="en">International Conferences</span><span data-l="ko">국제 학술대회</span>
+        </h3>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2025</span><span>IMIS</span></div>
+          <div>
+            <h4 class="entry__title">STCA-Net: Spatio-Temporal Convolutional Attention Network for Efficient Action Recognition in Videos</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <p class="entry__venue"><b>International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS)</b>, 2025</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2023</span><span>ICTC</span></div>
+          <div>
+            <h4 class="entry__title">Optimization of Reinforcement Learning-Based Backoff Indicator for 5G NR Random Access Procedure</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, C. You, and H. Park</p>
+            <p class="entry__venue"><b>International Conference on ICT Convergence (ICTC)</b>, 2023</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2022</span><span>IMIS</span></div>
+          <div>
+            <h4 class="entry__title">Hierarchical output model of CNN learning using multi-label datasets</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, A. A. José, J. Kim, Y. Kim, and H. Park</p>
+            <p class="entry__venue"><b>International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS)</b>, 2022</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span>ICUFN</span></div>
+          <div>
+            <h4 class="entry__title">OA-GAN: Overfitting Avoidance Method of GAN Oversampling based on Explainable AI</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <p class="entry__venue"><b>International Conference on Ubiquitous and Future Networks (ICUFN)</b>, July 2021</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span>IMIS</span></div>
+          <div>
+            <h4 class="entry__title">Reduced CNN Model for Face Image Detection with GAN Oversampling</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <p class="entry__venue"><b>International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS)</b>, 2021</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- ---- Under review ---- -->
+      <div class="pubgroup">
+        <h3 class="subhead">
+          <span data-l="en">Under Review</span><span data-l="ko">투고 중</span>
+        </h3>
+
+        <article class="entry">
+          <div class="entry__meta">
+            <span class="entry__year">2026</span>
+            <span class="flag" data-l="en">In review</span><span class="flag" data-l="ko">심사 중</span>
+          </div>
+          <div>
+            <h4 class="entry__title">Reliability-Aware Adaptive Contention Control for EMLSR Multi-Link Operation in IEEE 802.11bn WLANs</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, S. Park, and H. Park</p>
+            <p class="entry__venue"><b>IEEE Transactions on Mobile Computing</b><span data-l="en"> — under review</span><span data-l="ko"> — 심사 중</span></p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                IEEE 802.11bn Ultra High Reliability (UHR) extends multi-link operation toward a
+                reliability-oriented MAC, but multi-link contention under the EMLSR active-link
+                constraint resists closed-form analysis. We develop a Markov/fixed-point closure for
+                three-band MLDs coexisting with single-link legacy stations: exact under saturated,
+                per-link-independent STR; reducing to an availability-based approximation under
+                saturated EMLSR with an explicit validity range; and extending to unsaturated traffic
+                through per-link Bernoulli arrivals. On top of it we build a controller that adapts the
+                per-link minimum contention window from MAC observables inside the standard EDCA/EMLSR
+                loop. Against SLD, STR-MLD and static-EMLSR baselines it raises throughput by 10.6%,
+                lowers 95th-percentile HOL-service delay by 28%, and improves Jain's fairness from
+                0.910 to 0.954 at 48 stations. Triangulation across the analytical model, a
+                discrete-event simulator and ns-3 closes within a 2–4% mean relative gap.
+              </p>
+            </details>
+            <div class="entry__links">
+              <a class="chip" href="/assets/papers/emlsr-contention-control-80211bn.pdf">PDF</a>
+              <a class="chip" href="/assets/papers/emlsr-contention-control-80211bn-supplement.pdf">
+                <span data-l="en">Supplement</span><span data-l="ko">부록</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta">
+            <span class="entry__year">2026</span>
+            <span class="flag" data-l="en">In review</span><span class="flag" data-l="ko">심사 중</span>
+          </div>
+          <div>
+            <h4 class="entry__title">LyMAPPO: Lyapunov-Constrained Independent Learning for Ultra-High Reliability in Dense Multi-Band Wi-Fi</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, S. Park, and H. Park</p>
+            <p class="entry__venue"><span data-l="en">Under review</span><span data-l="ko">심사 중</span></p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                IEEE 802.11bn defines ultra-high reliability through per-BSS deadline-violation-rate
+                targets. We study these constraints in dense multi-band deployments with heterogeneous
+                AP link sets. LyMAPPO combines independent per-AP PPO with drop-inclusive rate-form
+                Lyapunov duals, one dual-derived congestion price per beacon for cross-BSS coordination,
+                and an auxiliary lower-tail quantile critic. Training and evaluation use an
+                ns-3-in-the-loop environment with 16 APs, three bands, shared-buffer multi-link
+                operation and Markov channels. Across 16 seeds with 110 s episodes, LyMAPPO achieves
+                15.1/16 feasible BSSs and a network p99 of 0.0017 — 6.1× to 25× lower than three static
+                baselines. The drift-plus-penalty analysis accounts for clipping and establishes a
+                run-time dual-stability condition under the Slater assumption.
+              </p>
+            </details>
+            <div class="entry__links">
+              <a class="chip" href="/assets/papers/lymappo.pdf">PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta">
+            <span class="entry__year">2026</span>
+            <span class="flag" data-l="en">In review</span><span class="flag" data-l="ko">심사 중</span>
+          </div>
+          <div>
+            <h4 class="entry__title">STCA-ViT: Spatio-Temporal Cross-Attention Vision Transformer for Video Action Recognition</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, S. Park, and H. Park</p>
+            <p class="entry__venue"><span data-l="en">Under review</span><span data-l="ko">심사 중</span></p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                STCA-ViT is a hybrid framework integrating a VideoMAE ViT-Base backbone with
+                bidirectional spatio-temporal cross-attention, Sobel-based boundary detection for motion
+                gating, and YOLO-based person attention in parallel. It adds residual contribution
+                fusion with gradient reversal for feature diversity, orthogonal regularization, a
+                multi-head ensemble classifier, and an optional weakly-supervised temporal action
+                localization head that recycles motion features into frame-level scores without temporal
+                annotations. STCA-ViT reaches 90.46% Top-1 on HMDB-51 — above VideoMAE V2 ViT-g
+                (86.08%) — with 98.29% on UCF-101, 79.44% on Kinetics-400 and 65.01% on
+                Something-Something-v2, using 110M parameters and 305 GFLOPs.
+              </p>
+            </details>
+            <div class="entry__links">
+              <a class="chip" href="/assets/papers/stca-vit.pdf">PDF</a>
+              <a class="chip" href="https://github.com/yaki-toki/STCA-ViT">
+                <span data-l="en">Code</span><span data-l="ko">코드</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta">
+            <span class="entry__year">2026</span>
+            <span class="flag" data-l="en">In review</span><span class="flag" data-l="ko">심사 중</span>
+          </div>
+          <div>
+            <h4 class="entry__title">PhysRoute-Fi: Physically-Routed Two-Branch WiFi-CSI 3D Human Pose Estimation</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span>, S. Park, and H. Park</p>
+            <p class="entry__venue"><span data-l="en">Under review</span><span data-l="ko">심사 중</span></p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                WiFi channel state information supports device-free 3D pose estimation, but posture and
+                motion remain hard to recover across subjects and scenes. On MM-Fi, recent estimators'
+                Procrustes-aligned errors (99.8–106.2 mm) sit close to a mean-posture reference
+                (99.4–103.6 mm), indicating much of the reported gain comes from localization.
+                PhysRoute-Fi separates CSI into physical components and assigns them to pose factors:
+                sanitized per-antenna phase is fused with an amplitude-led composite representation for
+                location, while the composite representation drives a graph-convolutional posture
+                decoder. With one-time enrollment, a motion-consistency loss recovers about 93% of the
+                aggregate inter-frame displacement magnitude and reaches 102.7 mm MPJPE and 65.5 mm
+                PA-MPJPE.
+              </p>
+            </details>
+            <div class="entry__links">
+              <a class="chip" href="/assets/papers/physroute-fi.pdf">PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta">
+            <span class="entry__year">2026</span>
+            <span class="flag" data-l="en">In review</span><span class="flag" data-l="ko">심사 중</span>
+          </div>
+          <div>
+            <h4 class="entry__title">SEAR: Segment-level Early Anomaly Recognition via Cross-Task Anticipation Gating and Temporal Contrastive MIL</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <p class="entry__venue"><span data-l="en">Under double-blind review — manuscript withheld until decision</span><span data-l="ko">더블블라인드 심사 중 — 결과 발표까지 원고 비공개</span></p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                Weakly-supervised video anomaly detection localizes frame-level anomalies using only
+                video-level binary labels. Existing methods treat anomaly detection and risk
+                anticipation as independent tasks, discarding cross-task predictive cues. SEAR jointly
+                performs multi-horizon risk anticipation and MIL-based detection through a shared
+                representation via three contributions: a Cross-Task Anticipation Gate, a
+                zero-initialized scalar that modulates detection features with anticipation risk scores;
+                Temporal Contrastive MIL, a hinge-loss objective separating peak anomaly scores from all
+                normal scores; and Curriculum Pseudo-Labeling with Negative Mining. On UCF-Crime, SEAR
+                reaches 85.36% frame-level AUC with frozen dual encoders (~0.59M trainable parameters),
+                and 87.78% AUC under triple-encoder fusion — the highest among frozen-encoder methods.
+                It detects 89% of anomalous videos before annotated event onset.
+              </p>
+            </details>
+          </div>
+        </article>
+      </div>
+
+      <!-- ---- Domestic ---- -->
+      <div class="pubgroup">
+        <h3 class="subhead">
+          <span data-l="en">Selected Domestic Conferences (KICS)</span><span data-l="ko">국내 학술대회 (한국통신학회)</span>
+        </h3>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">Summer</span><span data-l="ko">하계</span></div>
+          <div>
+            <h4 class="entry__title">IW-FedMAPPO: Interference-Weighted Federated Multi-Agent PPO for Ultra-Reliable Coordinated MLO Scheduling in Asymmetric OBSS Wi-Fi 8 Networks</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2026</span><span>JCCI</span></div>
+          <div>
+            <h4 class="entry__title">SEAR: Shared Evidential Anomaly and Risk Detection — Unified Framework for Video Detection and Multi-Horizon Anticipation</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">Winter</span><span data-l="ko">동계</span></div>
+          <div>
+            <h4 class="entry__title">Adaptive Federated Deep Reinforcement Learning for Multi-AP Wi-Fi Optimization</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2025</span><span data-l="en">Summer</span><span data-l="ko">하계</span></div>
+          <div>
+            <h4 class="entry__title">PRIME Wi-Fi: Predictive Resource Intelligence for Multi-Link Efficiency in Wi-Fi</h4>
+            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PATENTS ================= -->
+    <section class="section reveal" id="patents" aria-labelledby="h-patents">
+      <div class="section__head">
+        <h2 class="section__title" id="h-patents">
+          <span data-l="en">Patents</span><span data-l="ko">특허</span>
+        </h2>
+        <span class="section__rule"></span>
+        <span class="section__count">06</span>
+      </div>
+
+      <p data-l="en">
+        Korean patent applications filed through the Myongji University Industry–Academic
+        Cooperation Foundation, with Prof. Hyunhee Park.
+      </p>
+      <p data-l="ko">
+        명지대학교 산학협력단을 통해 박현희 교수와 공동 출원한 국내 특허입니다.
+      </p>
+
+      <div>
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2024</span></div>
+          <div>
+            <h3 class="patent__title">A Method for Performing Handover of Non-AP MLD for Multiple AP MLDs Performing Joint Transmission, and a Device Therefor</h3>
+            <p class="patent__no">Ref. PD241137 · <span data-l="en">filed 23 Dec 2024</span><span data-l="ko">2024.12.23 출원</span></p>
+          </div>
+        </article>
+
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2024</span></div>
+          <div>
+            <h3 class="patent__title">A Method for Performing Cooperative Transmission of UMAC-based AP MLD in Wireless LAN Network and an Apparatus Therefor</h3>
+            <p class="patent__no">Ref. PD241138 · <span data-l="en">filed 23 Dec 2024</span><span data-l="ko">2024.12.23 출원</span></p>
+          </div>
+        </article>
+
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2024</span></div>
+          <div>
+            <h3 class="patent__title">A Method for Receiving Cooperative Transmission Data of Non-AP MLD in Wireless LAN Network and an Apparatus Therefor</h3>
+            <p class="patent__no">Ref. PD241139 · <span data-l="en">filed 23 Dec 2024</span><span data-l="ko">2024.12.23 출원</span></p>
+          </div>
+        </article>
+
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2024</span></div>
+          <div>
+            <h3 class="patent__title">A Method for Parameter Exchange for Joint Transmission Among Multiple AP-MLDs Supporting Multi-Link, and Device Therefor</h3>
+            <p class="patent__no">Ref. PD241140 · <span data-l="en">filed 23 Dec 2024</span><span data-l="ko">2024.12.23 출원</span></p>
+          </div>
+        </article>
+
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2023</span></div>
+          <div>
+            <h3 class="patent__title">Method for Performing Random Access Procedure Based on Reinforcement Learning</h3>
+            <p class="patent__no">10-2023-0196634 · <span data-l="en">published KR 10-2025-0104336 A, 8 Jul 2025</span><span data-l="ko">공개 KR 10-2025-0104336 A, 2025.07.08</span></p>
+          </div>
+        </article>
+
+        <article class="patent">
+          <div class="entry__meta"><span class="entry__year">2022</span></div>
+          <div>
+            <h3 class="patent__title">Method and Apparatus for GAN-based Model Learning</h3>
+            <p class="patent__no">10-2022-0024885 · <span data-l="en">published KR 10-2023-0127508 A, 1 Sep 2023</span><span data-l="ko">공개 KR 10-2023-0127508 A, 2023.09.01</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section reveal" id="projects" aria-labelledby="h-projects">
+      <div class="section__head">
+        <h2 class="section__title" id="h-projects">
+          <span data-l="en">Projects</span><span data-l="ko">연구 과제</span>
+        </h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="entry__meta"><span class="entry__year">2024–</span><span>MOTIE / KEIT</span></div>
+          <div>
+            <h3 class="timeline__title">
+              <span data-l="en">Vision Recognition Technology SDK Based on Domestic AI Semiconductors</span>
+              <span data-l="ko">국산 AI 반도체 기반 비전 인식 기술 SDK 개발</span>
+            </h3>
+            <p class="timeline__org">RS-2024-00469138</p>
+            <p class="timeline__body" data-l="en">
+              Vision models targeted at domestic AI accelerators — the constraint that
+              pushed my action-recognition work toward accuracy-per-GFLOP rather than
+              accuracy alone.
+            </p>
+            <p class="timeline__body" data-l="ko">
+              국산 AI 가속기를 대상으로 하는 비전 모델 개발. 정확도만이 아니라
+              GFLOP당 정확도를 기준으로 행동 인식 연구를 설계하게 된 배경입니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="entry__meta"><span class="entry__year">2022–</span><span>NRF</span></div>
+          <div>
+            <h3 class="timeline__title">
+              <span data-l="en">AI-MAC Protocol for Intelligent Flying Base Stations Based on Distributed Machine Learning</span>
+              <span data-l="ko">분산 기계학습 기반 지능형 비행 기지국을 위한 AI-MAC 프로토콜</span>
+            </h3>
+            <p class="timeline__org">2022R1A2C2005705</p>
+            <p class="timeline__body" data-l="en">
+              Distributed learning for MAC-layer decisions in UAV-assisted networks;
+              the origin of my multi-UAV energy and Age-of-Information work.
+            </p>
+            <p class="timeline__body" data-l="ko">
+              UAV 기반 네트워크의 MAC 계층 의사결정을 위한 분산 학습 연구.
+              다중 UAV 에너지·AoI 최적화 연구의 출발점입니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="entry__meta"><span class="entry__year">2025–2026</span><span data-l="en">Industry</span><span data-l="ko">산학</span></div>
+          <div>
+            <h3 class="timeline__title">
+              <span data-l="en">Video Clip Understanding for Media Recommendation</span>
+              <span data-l="ko">미디어 추천을 위한 비디오 클립 이해</span>
+            </h3>
+            <p class="timeline__org">Innopia Technologies<span data-l="ko"> (이노피아테크)</span></p>
+            <p class="timeline__body" data-l="en">
+              Person-centred clip analysis over a broadcast video corpus: CLIP-based
+              embeddings, scene and appearance analysis, and retrieval built on top of them.
+            </p>
+            <p class="timeline__body" data-l="ko">
+              방송 영상 코퍼스를 대상으로 한 인물 중심 클립 분석. CLIP 기반 임베딩,
+              장면·출연 분석 및 이를 활용한 검색 파이프라인을 구축했습니다.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section reveal" id="education" aria-labelledby="h-edu">
+      <div class="section__head">
+        <h2 class="section__title" id="h-edu">
+          <span data-l="en">Education</span><span data-l="ko">학력</span>
+        </h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="entry__meta"><span class="entry__year">2020–</span><span data-l="en">Present</span><span data-l="ko">현재</span></div>
+          <div>
+            <h3 class="timeline__title">
+              <span data-l="en">Integrated Master's–PhD Program</span>
+              <span data-l="ko">석·박사 통합과정</span>
+            </h3>
+            <p class="timeline__org">
+              <span data-l="en">Myongji University · Department of Information and Communication Engineering</span>
+              <span data-l="ko">명지대학교 정보통신공학과</span>
+            </p>
+            <p class="timeline__body" data-l="en">
+              Doctoral thesis: <i>Attention-Based Robust Learning Method for Explainable
+              Video Understanding under Communication Constraints</i> — advised by
+              Prof. Hyunhee Park.
+            </p>
+            <p class="timeline__body" data-l="ko">
+              학위논문: <i>통신 환경을 고려한 설명 가능한 비디오 이해를 위한 Attention 기반
+              강건 학습 기법에 관한 연구</i> — 지도교수 박현희.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="entry__meta"><span class="entry__year">2014–2020</span><span>B.S.</span></div>
+          <div>
+            <h3 class="timeline__title">
+              <span data-l="en">B.S., Computer Software Engineering</span>
+              <span data-l="ko">컴퓨터소프트웨어학과 학사</span>
+            </h3>
+            <p class="timeline__org">
+              <span data-l="en">Korea Bible University</span>
+              <span data-l="ko">한국성서대학교</span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <p class="footer__note">
+        <span data-l="en">Last updated August 2026 · Yongin, Republic of Korea</span>
+        <span data-l="ko">2026년 8월 기준 · 대한민국 용인</span>
+      </p>
+      <nav class="footer__links" aria-label="Contact and profiles">
+        <a href="mailto:yaki5896@mju.ac.kr">Email</a>
+        <a href="https://github.com/yaki-toki">GitHub</a>
+        <a href="https://orcid.org/0000-0002-6711-6812">ORCID</a>
+        <a href="https://danlab.mju.ac.kr">DAN Lab</a>
+        <a href="https://kimunderground.tistory.com"><span data-l="en">Blog</span><span data-l="ko">블로그</span></a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

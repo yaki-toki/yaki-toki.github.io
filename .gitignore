@@ -1,0 +1,5 @@
+# Agent/tooling state — never part of the published site
+.omc/
+
+# OS cruft
+.DS_Store
