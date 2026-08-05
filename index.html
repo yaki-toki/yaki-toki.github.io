@@ -16,7 +16,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Noto+Serif+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/css/style.css">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='88'%20font-family='Georgia,serif'%3EK%3C/text%3E%3C/svg%3E">
@@ -158,6 +159,118 @@
           </div>
         </div>
       </div>
+
+      <!-- Multi-link operation: three bands, one active radio (EMLSR) -->
+      <figure class="mlo">
+        <div class="mlo__head">
+          <figcaption class="mlo__title">
+            <span data-l="en">EMLSR multi-link operation — the object of study</span>
+            <span data-l="ko">EMLSR 멀티링크 동작 — 연구 대상</span>
+          </figcaption>
+          <p class="mlo__note">
+            <span data-l="en">one radio, three bands, contention on every link</span>
+            <span data-l="ko">라디오 1개 · 대역 3개 · 링크마다 경쟁</span>
+          </p>
+        </div>
+
+        <svg viewBox="0 0 900 118" role="img"
+             aria-label="Three frequency bands — 6, 5 and 2.4 gigahertz — each carrying transmissions over time, with a single active radio moving between them.">
+          <text class="band-label" x="0" y="27">6 GHz</text>
+          <text class="band-label" x="0" y="55">5 GHz</text>
+          <text class="band-label" x="0" y="83">2.4 GHz</text>
+
+          <rect class="lane" x="68" y="12" width="824" height="24" rx="3"/>
+          <rect class="lane" x="68" y="40" width="824" height="24" rx="3"/>
+          <rect class="lane" x="68" y="68" width="824" height="24" rx="3"/>
+
+          <g>
+            <rect class="pkt pkt--active" x="88"  y="18" width="52" height="12"/>
+            <rect class="pkt"             x="150" y="18" width="26" height="12"/>
+            <rect class="pkt pkt--active" x="190" y="18" width="64" height="12"/>
+            <rect class="pkt pkt--wait"   x="266" y="18" width="24" height="12"/>
+            <rect class="pkt"             x="302" y="18" width="44" height="12"/>
+            <rect class="pkt pkt--active" x="360" y="18" width="58" height="12"/>
+            <rect class="pkt"             x="432" y="18" width="28" height="12"/>
+            <rect class="pkt pkt--active" x="472" y="18" width="70" height="12"/>
+            <rect class="pkt"             x="556" y="18" width="30" height="12"/>
+            <rect class="pkt pkt--active" x="600" y="18" width="52" height="12"/>
+            <rect class="pkt pkt--wait"   x="666" y="18" width="22" height="12"/>
+            <rect class="pkt pkt--active" x="702" y="18" width="66" height="12"/>
+            <rect class="pkt"             x="782" y="18" width="34" height="12"/>
+            <rect class="pkt pkt--active" x="828" y="18" width="52" height="12"/>
+
+            <rect class="pkt"             x="80"  y="46" width="38" height="12"/>
+            <rect class="pkt pkt--active" x="130" y="46" width="60" height="12"/>
+            <rect class="pkt"             x="204" y="46" width="30" height="12"/>
+            <rect class="pkt pkt--active" x="246" y="46" width="48" height="12"/>
+            <rect class="pkt pkt--wait"   x="308" y="46" width="26" height="12"/>
+            <rect class="pkt"             x="348" y="46" width="42" height="12"/>
+            <rect class="pkt pkt--active" x="404" y="46" width="64" height="12"/>
+            <rect class="pkt"             x="482" y="46" width="26" height="12"/>
+            <rect class="pkt pkt--active" x="522" y="46" width="56" height="12"/>
+            <rect class="pkt"             x="592" y="46" width="34" height="12"/>
+            <rect class="pkt pkt--active" x="640" y="46" width="70" height="12"/>
+            <rect class="pkt pkt--wait"   x="724" y="46" width="24" height="12"/>
+            <rect class="pkt"             x="762" y="46" width="40" height="12"/>
+            <rect class="pkt pkt--active" x="816" y="46" width="64" height="12"/>
+
+            <rect class="pkt"             x="76"  y="74" width="46" height="12"/>
+            <rect class="pkt pkt--wait"   x="136" y="74" width="22" height="12"/>
+            <rect class="pkt"             x="172" y="74" width="56" height="12"/>
+            <rect class="pkt pkt--active" x="242" y="74" width="44" height="12"/>
+            <rect class="pkt"             x="300" y="74" width="38" height="12"/>
+            <rect class="pkt"             x="352" y="74" width="62" height="12"/>
+            <rect class="pkt pkt--active" x="428" y="74" width="50" height="12"/>
+            <rect class="pkt"             x="492" y="74" width="30" height="12"/>
+            <rect class="pkt pkt--wait"   x="536" y="74" width="24" height="12"/>
+            <rect class="pkt"             x="574" y="74" width="52" height="12"/>
+            <rect class="pkt pkt--active" x="640" y="74" width="46" height="12"/>
+            <rect class="pkt"             x="700" y="74" width="36" height="12"/>
+            <rect class="pkt"             x="750" y="74" width="58" height="12"/>
+            <rect class="pkt pkt--active" x="822" y="74" width="58" height="12"/>
+          </g>
+
+          <rect class="radio" x="64" y="8" width="832" height="32" rx="5"/>
+
+          <g class="tick">
+            <line x1="68" y1="102" x2="892" y2="102"/>
+            <line x1="68" y1="99" x2="68" y2="105"/>
+            <line x1="274" y1="99" x2="274" y2="105"/>
+            <line x1="480" y1="99" x2="480" y2="105"/>
+            <line x1="686" y1="99" x2="686" y2="105"/>
+            <line x1="892" y1="99" x2="892" y2="105"/>
+          </g>
+          <text class="band-label" x="68" y="116">TIME</text>
+        </svg>
+      </figure>
+
+      <!-- Headline counts -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__val">8</span>
+          <span class="stat__key">
+            <span data-l="en">Published papers</span><span data-l="ko">게재 논문</span>
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat__val">5</span>
+          <span class="stat__key">
+            <span data-l="en">Under review</span><span data-l="ko">투고 중</span>
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat__val">6</span>
+          <span class="stat__key">
+            <span data-l="en">Patents filed</span><span data-l="ko">특허 출원</span>
+          </span>
+        </div>
+        <div class="stat">
+          <span class="stat__val">3</span>
+          <span class="stat__key">
+            <span data-l="en">Funded projects</span><span data-l="ko">참여 과제</span>
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- ================= RESEARCH ================= -->
@@ -172,6 +285,21 @@
       <div class="pillars">
         <article class="pillar">
           <span class="pillar__num">01</span>
+          <svg class="pillar__fig" viewBox="0 0 160 62" aria-hidden="true" focusable="false">
+            <line class="s" x1="2" y1="14" x2="158" y2="14"/>
+            <line class="s" x1="2" y1="31" x2="158" y2="31"/>
+            <line class="s" x1="2" y1="48" x2="158" y2="48"/>
+            <rect class="fd" x="10" y="9"  width="26" height="10" rx="2"/>
+            <rect class="f"  x="46" y="9"  width="38" height="10" rx="2"/>
+            <rect class="fd" x="96" y="9"  width="20" height="10" rx="2"/>
+            <rect class="f"  x="126" y="9" width="28" height="10" rx="2"/>
+            <rect class="fd" x="6"  y="26" width="34" height="10" rx="2"/>
+            <rect class="fd" x="52" y="26" width="22" height="10" rx="2"/>
+            <rect class="f"  x="86" y="26" width="44" height="10" rx="2"/>
+            <rect class="fd" x="16" y="43" width="30" height="10" rx="2"/>
+            <rect class="f"  x="58" y="43" width="26" height="10" rx="2"/>
+            <rect class="fd" x="96" y="43" width="40" height="10" rx="2"/>
+          </svg>
           <h3 class="pillar__title">
             <span data-l="en">Reliability-oriented MAC for Wi-Fi 8</span>
             <span data-l="ko">Wi-Fi 8 신뢰성 중심 MAC</span>
@@ -195,6 +323,13 @@
 
         <article class="pillar">
           <span class="pillar__num">02</span>
+          <svg class="pillar__fig" viewBox="0 0 160 62" aria-hidden="true" focusable="false">
+            <path class="fd" d="M112 52 C124 52 130 30 138 22 C144 16 150 14 156 13 L156 52 Z"/>
+            <path class="s" d="M2 52 C22 52 34 12 62 11 C92 10 104 44 128 50 C140 52 148 52 158 52"/>
+            <line class="a" x1="112" y1="4" x2="112" y2="56"/>
+            <circle class="f" cx="112" cy="4" r="2.6"/>
+            <line class="s" x1="2" y1="52" x2="158" y2="52"/>
+          </svg>
           <h3 class="pillar__title">
             <span data-l="en">Constrained RL for network control</span>
             <span data-l="ko">제약 기반 강화학습 네트워크 제어</span>
@@ -217,6 +352,20 @@
 
         <article class="pillar">
           <span class="pillar__num">03</span>
+          <svg class="pillar__fig" viewBox="0 0 160 62" aria-hidden="true" focusable="false">
+            <rect class="s" x="2"   y="14" width="22" height="34" rx="2"/>
+            <rect class="s" x="29"  y="14" width="22" height="34" rx="2"/>
+            <rect class="s" x="56"  y="14" width="22" height="34" rx="2" stroke-dasharray="3 3"/>
+            <rect class="s" x="83"  y="14" width="22" height="34" rx="2"/>
+            <rect class="s" x="110" y="14" width="22" height="34" rx="2" stroke-dasharray="3 3"/>
+            <rect class="s" x="137" y="14" width="21" height="34" rx="2"/>
+            <rect class="f"  x="6"   y="36" width="14" height="8" rx="1"/>
+            <rect class="f"  x="33"  y="30" width="14" height="14" rx="1"/>
+            <rect class="fd" x="60"  y="38" width="14" height="6" rx="1"/>
+            <rect class="f"  x="87"  y="24" width="14" height="20" rx="1"/>
+            <rect class="fd" x="114" y="39" width="14" height="5" rx="1"/>
+            <rect class="f"  x="141" y="32" width="13" height="12" rx="1"/>
+          </svg>
           <h3 class="pillar__title">
             <span data-l="en">Video understanding under degradation</span>
             <span data-l="ko">열화 환경에서의 비디오 이해</span>
@@ -248,6 +397,76 @@
         <span class="section__rule"></span>
         <span class="section__count">08 + 05</span>
       </div>
+
+      <!-- Output by year. One mark = one paper; hue and shape both encode venue. -->
+      <figure class="chart">
+        <figcaption>
+          <span class="chart__title">
+            <span data-l="en">Output by year</span><span data-l="ko">연도별 실적</span>
+          </span>
+          <span class="chart__sub">
+            <span data-l="en">one mark = one paper · 2021–2026</span>
+            <span data-l="ko">마크 1개 = 논문 1편 · 2021–2026</span>
+          </span>
+        </figcaption>
+
+        <svg viewBox="0 0 900 258" role="img"
+             aria-label="Publications per year from 2021 to 2026: two in 2021, two in 2022, one in 2023, two in 2024, two in 2025, and eight in 2026 of which five are under review.">
+          <line class="axis" x1="40" y1="220" x2="866" y2="220"/>
+
+          <!-- 2021 -->
+          <rect class="mark m2" x="100" y="192" width="16" height="16" rx="2"><title>ICUFN 2021 — OA-GAN</title></rect>
+          <rect class="mark m2" x="100" y="168" width="16" height="16" rx="2"><title>IMIS 2021 — Reduced CNN Model for Face Image Detection</title></rect>
+          <!-- 2022 -->
+          <circle class="mark m1" cx="246" cy="200" r="8"><title>ICT Express 2022 — Limited Discriminator GAN</title></circle>
+          <rect class="mark m2" x="238" y="168" width="16" height="16" rx="2"><title>IMIS 2022 — Hierarchical output model of CNN learning</title></rect>
+          <!-- 2023 -->
+          <rect class="mark m2" x="376" y="192" width="16" height="16" rx="2"><title>ICTC 2023 — RL-Based Backoff Indicator for 5G NR</title></rect>
+          <!-- 2024 -->
+          <circle class="mark m1" cx="522" cy="200" r="8"><title>IEEE Access 2024 — Dynamic Transmission and Delay Optimization</title></circle>
+          <circle class="mark m1" cx="522" cy="176" r="8"><title>IET Electronics Letters 2024 — Multi-UAV Energy and AoI</title></circle>
+          <!-- 2025 -->
+          <rect class="mark m2" x="652" y="192" width="16" height="16" rx="2"><title>IMIS 2025 — STCA-Net</title></rect>
+          <path class="mark m3" d="M660 167 L668 182 L652 182 Z"><title>KICS Summer 2025 — PRIME Wi-Fi</title></path>
+          <!-- 2026 -->
+          <path class="mark m3" d="M798 191 L806 206 L790 206 Z"><title>KICS Winter 2026 — Adaptive Federated DRL for Multi-AP Wi-Fi</title></path>
+          <path class="mark m3" d="M798 167 L806 182 L790 182 Z"><title>JCCI 2026 — SEAR</title></path>
+          <path class="mark m3" d="M798 143 L806 158 L790 158 Z"><title>KICS Summer 2026 — IW-FedMAPPO</title></path>
+          <circle class="mark m4" cx="798" cy="128" r="7.5"><title>Under review — IEEE TMC, EMLSR contention control</title></circle>
+          <circle class="mark m4" cx="798" cy="104" r="7.5"><title>Under review — LyMAPPO</title></circle>
+          <circle class="mark m4" cx="798" cy="80"  r="7.5"><title>Under review — STCA-ViT</title></circle>
+          <circle class="mark m4" cx="798" cy="56"  r="7.5"><title>Under review — PhysRoute-Fi</title></circle>
+          <circle class="mark m4" cx="798" cy="32"  r="7.5"><title>Under review — SEAR</title></circle>
+
+          <g class="yr" text-anchor="middle">
+            <text x="108" y="242">2021</text>
+            <text x="246" y="242">2022</text>
+            <text x="384" y="242">2023</text>
+            <text x="522" y="242">2024</text>
+            <text x="660" y="242">2025</text>
+            <text x="798" y="242">2026</text>
+          </g>
+        </svg>
+
+        <ul class="chart__legend">
+          <li>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle class="m1" cx="8" cy="8" r="6"/></svg>
+            <span data-l="en">Journal</span><span data-l="ko">학술지</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><rect class="m2" x="2" y="2" width="12" height="12" rx="2"/></svg>
+            <span data-l="en">International conf.</span><span data-l="ko">국제학회</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path class="m3" d="M8 2 L14 13 L2 13 Z"/></svg>
+            <span data-l="en">Domestic conf.</span><span data-l="ko">국내학회</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle class="m4" cx="8" cy="8" r="5.5"/></svg>
+            <span data-l="en">Under review</span><span data-l="ko">투고 중</span>
+          </li>
+        </ul>
+      </figure>
 
       <!-- ---- Journals ---- -->
       <div class="pubgroup">
@@ -367,11 +586,11 @@
                 discrete-event simulator and ns-3 closes within a 2–4% mean relative gap.
               </p>
             </details>
-            <div class="entry__links">
-              <a class="chip" href="/assets/papers/emlsr-contention-control-80211bn.pdf">PDF</a>
-              <a class="chip" href="/assets/papers/emlsr-contention-control-80211bn-supplement.pdf">
-                <span data-l="en">Supplement</span><span data-l="ko">부록</span>
-              </a>
+            <div class="results">
+              <span class="result"><b>+10.6%</b> throughput</span>
+              <span class="result"><b>−28%</b> p95 HOL delay</span>
+              <span class="result">fairness 0.910 → <b>0.954</b></span>
+              <span class="result">model ↔ ns-3 gap <b>2–4%</b></span>
             </div>
           </div>
         </article>
@@ -400,8 +619,11 @@
                 run-time dual-stability condition under the Slater assumption.
               </p>
             </details>
-            <div class="entry__links">
-              <a class="chip" href="/assets/papers/lymappo.pdf">PDF</a>
+            <div class="results">
+              <span class="result">network p99 <b>0.0017</b></span>
+              <span class="result"><b>6.1–25×</b> lower than static</span>
+              <span class="result"><b>15.1/16</b> feasible BSS</span>
+              <span class="result">16 APs · 3 bands · ns-3</span>
             </div>
           </div>
         </article>
@@ -429,10 +651,13 @@
                 Something-Something-v2, using 110M parameters and 305 GFLOPs.
               </p>
             </details>
-            <div class="entry__links">
-              <a class="chip" href="/assets/papers/stca-vit.pdf">PDF</a>
-              <a class="chip" href="https://github.com/yaki-toki/STCA-ViT">
-                <span data-l="en">Code</span><span data-l="ko">코드</span>
+            <div class="results">
+              <span class="result">HMDB-51 <b>90.46%</b></span>
+              <span class="result">UCF-101 <b>98.29%</b></span>
+              <span class="result">K-400 <b>79.44%</b></span>
+              <span class="result"><b>110M</b> params · 305 GFLOPs</span>
+              <a class="result" href="https://github.com/yaki-toki/STCA-ViT">
+                <span data-l="en">Code ↗</span><span data-l="ko">코드 ↗</span>
               </a>
             </div>
           </div>
@@ -462,8 +687,10 @@
                 PA-MPJPE.
               </p>
             </details>
-            <div class="entry__links">
-              <a class="chip" href="/assets/papers/physroute-fi.pdf">PDF</a>
+            <div class="results">
+              <span class="result">MPJPE <b>102.7 mm</b></span>
+              <span class="result">PA-MPJPE <b>65.5 mm</b></span>
+              <span class="result"><b>93%</b> motion recovered</span>
             </div>
           </div>
         </article>
@@ -476,7 +703,7 @@
           <div>
             <h4 class="entry__title">SEAR: Segment-level Early Anomaly Recognition via Cross-Task Anticipation Gating and Temporal Contrastive MIL</h4>
             <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
-            <p class="entry__venue"><span data-l="en">Under double-blind review — manuscript withheld until decision</span><span data-l="ko">더블블라인드 심사 중 — 결과 발표까지 원고 비공개</span></p>
+            <p class="entry__venue"><span data-l="en">Under review</span><span data-l="ko">심사 중</span></p>
             <details class="abstract">
               <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
               <p class="abstract__body">
@@ -493,6 +720,12 @@
                 It detects 89% of anomalous videos before annotated event onset.
               </p>
             </details>
+            <div class="results">
+              <span class="result">UCF-Crime AUC <b>87.78%</b></span>
+              <span class="result">AP <b>33.04%</b></span>
+              <span class="result"><b>0.59M</b> trainable params</span>
+              <span class="result"><b>89%</b> detected pre-onset</span>
+            </div>
           </div>
         </article>
       </div>
