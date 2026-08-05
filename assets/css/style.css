@@ -335,7 +335,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   margin-top: clamp(2.5rem, 1.5rem + 4vw, 4rem);
 }
 
-@media (min-width: 44rem) { .stats { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 44rem) { .stats { grid-template-columns: repeat(3, 1fr); } }
+
+.stat__note { display: block; margin-top: 0.3rem; font-family: var(--font-mono);
+              font-size: var(--text-micro); color: var(--ink-faint); opacity: 0.75; }
 
 .stat {
   background: var(--paper);
@@ -594,6 +597,89 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
 .footer__note { font-size: var(--text-micro); color: var(--ink-faint); letter-spacing: 0.06em; }
 .footer__links { display: flex; flex-wrap: wrap; gap: 1.15rem; }
 .footer__links a { font-size: var(--text-small); border-bottom-color: var(--rule); }
+
+/* ---- Trajectory / span tracks ----------------------------------------
+   Themes and projects are named in their own row, so the label carries
+   identity and one accent hue is enough — no second categorical palette. */
+
+.traj { margin-top: clamp(2rem, 1.5rem + 2.5vw, 3.25rem); }
+
+.traj__row {
+  display: grid; grid-template-columns: 1fr; gap: 0.5rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid var(--rule);
+  align-items: center;
+}
+.traj__row:last-child { border-bottom: 1px solid var(--rule); }
+
+.traj__scale { display: grid; grid-template-columns: 1fr; gap: 0.5rem; padding-bottom: 0.4rem; }
+
+@media (min-width: 46rem) {
+  .traj__row, .traj__scale { grid-template-columns: 15.5rem minmax(0, 1fr); gap: 1.5rem; }
+}
+
+.traj__name { font-size: var(--text-small); font-weight: 500; line-height: 1.3; text-wrap: balance; }
+.traj__name small { display: block; font-weight: 400; color: var(--ink-faint); font-size: var(--text-micro); margin-top: 0.15rem; }
+
+.traj__years, .traj__rail { display: grid; grid-template-columns: repeat(6, 1fr); align-items: center; }
+.traj__years--5, .traj__rail--5 { grid-template-columns: repeat(5, 1fr); }
+.traj__years--7, .traj__rail--7 { grid-template-columns: repeat(7, 1fr); }
+
+.traj__years span {
+  font-family: var(--font-mono); font-size: var(--text-micro);
+  color: var(--ink-faint); letter-spacing: 0.08em; text-align: center;
+}
+
+.traj__rail { position: relative; min-height: 26px; }
+.traj__rail::before {
+  content: ""; position: absolute; inset-inline: 0; top: 50%;
+  height: 1px; background: var(--rule);
+}
+
+/* Filled span with an output count — research themes */
+.traj__bar {
+  position: relative; height: 24px; border-radius: 3px;
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 42%, transparent);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-inline: 0.55rem;
+  font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+  font-size: var(--text-micro); color: var(--accent); letter-spacing: 0.04em;
+}
+
+/* Hairline span with end caps — projects (a different mark, on purpose) */
+.traj__span {
+  position: relative; height: 2px; background: var(--accent);
+  align-self: center; margin-block: 11px;
+}
+.traj__span::before {
+  content: ""; position: absolute; left: -1px; top: 50%;
+  width: 9px; height: 9px; margin-top: -4.5px; border-radius: 50%;
+  background: var(--accent);
+}
+.traj__span::after {
+  content: ""; position: absolute; right: -1px; top: 50%;
+  width: 9px; height: 9px; margin-top: -4.5px; border-radius: 50%;
+  background: var(--accent);
+}
+/* Open-ended: arrowhead instead of a terminal dot */
+.traj__span--open::after {
+  width: 0; height: 0; margin-top: -4px; right: -6px; border-radius: 0;
+  background: none;
+  border-left: 7px solid var(--accent);
+  border-block: 4px solid transparent;
+}
+
+/* ---- Patent timeline (dots on a year axis) ---------------------------- */
+
+.ptl { margin-bottom: clamp(1.75rem, 1.2rem + 2vw, 2.75rem); }
+.ptl svg { display: block; width: 100%; height: auto; overflow: visible; }
+.ptl .axis { stroke: var(--rule-strong); stroke-width: 1; }
+.ptl .dot { fill: var(--accent); transition: transform var(--duration) var(--ease);
+            transform-box: fill-box; transform-origin: center; }
+.ptl .dot:hover { transform: scale(1.3); }
+.ptl .yr { fill: var(--ink-soft); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; }
+.ptl .ct { fill: var(--ink-faint); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; }
 
 /* ---- Motion ----------------------------------------------------------- */
 
