@@ -16,9 +16,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- Marks that JS is live, so the scroll-reveal styles apply. Without it every
+     section renders visible — the CV must not depend on a script. -->
+<script>document.documentElement.classList.add('js');</script>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='88'%20font-family='Georgia,serif'%3EK%3C/text%3E%3C/svg%3E">
 
@@ -51,7 +55,7 @@
 
 <div class="shell">
 
-  <header class="masthead">
+  <header class="masthead bleed">
     <a class="masthead__name" href="#main">Jiha Kim<span data-l="ko"> · 김지하</span></a>
     <div class="masthead__tools">
       <button class="pill" id="lang-toggle" type="button" aria-pressed="false">
@@ -66,8 +70,8 @@
   <main id="main">
 
     <!-- ================= HERO ================= -->
-    <section class="hero">
-      <p class="hero__eyebrow">
+    <section class="hero bleed">
+      <p class="eyebrow">
         <span data-l="en">Myongji University · DAN Lab · Integrated MS–PhD</span>
         <span data-l="ko">명지대학교 · DAN 연구실 · 석·박사 통합과정</span>
       </p>
@@ -291,10 +295,11 @@
     <!-- ================= RESEARCH ================= -->
     <section class="section reveal" id="research" aria-labelledby="h-research">
       <div class="section__head">
+        <span class="section__idx">01</span>
         <h2 class="section__title" id="h-research">
           <span data-l="en">Research</span><span data-l="ko">연구 분야</span>
         </h2>
-        <span class="section__rule"></span>
+        <span class="section__count"></span>
       </div>
 
       <div class="pillars">
@@ -487,10 +492,10 @@
     <!-- ================= PUBLICATIONS ================= -->
     <section class="section reveal" id="publications" aria-labelledby="h-pubs">
       <div class="section__head">
+        <span class="section__idx">02</span>
         <h2 class="section__title" id="h-pubs">
           <span data-l="en">Publications</span><span data-l="ko">논문</span>
         </h2>
-        <span class="section__rule"></span>
         <span class="section__count">09 + 05</span>
       </div>
 
@@ -881,10 +886,10 @@
     <!-- ================= PATENTS ================= -->
     <section class="section reveal" id="patents" aria-labelledby="h-patents">
       <div class="section__head">
+        <span class="section__idx">03</span>
         <h2 class="section__title" id="h-patents">
           <span data-l="en">Patents</span><span data-l="ko">특허</span>
         </h2>
-        <span class="section__rule"></span>
         <span class="section__count">06</span>
       </div>
 
@@ -973,10 +978,11 @@
     <!-- ================= PROJECTS ================= -->
     <section class="section reveal" id="projects" aria-labelledby="h-projects">
       <div class="section__head">
+        <span class="section__idx">04</span>
         <h2 class="section__title" id="h-projects">
           <span data-l="en">Projects</span><span data-l="ko">연구 과제</span>
         </h2>
-        <span class="section__rule"></span>
+        <span class="section__count"></span>
       </div>
 
       <!-- Concurrency: the three funded efforts overlap -->
@@ -1074,10 +1080,11 @@
     <!-- ================= EDUCATION ================= -->
     <section class="section reveal" id="education" aria-labelledby="h-edu">
       <div class="section__head">
+        <span class="section__idx">05</span>
         <h2 class="section__title" id="h-edu">
           <span data-l="en">Education</span><span data-l="ko">학력</span>
         </h2>
-        <span class="section__rule"></span>
+        <span class="section__count"></span>
       </div>
 
       <div class="timeline">
@@ -1122,7 +1129,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer bleed">
     <div class="footer__grid">
       <p class="footer__note">
         <span data-l="en">Last updated August 2026 · Yongin, Republic of Korea</span>

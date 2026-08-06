@@ -9,6 +9,14 @@
   var STORE_LANG = 'jk.lang';
   var STORE_THEME = 'jk.theme';
 
+  /* ---- Scrollbar width, for the full-bleed bands ---------------------- */
+
+  function measureScrollbar() {
+    root.style.setProperty('--sbw', (window.innerWidth - root.clientWidth) + 'px');
+  }
+  measureScrollbar();
+  window.addEventListener('resize', measureScrollbar);
+
   /* Storage can throw in private mode — never let that break the page. */
   function read(key) {
     try { return window.localStorage.getItem(key); } catch (e) { return null; }
@@ -79,7 +87,7 @@
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
 
   Array.prototype.forEach.call(targets, function (el) { observer.observe(el); });
 }());
