@@ -259,8 +259,10 @@
         <figure class="tfig" data-topic="02">
           <svg viewBox="0 0 900 150" role="img"
                aria-label="A latency distribution with p99 and p99.9 thresholds marked and the violating tail shaded.">
-            <path class="t-fill" d="M596 118 C640 118 664 84 700 62 C740 38 800 26 872 22 L872 118 Z"/>
-            <path class="t-curve" d="M60 118 C160 118 210 30 300 22 C400 14 470 82 596 104 C700 120 800 122 872 122"/>
+            <path class="t-fill t-anneal" d="M596 118 C640 118 664 84 700 62 C740 38 800 26 872 22 L872 118 Z"/>
+            <path class="t-fill t-anneal t-anneal--tight" d="M596 118 C632 118 662 112 700 110 C760 107 820 106 872 106 L872 118 Z"/>
+            <path class="t-curve t-anneal" d="M60 118 C160 118 210 30 300 22 C400 14 470 82 596 104 C700 120 800 122 872 122"/>
+            <path class="t-curve t-anneal t-anneal--tight" d="M60 118 C144 118 196 24 262 16 C336 8 392 76 468 102 C540 120 700 122 872 122"/>
             <line class="t-axis" x1="60" y1="118" x2="872" y2="118"/>
             <line class="t-th" x1="596" y1="12" x2="596" y2="126"/>
             <line class="t-th t-th--2" x1="700" y1="12" x2="700" y2="126"/>
@@ -278,8 +280,8 @@
         <figure class="tfig" data-topic="03">
           <svg viewBox="0 0 900 150" role="img"
                aria-label="Twelve video frames, three of them degraded, with an anomaly score that rises before the annotated event onset.">
-            <path class="t-fill" d="M556 66 L872 66 L872 20 L556 20 Z" opacity="0.08"/>
-            <polyline class="t-curve" points="60,62 128,60 196,58 264,54 332,50 400,44 468,32 536,20 604,16 672,22 740,34 808,46 872,54"/>
+            <path class="t-fill" d="M604 66 L872 66 L872 20 L604 20 Z" opacity="0.07"/>
+            <polyline class="t-curve t-score" points="60,62 128,60 196,58 264,54 332,50 400,44 468,32 536,20 604,16 672,22 740,34 808,46 872,54"/>
             <line class="t-th" x1="604" y1="10" x2="604" y2="126"/>
             <circle class="t-dot" cx="536" cy="20" r="5"/>
             <text class="t-lab t-lab--a" x="380" y="16">EARLY WARNING</text>
@@ -309,6 +311,7 @@
             <rect class="t-pkt" x="734" y="104" width="44" height="8"/>
             <rect class="t-frame" x="794" y="74" width="60" height="46" rx="2"/>
             <rect class="t-pkt" x="802" y="104" width="44" height="8"/>
+            <line class="t-playhead" x1="46" y1="8" x2="46" y2="128"/>
             <text class="t-lab" x="46" y="140">FRAMES · DASHED = DEGRADED BY THE LINK</text>
           </svg>
           <figcaption class="tfig__cap">
@@ -319,10 +322,11 @@
         <figure class="tfig" data-topic="04">
           <svg viewBox="0 0 900 150" role="img"
                aria-label="Three WiFi channel-state subcarrier traces mapped through to a three-dimensional human pose skeleton.">
-            <polyline class="t-curve t-curve--thin" points="48,42 59,49 70,44 81,34 92,26 103,22 114,22 125,29 136,37 147,42 158,49 169,42 180,34 191,28 202,22 213,22 224,30 235,39 246,47 257,43 268,40 279,34 290,24 301,23 312,25 323,30 334,37 345,43 356,46"/>
-            <polyline class="t-curve t-curve--thin" points="48,77 59,71 70,64 81,60 92,55 103,59 114,65 125,71 136,76 147,75 158,70 169,64 180,59 191,57 202,59 213,65 224,73 235,75 246,74 257,69 268,64 279,60 290,57 301,60 312,66 323,73 334,75 345,75 356,69"/>
-            <polyline class="t-curve t-curve--thin" points="48,100 59,90 70,86 81,84 92,91 103,100 114,106 125,115 136,107 147,99 158,88 169,85 180,83 191,92 202,101 213,107 224,113 235,110 246,100 257,89 268,83 279,88 290,91 301,102 312,108 323,108 334,110 345,99 356,89"/>
+            <polyline class="t-curve t-curve--thin t-wave t-wave--1" points="48,42 59,49 70,44 81,34 92,26 103,22 114,22 125,29 136,37 147,42 158,49 169,42 180,34 191,28 202,22 213,22 224,30 235,39 246,47 257,43 268,40 279,34 290,24 301,23 312,25 323,30 334,37 345,43 356,46"/>
+            <polyline class="t-curve t-curve--thin t-wave t-wave--2" points="48,77 59,71 70,64 81,60 92,55 103,59 114,65 125,71 136,76 147,75 158,70 169,64 180,59 191,57 202,59 213,65 224,73 235,75 246,74 257,69 268,64 279,60 290,57 301,60 312,66 323,73 334,75 345,75 356,69"/>
+            <polyline class="t-curve t-curve--thin t-wave t-wave--3" points="48,100 59,90 70,86 81,84 92,91 103,100 114,106 125,115 136,107 147,99 158,88 169,85 180,83 191,92 202,101 213,107 224,113 235,110 246,100 257,89 268,83 279,88 290,91 301,102 312,108 323,108 334,110 345,99 356,89"/>
             <text class="t-lab" x="48" y="140">CSI · PER-ANTENNA PHASE + AMPLITUDE</text>
+            <rect class="t-scan" x="48" y="14" width="26" height="104"/>
             <line class="t-arrow" x1="400" y1="66" x2="470" y2="66"/>
             <path class="t-arrowhead" d="M470 59 L486 66 L470 73 Z"/>
             <text class="t-lab t-lab--a" x="398" y="52">PHYSICAL ROUTING</text>

@@ -353,8 +353,43 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .tfig .t-joint { fill: var(--sig-2); }
 .tfig .t-joint--s { opacity: 0.75; }
 
+/* 02 — the annealing pair: the loose state fades out as the tight one fades
+   in, so the tail is seen being pulled back inside the deadline. */
+.tfig .t-anneal--tight { opacity: 0; }
+
+/* 03 — playhead and the score it draws */
+.tfig .t-playhead { stroke: var(--sig-2); stroke-width: 1.4; opacity: 0; }
+.tfig .t-score { stroke-dasharray: 940; stroke-dashoffset: 0; }
+
+/* 04 — a scan band over the CSI traces */
+.tfig .t-scan { fill: var(--sig-2); opacity: 0; }
+
 @media (prefers-reduced-motion: no-preference) {
   .tfig[data-topic="01"] .t-radio { animation: radioSlide 7.2s cubic-bezier(0.6, 0, 0.4, 1) infinite; }
+  /* 02 — tail annealing */
+  .tfig[data-topic="02"] .t-anneal { animation: annealOut 7s var(--ease) infinite; }
+  .tfig[data-topic="02"] .t-anneal--tight { animation: annealIn 7s var(--ease) infinite; }
+
+  /* 03 — playhead sweeps, score draws in behind it, the early-warning
+     marker lights up as the head reaches it */
+  .tfig[data-topic="03"] .t-playhead { animation: sweep 7s linear infinite; }
+  .tfig[data-topic="03"] .t-score { animation: draw 7s linear infinite; }
+  .tfig[data-topic="03"] .t-dot { animation: markerHit 7s linear infinite; }
+  .tfig[data-topic="03"] .t-frame--bad { animation: dropout 2.4s steps(1, end) infinite; }
+  .tfig[data-topic="03"] .t-frame--bad:nth-of-type(2n) { animation-delay: 0.8s; }
+
+  /* 04 — traces drift at their own rates, a scan band crosses them, and the
+     pose keeps being re-estimated */
+  .tfig[data-topic="04"] .t-wave--1 { animation: drift 5.2s ease-in-out infinite; }
+  .tfig[data-topic="04"] .t-wave--2 { animation: drift 6.8s ease-in-out infinite reverse; }
+  .tfig[data-topic="04"] .t-wave--3 { animation: drift 4.4s ease-in-out infinite; }
+  .tfig[data-topic="04"] .t-scan { animation: scan 5.6s linear infinite; }
+  .tfig[data-topic="04"] .t-pose { animation: sway 5.6s ease-in-out infinite;
+                                   transform-origin: 640px 82px; transform-box: view-box; }
+  .tfig[data-topic="04"] .t-joint--s { animation: jointPulse 5.6s ease-in-out infinite; }
+  .tfig[data-topic="04"] .t-joint--s:nth-of-type(2n) { animation-delay: 0.7s; }
+  .tfig[data-topic="04"] .t-joint--s:nth-of-type(3n) { animation-delay: 1.4s; }
+
   .tfig[data-topic="01"] .t-on { animation: pktPulse 3.6s var(--ease) infinite; }
   .tfig[data-topic="01"] .t-on:nth-of-type(3n) { animation-delay: 1.2s; }
   .tfig[data-topic="01"] .t-on:nth-of-type(3n+1) { animation-delay: 2.4s; }
@@ -364,6 +399,32 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   0%, 26% { transform: translateY(0); } 33%, 59% { transform: translateY(34px); }
   66%, 92% { transform: translateY(68px); } 100% { transform: translateY(0); }
 }
+
+@keyframes annealOut { 0%, 26% { opacity: 1; } 52%, 74% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes annealIn  { 0%, 26% { opacity: 0; } 52%, 74% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sweep {
+  0% { transform: translateX(0); opacity: 0; }
+  6% { opacity: 0.9; }
+  92% { opacity: 0.9; }
+  100% { transform: translateX(812px); opacity: 0; }
+}
+@keyframes draw { 0% { stroke-dashoffset: 940; } 88%, 100% { stroke-dashoffset: 0; } }
+@keyframes markerHit {
+  0%, 52% { opacity: 0.25; r: 5; }
+  60% { opacity: 1; r: 8; }
+  74%, 100% { opacity: 1; r: 5; }
+}
+@keyframes dropout { 0%, 70% { opacity: 0.55; } 78% { opacity: 0.12; } 86%, 100% { opacity: 0.55; } }
+@keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-11px); } }
+@keyframes scan {
+  0% { transform: translateX(0); opacity: 0; }
+  10% { opacity: 0.16; }
+  85% { opacity: 0.16; }
+  100% { transform: translateX(318px); opacity: 0; }
+}
+@keyframes sway { 0%, 100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
+@keyframes jointPulse { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+
 
 /* ---- Stat band — oversized numerals, still on ink --------------------- */
 
