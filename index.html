@@ -81,36 +81,56 @@
         <span class="hero__ko" data-l="ko">김지하</span>
       </h1>
 
-      <div class="hero__grid">
-        <div>
-          <p class="hero__lead" data-l="en">
-            A wireless link fails in ordinary ways — a collision, a deferred frame,
-            a few hundred milliseconds that never arrive. I work on both sides of
-            that failure: the <strong>MAC that decides who transmits</strong>, and the
-            <strong>models that must keep seeing</strong> when what arrives is damaged.
-          </p>
-          <p class="hero__lead" data-l="ko">
-            무선 링크는 평범한 방식으로 실패합니다 — 충돌 한 번, 미뤄진 프레임 하나,
-            끝내 오지 않는 수백 밀리초. 저는 그 실패의 양쪽을 연구합니다.
-            <strong>누가 전송할지 정하는 MAC</strong>과, 손상된 데이터가 도착해도
-            <strong>계속 보아야 하는 모델</strong>입니다.
-          </p>
+      <div class="tsel" role="group">
+        <span class="tsel__label">
+          <span data-l="en">Research topics</span><span data-l="ko">연구 주제</span>
+        </span>
+        <div class="tsel__row">
+        <button class="tsel__btn" type="button" data-topic="01">
+          <span class="tsel__n">01</span>
+          <span data-l="en">Wi-Fi 8 multi-link MAC</span><span data-l="ko">Wi-Fi 8 멀티링크 MAC</span>
+        </button>
+        <button class="tsel__btn" type="button" data-topic="02">
+          <span class="tsel__n">02</span>
+          <span data-l="en">Constrained reinforcement learning</span><span data-l="ko">제약 기반 강화학습</span>
+        </button>
+        <button class="tsel__btn" type="button" data-topic="03">
+          <span class="tsel__n">03</span>
+          <span data-l="en">Video understanding</span><span data-l="ko">비디오 이해</span>
+        </button>
+        <button class="tsel__btn" type="button" data-topic="04">
+          <span class="tsel__n">04</span>
+          <span data-l="en">Wireless sensing</span><span data-l="ko">무선 센싱</span>
+        </button>
+        </div>
+      </div>
 
-          <p data-l="en">
-            Right now that means IEEE 802.11bn (Wi-Fi 8) ultra-high reliability — a
-            Markov/fixed-point closure for EMLSR multi-link contention, and constrained
-            multi-agent reinforcement learning that holds p99 deadline targets across
-            dense overlapping BSSs. Alongside it, attention models for anomaly
-            anticipation, action recognition and device-free WiFi-CSI sensing. Reliability
-            is the thread: it is a tail problem in both halves, never an average one.
-          </p>
-          <p data-l="ko">
-            현재는 IEEE 802.11bn(Wi-Fi 8) 초고신뢰성(UHR)이 중심입니다. EMLSR 멀티링크
-            경쟁의 Markov/고정점 폐형, 그리고 밀집 OBSS 환경에서 p99 지연 목표를 지키는
-            제약 기반 다중 에이전트 강화학습을 다룹니다. 그 옆에서 이상 예측, 행동 인식,
-            비접촉 WiFi-CSI 센싱을 위한 어텐션 모델을 만듭니다. 두 갈래를 관통하는 것은
-            신뢰성입니다 — 어느 쪽에서도 평균이 아니라 꼬리 분위의 문제입니다.
-          </p>
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="tcopy" data-topic="01">
+            <p class="hero__lead" data-l="en">Multi-link contention stops being tractable the moment one radio has to serve three bands.</p>
+            <p class="hero__lead" data-l="ko">라디오 하나가 세 대역을 감당하는 순간, 멀티링크 경쟁은 풀리지 않는 문제가 됩니다.</p>
+            <p data-l="en">Under the EMLSR active-link constraint the queues couple across links, so single-link Bianchi analysis no longer transfers. I build Markov/fixed-point closures that stay analytically auditable — exact under saturated STR, an availability-based approximation under EMLSR with its validity range made explicit — and drive the contention window from observables the MAC already has: collision rate, blocked ratio, queue backlog, head-of-line excess.</p>
+            <p data-l="ko">EMLSR의 단일 활성 링크 제약 아래에서는 큐가 링크 간에 결합되어, 단일 링크 Bianchi 해석이 그대로 옮겨가지 않습니다. 분석 가능성을 유지하는 Markov/고정점 폐형을 세우고 — 포화 STR에서는 엄밀하게, EMLSR에서는 유효 범위를 명시한 가용성 기반 근사로 — MAC이 이미 관측하는 값(충돌률, 차단 비율, 큐 적체, HOL 초과)으로 경쟁 윈도우를 제어합니다.</p>
+          </div>
+          <div class="tcopy" data-topic="02">
+            <p class="hero__lead" data-l="en">Ultra-high reliability is a promise about the worst one percent, not about the average.</p>
+            <p class="hero__lead" data-l="ko">초고신뢰성은 평균이 아니라 최악의 1%에 대한 약속입니다.</p>
+            <p data-l="en">So the tail belongs in the objective. I carry p99 and p99.9 deadline-violation rates as Lyapunov drift-plus-penalty duals, price cross-BSS congestion once per beacon, and weight federated aggregation by measured interference rather than a plain mean — because averaging dilutes exactly the access points that need the most help.</p>
+            <p data-l="ko">그래서 꼬리 분위를 목적함수에 넣습니다. p99·p99.9 지연 위반율을 Lyapunov drift-plus-penalty의 쌍대변수로 다루고, 비컨마다 BSS 간 혼잡 가격을 한 번 산출하며, 연합 집성은 단순 평균이 아니라 측정된 간섭에 비례해 가중합니다 — 평균은 정작 가장 도움이 필요한 AP의 갱신을 희석시키기 때문입니다.</p>
+          </div>
+          <div class="tcopy" data-topic="03">
+            <p class="hero__lead" data-l="en">Deployed video arrives compressed, dropped and late. Models are usually trained as if it did not.</p>
+            <p class="hero__lead" data-l="ko">실제 운용 환경의 영상은 압축되고, 유실되고, 늦게 도착합니다. 모델은 대개 그렇지 않은 것처럼 학습됩니다.</p>
+            <p data-l="en">My doctoral work makes attention degradation-aware and explainable: simulate packet loss, jitter and compression on the input, then teach spatial and temporal attention to weight what actually survived. Applied to weakly-supervised anomaly detection — where anticipation and detection share one representation — and to action recognition under a real compute budget.</p>
+            <p data-l="ko">학위 연구는 어텐션을 열화 인지적이고 설명 가능하게 만드는 데 있습니다. 입력에 패킷 손실·지터·압축을 시뮬레이션한 뒤, 공간·시간 어텐션이 살아남은 정보에 가중치를 두도록 학습시킵니다. 예측과 탐지가 하나의 표현을 공유하는 약지도 이상 탐지, 그리고 실제 연산 예산 안에서의 행동 인식에 적용합니다.</p>
+          </div>
+          <div class="tcopy" data-topic="04">
+            <p class="hero__lead" data-l="en">The same channel state that tells a MAC how bad the link is can also tell you where a body is.</p>
+            <p class="hero__lead" data-l="ko">링크 상태를 MAC에 알려주는 바로 그 채널 정보가, 사람이 어디에 어떤 자세로 있는지도 알려줍니다.</p>
+            <p data-l="en">On MM-Fi, reported gains largely reflect better localization — Procrustes-aligned errors sit close to a mean-posture reference. So I route CSI by physics: sanitized per-antenna phase carries location, an amplitude-led composite carries posture, and a motion-consistency loss recovers the posture dynamics that pure localization misses.</p>
+            <p data-l="ko">MM-Fi에서 보고되는 성능 향상의 상당 부분은 사실 위치 추정 개선입니다 — Procrustes 정렬 오차가 평균 자세 기준선에 가깝습니다. 그래서 CSI를 물리적으로 분기시킵니다. 정제된 안테나별 위상은 위치를, 진폭 중심 합성 표현은 자세를 담당하며, 움직임 일관성 손실이 위치 추정만으로는 놓치는 자세 동역학을 회복합니다.</p>
+          </div>
         </div>
 
         <div class="identity">
@@ -167,100 +187,171 @@
         </div>
       </div>
 
-      <!-- Multi-link operation: three bands, one active radio (EMLSR) -->
-      <figure class="mlo">
-        <div class="mlo__head">
-          <span class="mlo__title">
-            <span data-l="en">Research topics</span>
-            <span data-l="ko">연구 주제</span>
-          </span>
-          <ul class="mlo__topics">
-            <li><span data-l="en">Wi-Fi 8 multi-link MAC</span><span data-l="ko">Wi-Fi 8 멀티링크 MAC</span></li>
-            <li><span data-l="en">Constrained reinforcement learning</span><span data-l="ko">제약 기반 강화학습</span></li>
-            <li><span data-l="en">Video understanding</span><span data-l="ko">비디오 이해</span></li>
-            <li><span data-l="en">Wireless sensing</span><span data-l="ko">무선 센싱</span></li>
-          </ul>
-        </div>
+      <div class="tfigs">
+        <figure class="tfig" data-topic="01">
+          <svg viewBox="0 0 900 150" role="img"
+               aria-label="Three frequency bands — 6, 5 and 2.4 gigahertz — carrying transmissions over time, with a single active radio moving between them.">
+            <text class="t-lab" x="0" y="29">6 GHz</text>
+            <text class="t-lab" x="0" y="63">5 GHz</text>
+            <text class="t-lab" x="0" y="97">2.4 GHz</text>
+            <rect class="t-lane" x="68" y="12" width="824" height="26" rx="3"/>
+            <rect class="t-lane" x="68" y="46" width="824" height="26" rx="3"/>
+            <rect class="t-lane" x="68" y="80" width="824" height="26" rx="3"/>
+            <g>
+            <rect class="t-pkt t-on" x="79" y="19" width="58" height="13"/>
+            <rect class="t-pkt t-on" x="157" y="19" width="40" height="13"/>
+            <rect class="t-pkt t-on" x="209" y="19" width="28" height="13"/>
+            <rect class="t-pkt t-on" x="257" y="19" width="52" height="13"/>
+            <rect class="t-pkt t-wait" x="321" y="19" width="22" height="13"/>
+            <rect class="t-pkt t-on" x="359" y="19" width="28" height="13"/>
+            <rect class="t-pkt t-wait" x="395" y="19" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="461" y="19" width="52" height="13"/>
+            <rect class="t-pkt t-on" x="525" y="19" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="579" y="19" width="22" height="13"/>
+            <rect class="t-pkt t-on" x="613" y="19" width="28" height="13"/>
+            <rect class="t-pkt t-wait" x="649" y="19" width="58" height="13"/>
+            <rect class="t-pkt t-on" x="723" y="19" width="40" height="13"/>
+            <rect class="t-pkt" x="775" y="19" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="837" y="19" width="40" height="13"/>
+            <rect class="t-pkt" x="86" y="53" width="28" height="13"/>
+            <rect class="t-pkt t-wait" x="122" y="53" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="180" y="53" width="52" height="13"/>
+            <rect class="t-pkt t-on" x="248" y="53" width="58" height="13"/>
+            <rect class="t-pkt t-on" x="318" y="53" width="34" height="13"/>
+            <rect class="t-pkt" x="368" y="53" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="434" y="53" width="52" height="13"/>
+            <rect class="t-pkt" x="494" y="53" width="46" height="13"/>
+            <rect class="t-pkt" x="556" y="53" width="40" height="13"/>
+            <rect class="t-pkt t-on" x="608" y="53" width="58" height="13"/>
+            <rect class="t-pkt" x="674" y="53" width="52" height="13"/>
+            <rect class="t-pkt" x="742" y="53" width="34" height="13"/>
+            <rect class="t-pkt t-on" x="796" y="53" width="34" height="13"/>
+            <rect class="t-pkt" x="842" y="53" width="34" height="13"/>
+            <rect class="t-pkt" x="81" y="87" width="28" height="13"/>
+            <rect class="t-pkt t-on" x="125" y="87" width="40" height="13"/>
+            <rect class="t-pkt t-on" x="177" y="87" width="52" height="13"/>
+            <rect class="t-pkt t-on" x="245" y="87" width="52" height="13"/>
+            <rect class="t-pkt" x="317" y="87" width="40" height="13"/>
+            <rect class="t-pkt t-wait" x="365" y="87" width="34" height="13"/>
+            <rect class="t-pkt t-wait" x="415" y="87" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="469" y="87" width="52" height="13"/>
+            <rect class="t-pkt" x="541" y="87" width="58" height="13"/>
+            <rect class="t-pkt" x="615" y="87" width="46" height="13"/>
+            <rect class="t-pkt t-on" x="669" y="87" width="58" height="13"/>
+            <rect class="t-pkt" x="743" y="87" width="34" height="13"/>
+            <rect class="t-pkt" x="785" y="87" width="52" height="13"/>
+            </g>
+            <rect class="t-radio" x="64" y="8" width="832" height="34" rx="4"/>
+            <g class="t-axis">
+              <line x1="68" y1="124" x2="892" y2="124"/>
+              <line x1="68" y1="121" x2="68" y2="127"/>
+              <line x1="480" y1="121" x2="480" y2="127"/>
+              <line x1="892" y1="121" x2="892" y2="127"/>
+            </g>
+            <text class="t-lab" x="68" y="142">TIME</text>
+            <text class="t-lab t-lab--a" x="792" y="142">ACTIVE LINK</text>
+          </svg>
+          <figcaption class="tfig__cap">
+            <span data-l="en">One radio, three bands. The active link moves; every other link still contends.</span>
+            <span data-l="ko">라디오는 하나, 대역은 셋. 활성 링크는 옮겨 다니고, 나머지 링크는 그동안에도 경쟁합니다.</span>
+          </figcaption>
+        </figure>
+        <figure class="tfig" data-topic="02">
+          <svg viewBox="0 0 900 150" role="img"
+               aria-label="A latency distribution with p99 and p99.9 thresholds marked and the violating tail shaded.">
+            <path class="t-fill" d="M596 118 C640 118 664 84 700 62 C740 38 800 26 872 22 L872 118 Z"/>
+            <path class="t-curve" d="M60 118 C160 118 210 30 300 22 C400 14 470 82 596 104 C700 120 800 122 872 122"/>
+            <line class="t-axis" x1="60" y1="118" x2="872" y2="118"/>
+            <line class="t-th" x1="596" y1="12" x2="596" y2="126"/>
+            <line class="t-th t-th--2" x1="700" y1="12" x2="700" y2="126"/>
+            <text class="t-lab t-lab--a" x="558" y="140">p99</text>
+            <text class="t-lab t-lab--a" x="668" y="140">p99.9</text>
+            <text class="t-lab" x="60" y="140">DEADLINE MARGIN</text>
+            <text class="t-lab t-lab--a" x="784" y="52">VIOLATION</text>
+            <line class="t-lead" x1="782" y1="58" x2="742" y2="76"/>
+          </svg>
+          <figcaption class="tfig__cap">
+            <span data-l="en">Both tail quantiles enter the objective as duals — averaging the reward would hide exactly this region.</span>
+            <span data-l="ko">두 꼬리 분위를 쌍대변수로 목적함수에 넣습니다 — 보상을 평균 내면 바로 이 구간이 가려집니다.</span>
+          </figcaption>
+        </figure>
+        <figure class="tfig" data-topic="03">
+          <svg viewBox="0 0 900 150" role="img"
+               aria-label="Twelve video frames, three of them degraded, with an anomaly score that rises before the annotated event onset.">
+            <path class="t-fill" d="M556 66 L872 66 L872 20 L556 20 Z" opacity="0.08"/>
+            <polyline class="t-curve" points="60,62 128,60 196,58 264,54 332,50 400,44 468,32 536,20 604,16 672,22 740,34 808,46 872,54"/>
+            <line class="t-th" x1="604" y1="10" x2="604" y2="126"/>
+            <circle class="t-dot" cx="536" cy="20" r="5"/>
+            <text class="t-lab t-lab--a" x="380" y="16">EARLY WARNING</text>
+            <line class="t-lead" x1="470" y1="12" x2="528" y2="18"/>
+            <text class="t-lab" x="614" y="16">EVENT ONSET</text>
+            <rect class="t-frame" x="46" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="54" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="114" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="122" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="182" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="190" y="104" width="44" height="8"/>
+            <rect class="t-frame t-frame--bad" x="250" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt t-wait" x="258" y="106" width="44" height="6"/>
+            <rect class="t-frame" x="318" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="326" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="386" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="394" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="454" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="462" y="104" width="44" height="8"/>
+            <rect class="t-frame t-frame--bad" x="522" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt t-wait" x="530" y="106" width="44" height="6"/>
+            <rect class="t-frame t-frame--bad" x="590" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt t-wait" x="598" y="106" width="44" height="6"/>
+            <rect class="t-frame" x="658" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="666" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="726" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="734" y="104" width="44" height="8"/>
+            <rect class="t-frame" x="794" y="74" width="60" height="46" rx="2"/>
+            <rect class="t-pkt" x="802" y="104" width="44" height="8"/>
+            <text class="t-lab" x="46" y="140">FRAMES · DASHED = DEGRADED BY THE LINK</text>
+          </svg>
+          <figcaption class="tfig__cap">
+            <span data-l="en">Attention is trained on degraded input, and the anticipation branch scores the event before its annotated onset.</span>
+            <span data-l="ko">어텐션을 열화된 입력에서 학습시키고, 예측 분기가 주석된 사건 시작 이전에 점수를 올립니다.</span>
+          </figcaption>
+        </figure>
+        <figure class="tfig" data-topic="04">
+          <svg viewBox="0 0 900 150" role="img"
+               aria-label="Three WiFi channel-state subcarrier traces mapped through to a three-dimensional human pose skeleton.">
+            <polyline class="t-curve t-curve--thin" points="48,42 59,49 70,44 81,34 92,26 103,22 114,22 125,29 136,37 147,42 158,49 169,42 180,34 191,28 202,22 213,22 224,30 235,39 246,47 257,43 268,40 279,34 290,24 301,23 312,25 323,30 334,37 345,43 356,46"/>
+            <polyline class="t-curve t-curve--thin" points="48,77 59,71 70,64 81,60 92,55 103,59 114,65 125,71 136,76 147,75 158,70 169,64 180,59 191,57 202,59 213,65 224,73 235,75 246,74 257,69 268,64 279,60 290,57 301,60 312,66 323,73 334,75 345,75 356,69"/>
+            <polyline class="t-curve t-curve--thin" points="48,100 59,90 70,86 81,84 92,91 103,100 114,106 125,115 136,107 147,99 158,88 169,85 180,83 191,92 202,101 213,107 224,113 235,110 246,100 257,89 268,83 279,88 290,91 301,102 312,108 323,108 334,110 345,99 356,89"/>
+            <text class="t-lab" x="48" y="140">CSI · PER-ANTENNA PHASE + AMPLITUDE</text>
+            <line class="t-arrow" x1="400" y1="66" x2="470" y2="66"/>
+            <path class="t-arrowhead" d="M470 59 L486 66 L470 73 Z"/>
+            <text class="t-lab t-lab--a" x="398" y="52">PHYSICAL ROUTING</text>
+            <g class="t-pose">
+              <circle class="t-joint" cx="640" cy="26" r="11"/>
+              <line class="t-bone" x1="640" y1="37" x2="640" y2="82"/>
+              <line class="t-bone" x1="640" y1="50" x2="596" y2="74"/>
+              <line class="t-bone" x1="596" y1="74" x2="580" y2="106"/>
+              <line class="t-bone" x1="640" y1="50" x2="686" y2="66"/>
+              <line class="t-bone" x1="686" y1="66" x2="712" y2="94"/>
+              <line class="t-bone" x1="640" y1="82" x2="614" y2="122"/>
+              <line class="t-bone" x1="640" y1="82" x2="672" y2="122"/>
+              <circle class="t-joint t-joint--s" cx="596" cy="74" r="5"/>
+              <circle class="t-joint t-joint--s" cx="580" cy="106" r="5"/>
+              <circle class="t-joint t-joint--s" cx="686" cy="66" r="5"/>
+              <circle class="t-joint t-joint--s" cx="712" cy="94" r="5"/>
+              <circle class="t-joint t-joint--s" cx="614" cy="122" r="5"/>
+              <circle class="t-joint t-joint--s" cx="672" cy="122" r="5"/>
+              <circle class="t-joint t-joint--s" cx="640" cy="82" r="5"/>
+            </g>
+            <text class="t-lab" x="560" y="140">DEVICE-FREE 3D POSE</text>
+          </svg>
+          <figcaption class="tfig__cap">
+            <span data-l="en">Phase routes to location, an amplitude-led composite to posture — the split is set by measured recoverability.</span>
+            <span data-l="ko">위상은 위치로, 진폭 중심 합성 표현은 자세로 보냅니다 — 이 분기는 측정된 복원 가능성에 따라 정했습니다.</span>
+          </figcaption>
+        </figure>
+      </div>
 
-        <svg viewBox="0 0 900 118" role="img"
-             aria-label="Three frequency bands — 6, 5 and 2.4 gigahertz — each carrying transmissions over time, with a single active radio moving between them.">
-          <text class="band-label" x="0" y="27">6 GHz</text>
-          <text class="band-label" x="0" y="55">5 GHz</text>
-          <text class="band-label" x="0" y="83">2.4 GHz</text>
-
-          <rect class="lane" x="68" y="12" width="824" height="24" rx="3"/>
-          <rect class="lane" x="68" y="40" width="824" height="24" rx="3"/>
-          <rect class="lane" x="68" y="68" width="824" height="24" rx="3"/>
-
-          <g>
-            <rect class="pkt pkt--active" x="88"  y="18" width="52" height="12"/>
-            <rect class="pkt"             x="150" y="18" width="26" height="12"/>
-            <rect class="pkt pkt--active" x="190" y="18" width="64" height="12"/>
-            <rect class="pkt pkt--wait"   x="266" y="18" width="24" height="12"/>
-            <rect class="pkt"             x="302" y="18" width="44" height="12"/>
-            <rect class="pkt pkt--active" x="360" y="18" width="58" height="12"/>
-            <rect class="pkt"             x="432" y="18" width="28" height="12"/>
-            <rect class="pkt pkt--active" x="472" y="18" width="70" height="12"/>
-            <rect class="pkt"             x="556" y="18" width="30" height="12"/>
-            <rect class="pkt pkt--active" x="600" y="18" width="52" height="12"/>
-            <rect class="pkt pkt--wait"   x="666" y="18" width="22" height="12"/>
-            <rect class="pkt pkt--active" x="702" y="18" width="66" height="12"/>
-            <rect class="pkt"             x="782" y="18" width="34" height="12"/>
-            <rect class="pkt pkt--active" x="828" y="18" width="52" height="12"/>
-
-            <rect class="pkt"             x="80"  y="46" width="38" height="12"/>
-            <rect class="pkt pkt--active" x="130" y="46" width="60" height="12"/>
-            <rect class="pkt"             x="204" y="46" width="30" height="12"/>
-            <rect class="pkt pkt--active" x="246" y="46" width="48" height="12"/>
-            <rect class="pkt pkt--wait"   x="308" y="46" width="26" height="12"/>
-            <rect class="pkt"             x="348" y="46" width="42" height="12"/>
-            <rect class="pkt pkt--active" x="404" y="46" width="64" height="12"/>
-            <rect class="pkt"             x="482" y="46" width="26" height="12"/>
-            <rect class="pkt pkt--active" x="522" y="46" width="56" height="12"/>
-            <rect class="pkt"             x="592" y="46" width="34" height="12"/>
-            <rect class="pkt pkt--active" x="640" y="46" width="70" height="12"/>
-            <rect class="pkt pkt--wait"   x="724" y="46" width="24" height="12"/>
-            <rect class="pkt"             x="762" y="46" width="40" height="12"/>
-            <rect class="pkt pkt--active" x="816" y="46" width="64" height="12"/>
-
-            <rect class="pkt"             x="76"  y="74" width="46" height="12"/>
-            <rect class="pkt pkt--wait"   x="136" y="74" width="22" height="12"/>
-            <rect class="pkt"             x="172" y="74" width="56" height="12"/>
-            <rect class="pkt pkt--active" x="242" y="74" width="44" height="12"/>
-            <rect class="pkt"             x="300" y="74" width="38" height="12"/>
-            <rect class="pkt"             x="352" y="74" width="62" height="12"/>
-            <rect class="pkt pkt--active" x="428" y="74" width="50" height="12"/>
-            <rect class="pkt"             x="492" y="74" width="30" height="12"/>
-            <rect class="pkt pkt--wait"   x="536" y="74" width="24" height="12"/>
-            <rect class="pkt"             x="574" y="74" width="52" height="12"/>
-            <rect class="pkt pkt--active" x="640" y="74" width="46" height="12"/>
-            <rect class="pkt"             x="700" y="74" width="36" height="12"/>
-            <rect class="pkt"             x="750" y="74" width="58" height="12"/>
-            <rect class="pkt pkt--active" x="822" y="74" width="58" height="12"/>
-          </g>
-
-          <rect class="radio" x="64" y="8" width="832" height="32" rx="5"/>
-
-          <g class="tick">
-            <line x1="68" y1="102" x2="892" y2="102"/>
-            <line x1="68" y1="99" x2="68" y2="105"/>
-            <line x1="274" y1="99" x2="274" y2="105"/>
-            <line x1="480" y1="99" x2="480" y2="105"/>
-            <line x1="686" y1="99" x2="686" y2="105"/>
-            <line x1="892" y1="99" x2="892" y2="105"/>
-          </g>
-          <text class="band-label" x="68" y="116">TIME</text>
-        </svg>
-
-        <figcaption class="mlo__cap">
-          <span data-l="en">Diagram: EMLSR multi-link operation, the first of these —
-            one radio, three bands, contention on every link.</span>
-          <span data-l="ko">그림: 위 주제 가운데 첫 번째인 EMLSR 멀티링크 동작 —
-            라디오 1개, 대역 3개, 링크마다 경쟁.</span>
-        </figcaption>
-      </figure>
-
-      <!-- Headline counts -->
       <div class="stats">
         <div class="stat">
           <span class="stat__val">9</span>

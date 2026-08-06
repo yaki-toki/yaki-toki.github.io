@@ -142,7 +142,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .mono, .pill, .masthead__name, .eyebrow, .section__idx, .section__count,
 .subhead, .identity__key, .entry__meta, .patent__no, .tag, .result, .flag,
 .pillar__num, .footer__note, .stat__key, .stat__note, .chart__legend,
-.chart text, .ptl text, .traj__years, .traj__bar, .mlo__title, .mlo__note,
+.chart text, .ptl text, .traj__years, .traj__bar, .tsel__label,
 .chart__sub, .traj__name small {
   font-family: var(--mono);
   font-variant-numeric: tabular-nums;
@@ -270,58 +270,99 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .identity__val a { border-bottom-color: oklch(94% 0.014 85 / 0.28); }
 .identity__val a:hover { color: var(--sig-2); border-bottom-color: var(--sig-2); }
 
-/* ---- Hero figure: multi-link operation -------------------------------- */
+/* ---- Topic selector, swappable copy and figure ------------------------
+   The four topics drive both the intro copy and the diagram. Without JS the
+   selector is hidden and all four copy blocks and figures render in full. */
 
-.mlo { margin: clamp(2rem, 1.2rem + 3vw, 3.25rem) 0 0; }
-.mlo__head { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem;
-             align-items: baseline; justify-content: space-between; margin-bottom: 0.9rem; }
-.mlo__title { font-size: var(--t-xs); letter-spacing: 0.18em; text-transform: uppercase;
-              color: var(--on-ink-dim); }
-.mlo__note { font-size: var(--t-xs); color: var(--on-ink-dim); opacity: 0.7; margin: 0; }
+.tsel { display: none; margin-top: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
+:root.js .tsel { display: block; }
 
-/* All four topics named up front, so the diagram below reads as one of them
-   rather than as the whole of the research. */
-.mlo__topics {
-  display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem;
-  margin: 0; padding: 0; list-style: none;
+.tsel__label {
+  display: block; font-family: var(--mono); font-size: var(--t-xs);
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--on-ink-dim); margin-bottom: 0.7rem;
 }
-.mlo__topics li {
-  font-family: var(--mono);
-  font-size: var(--t-xs); letter-spacing: 0.08em;
-  color: var(--on-ink); white-space: nowrap;
+
+.tsel__row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.tsel__btn {
+  font-family: var(--mono); font-size: var(--t-xs);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--on-ink-dim); background: none; cursor: pointer;
   border: 1px solid oklch(94% 0.014 85 / 0.22);
-  padding: 0.2rem 0.55rem;
+  padding: 0.42rem 0.7rem;
+  display: inline-flex; align-items: baseline; gap: 0.45rem;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              background-color var(--dur) var(--ease);
 }
-.mlo__topics li:first-child { border-color: var(--sig-2); color: var(--sig-2); }
+.tsel__n { opacity: 0.55; }
+.tsel__btn:hover { color: var(--on-ink); border-color: oklch(94% 0.014 85 / 0.45); }
+.tsel__btn[aria-pressed="true"] {
+  color: #fff; background: var(--sig); border-color: var(--sig);
+}
+.tsel__btn[aria-pressed="true"] .tsel__n { opacity: 0.8; }
 
-.mlo__cap {
-  font-family: var(--mono);
+/* Copy blocks — one per topic */
+:root.js .tcopy[hidden] { display: none; }
+:root.js .tcopy { animation: topicIn 340ms var(--ease) both; }
+.tcopy + .tcopy { margin-top: 1.75rem; }
+:root.js .tcopy + .tcopy { margin-top: 0; }
+
+/* Figures — one per topic */
+.tfigs { margin-top: clamp(1.75rem, 1.2rem + 2.5vw, 3rem); }
+.tfig { margin: 0; }
+.tfig + .tfig { margin-top: 2.25rem; }
+:root.js .tfig + .tfig { margin-top: 0; }
+:root.js .tfig[hidden] { display: none; }
+:root.js .tfig { animation: topicIn 340ms var(--ease) both; }
+
+.tfig svg { display: block; width: 100%; height: auto; overflow: visible; }
+.tfig__cap {
+  font-family: var(--mono); font-size: var(--t-xs); line-height: 1.55;
+  color: var(--on-ink-dim); opacity: 0.85;
   margin-top: 0.9rem; padding-top: 0.75rem;
   border-top: 1px solid oklch(94% 0.014 85 / 0.12);
-  font-size: var(--t-xs); line-height: 1.5;
-  color: var(--on-ink-dim); opacity: 0.8; max-width: var(--measure-sm);
+  max-width: var(--measure-sm);
 }
 
-.mlo svg { display: block; width: 100%; height: auto; }
-.mlo .band-label { fill: var(--on-ink-dim); font-size: 9px; letter-spacing: 0.14em;
-                   font-family: var(--mono); opacity: 0.75; }
-.mlo .lane { fill: oklch(94% 0.014 85 / 0.05); }
-.mlo .tick { stroke: oklch(94% 0.014 85 / 0.18); stroke-width: 1; }
-.mlo .pkt { fill: var(--on-ink); opacity: 0.16; rx: 1; }
-.mlo .pkt--active { fill: var(--sig-2); opacity: 1; }
-.mlo .pkt--wait { fill: none; stroke: oklch(94% 0.014 85 / 0.34); stroke-width: 1; stroke-dasharray: 2 2; }
-.mlo .radio { fill: none; stroke: var(--sig-2); stroke-width: 1.5; }
+@keyframes topicIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* Marks shared by the four diagrams */
+.tfig .t-lab { fill: var(--on-ink-dim); font-family: var(--mono);
+               font-size: 9px; letter-spacing: 0.14em; opacity: 0.7; }
+.tfig .t-lab--a { fill: var(--sig-2); opacity: 1; }
+.tfig .t-lane { fill: oklch(94% 0.014 85 / 0.05); }
+.tfig .t-pkt { fill: var(--on-ink); opacity: 0.17; rx: 1.5; }
+.tfig .t-on { fill: var(--sig-2); opacity: 1; }
+.tfig .t-wait { fill: none; stroke: oklch(94% 0.014 85 / 0.34); stroke-width: 1; stroke-dasharray: 2 2; }
+.tfig .t-radio { fill: none; stroke: var(--sig-2); stroke-width: 1.5; }
+.tfig .t-curve { fill: none; stroke: var(--on-ink); stroke-width: 2;
+                 opacity: 0.72; stroke-linecap: round; stroke-linejoin: round; }
+.tfig .t-curve--thin { stroke-width: 1.3; opacity: 0.55; }
+.tfig .t-fill { fill: var(--sig-2); opacity: 0.2; }
+.tfig .t-axis { stroke: oklch(94% 0.014 85 / 0.22); stroke-width: 1; }
+.tfig .t-th { stroke: var(--sig-2); stroke-width: 1.3; stroke-dasharray: 4 4; }
+.tfig .t-th--2 { opacity: 0.55; }
+.tfig .t-lead { stroke: var(--sig-2); stroke-width: 1; opacity: 0.7; }
+.tfig .t-dot { fill: var(--sig-2); }
+.tfig .t-frame { fill: none; stroke: var(--on-ink); stroke-width: 1; opacity: 0.3; }
+.tfig .t-frame--bad { stroke-dasharray: 3 3; opacity: 0.55; stroke: var(--sig-2); }
+.tfig .t-arrow { stroke: var(--on-ink-dim); stroke-width: 1.4; opacity: 0.6; }
+.tfig .t-arrowhead { fill: var(--on-ink-dim); opacity: 0.6; }
+.tfig .t-bone { stroke: var(--sig-2); stroke-width: 2.4; stroke-linecap: round; }
+.tfig .t-joint { fill: var(--sig-2); }
+.tfig .t-joint--s { opacity: 0.75; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .mlo .pkt--active { animation: pktPulse 3.6s var(--ease) infinite; }
-  .mlo .pkt--active:nth-of-type(2n) { animation-delay: 1.2s; }
-  .mlo .pkt--active:nth-of-type(3n) { animation-delay: 2.4s; }
-  .mlo .radio { animation: radioSlide 7.2s cubic-bezier(0.6, 0, 0.4, 1) infinite; }
+  .tfig[data-topic="01"] .t-radio { animation: radioSlide 7.2s cubic-bezier(0.6, 0, 0.4, 1) infinite; }
+  .tfig[data-topic="01"] .t-on { animation: pktPulse 3.6s var(--ease) infinite; }
+  .tfig[data-topic="01"] .t-on:nth-of-type(3n) { animation-delay: 1.2s; }
+  .tfig[data-topic="01"] .t-on:nth-of-type(3n+1) { animation-delay: 2.4s; }
 }
 @keyframes pktPulse { 0%, 70%, 100% { opacity: 1; } 85% { opacity: 0.3; } }
 @keyframes radioSlide {
-  0%, 26% { transform: translateY(0); } 33%, 59% { transform: translateY(28px); }
-  66%, 92% { transform: translateY(56px); } 100% { transform: translateY(0); }
+  0%, 26% { transform: translateY(0); } 33%, 59% { transform: translateY(34px); }
+  66%, 92% { transform: translateY(68px); } 100% { transform: translateY(0); }
 }
 
 /* ---- Stat band — oversized numerals, still on ink --------------------- */
@@ -651,10 +692,12 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
     --text: #000; --text-2: #333; --text-3: #555;
     --rule: #ccc; --rule-2: #888; --sig: #000; --sig-2: #000; --sig-wash: transparent;
   }
-  body::after, .masthead, .footer__links, .skip-link, .pill, .mlo, .tabs { display: none; }
+  body::after, .masthead, .footer__links, .skip-link, .pill, .tabs, .tsel { display: none; }
   /* Print the whole CV, not just the open tab */
-  :root.js .panel[hidden] { display: block !important; }
-  :root.js .panel { animation: none !important; }
+  :root.js .panel[hidden],
+  :root.js .tcopy[hidden],
+  :root.js .tfig[hidden] { display: block !important; }
+  :root.js .panel, :root.js .tcopy, :root.js .tfig { animation: none !important; }
   .hero, .footer { background: #fff !important; color: #000 !important; }
   .hero::before { display: none; }
   .hero__name em { -webkit-text-stroke: 0; color: #000; }

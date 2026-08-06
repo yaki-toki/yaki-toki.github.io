@@ -72,6 +72,45 @@
     });
   }
 
+  /* ---- Topic selector -------------------------------------------------
+     Drives both the intro copy and the diagram. The markup ships with every
+     topic visible; this only narrows it once JS is confirmed running. */
+
+  var topicBtns = Array.prototype.slice.call(document.querySelectorAll('.tsel__btn'));
+
+  if (topicBtns.length) {
+    var copies = Array.prototype.slice.call(document.querySelectorAll('.tcopy'));
+    var figures = Array.prototype.slice.call(document.querySelectorAll('.tfig'));
+
+    function showTopic(id) {
+      topicBtns.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.topic === id));
+      });
+      copies.concat(figures).forEach(function (el) {
+        el.hidden = el.dataset.topic !== id;
+      });
+    }
+
+    showTopic(topicBtns[0].dataset.topic);
+
+    topicBtns.forEach(function (b) {
+      b.addEventListener('click', function () { showTopic(b.dataset.topic); });
+    });
+
+    /* Left/right arrows move between topics, as in a radio group. */
+    document.querySelector('.tsel__row').addEventListener('keydown', function (ev) {
+      var i = topicBtns.indexOf(document.activeElement);
+      if (i < 0) return;
+      var next = null;
+      if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') next = (i + 1) % topicBtns.length;
+      else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') next = (i - 1 + topicBtns.length) % topicBtns.length;
+      if (next === null) return;
+      ev.preventDefault();
+      topicBtns[next].focus();
+      showTopic(topicBtns[next].dataset.topic);
+    });
+  }
+
   /* ---- Tabs ----------------------------------------------------------- */
 
   var tabBar = document.getElementById('tabs');
