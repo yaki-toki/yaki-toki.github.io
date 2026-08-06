@@ -279,6 +279,29 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
               color: var(--on-ink-dim); }
 .mlo__note { font-size: var(--t-xs); color: var(--on-ink-dim); opacity: 0.7; margin: 0; }
 
+/* All four topics named up front, so the diagram below reads as one of them
+   rather than as the whole of the research. */
+.mlo__topics {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem;
+  margin: 0; padding: 0; list-style: none;
+}
+.mlo__topics li {
+  font-family: var(--mono);
+  font-size: var(--t-xs); letter-spacing: 0.08em;
+  color: var(--on-ink); white-space: nowrap;
+  border: 1px solid oklch(94% 0.014 85 / 0.22);
+  padding: 0.2rem 0.55rem;
+}
+.mlo__topics li:first-child { border-color: var(--sig-2); color: var(--sig-2); }
+
+.mlo__cap {
+  font-family: var(--mono);
+  margin-top: 0.9rem; padding-top: 0.75rem;
+  border-top: 1px solid oklch(94% 0.014 85 / 0.12);
+  font-size: var(--t-xs); line-height: 1.5;
+  color: var(--on-ink-dim); opacity: 0.8; max-width: var(--measure-sm);
+}
+
 .mlo svg { display: block; width: 100%; height: auto; }
 .mlo .band-label { fill: var(--on-ink-dim); font-size: 9px; letter-spacing: 0.14em;
                    font-family: var(--mono); opacity: 0.75; }
