@@ -49,6 +49,11 @@
   --space:    clamp(4.5rem, 3rem + 6vw, 9rem);
   --gutter:   clamp(1.15rem, 0.7rem + 2.6vw, 4.5rem);
   --measure:  62ch;
+  /* `ch` resolves against the element's own font-size, so 62ch on small type
+     lands ~100px narrower than the same token on body text (480px vs 579px).
+     Multi-line small-type prose then looked half-width beside its own title.
+     This is the small-type counterpart, sized to sit with the result chips. */
+  --measure-sm: 88ch;
   --dur:      260ms;
   --ease:     cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -494,7 +499,8 @@ details.abstract > summary:hover { color: var(--sig); }
 details.abstract > summary::before { content: "+"; transition: transform var(--dur) var(--ease); }
 details.abstract[open] > summary::before { transform: rotate(45deg); }
 .abstract__body { font-size: var(--t-sm); color: var(--text-2); margin: 0.8rem 0 0;
-                  padding-left: 0.9rem; border-left: 2px solid var(--sig); max-width: var(--measure); }
+                  padding-left: 0.9rem; border-left: 2px solid var(--sig);
+                  max-width: var(--measure-sm); }
 
 .patent__title { font-size: 1rem; line-height: 1.3; margin-bottom: 0.25rem;
                  font-weight: 700; letter-spacing: -0.014em; text-wrap: pretty; }
@@ -503,7 +509,8 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
 .timeline__title { font-size: var(--t-h3); line-height: 1.2; margin-bottom: 0.3rem;
                    font-weight: 700; letter-spacing: -0.02em; }
 .timeline__org { font-size: var(--t-sm); color: var(--text-2); margin-bottom: 0.4rem; }
-.timeline__body { font-size: var(--t-sm); color: var(--text-2); margin: 0; }
+.timeline__body { font-size: var(--t-sm); color: var(--text-2); margin: 0;
+                  max-width: var(--measure-sm); }
 
 /* ---- Charts ----------------------------------------------------------- */
 
