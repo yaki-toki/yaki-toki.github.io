@@ -321,6 +321,42 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .stat__note { display: block; margin-top: 0.2rem; font-size: var(--t-xs);
               color: var(--sig-2); opacity: 0.85; letter-spacing: 0.08em; }
 
+/* ---- Tabs ------------------------------------------------------------
+   Anchors first, tabs second. Without JS they are in-page links and every
+   panel is visible; main.js upgrades them to a real tablist. */
+
+.tabs {
+  /* --mh is the masthead height, measured by main.js; without JS the tab bar
+     is a plain anchor list, so the fallback only needs to be close. */
+  position: sticky; top: var(--mh, 44px); z-index: 25;
+  display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+  background: var(--ink-2);
+  border-bottom: 1px solid oklch(94% 0.014 85 / 0.14);
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  flex: none; border: 0; background: none; cursor: pointer;
+  font-family: var(--mono); font-size: var(--t-xs);
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--on-ink-dim);
+  padding: 0.95rem 1.15rem; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              background-color var(--dur) var(--ease);
+}
+.tab i { font-style: normal; font-size: 0.62rem; letter-spacing: 0.06em;
+         color: var(--on-ink-dim); opacity: 0.55; }
+.tab:hover { color: var(--on-ink); background: oklch(94% 0.014 85 / 0.05); }
+.tab[aria-selected="true"] { color: #fff; border-bottom-color: var(--sig); }
+.tab[aria-selected="true"] i { color: var(--sig-2); opacity: 1; }
+
+/* Panels are only hidden once JS is running */
+:root.js .panel[hidden] { display: none; }
+:root.js .panel { animation: panelIn 380ms var(--ease) both; }
+@keyframes panelIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
 /* ---- Sections — numbered, with a real headline ------------------------ */
 
 .section { padding-block: var(--space); }
@@ -585,7 +621,10 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
     --text: #000; --text-2: #333; --text-3: #555;
     --rule: #ccc; --rule-2: #888; --sig: #000; --sig-2: #000; --sig-wash: transparent;
   }
-  body::after, .masthead, .footer__links, .skip-link, .pill, .mlo { display: none; }
+  body::after, .masthead, .footer__links, .skip-link, .pill, .mlo, .tabs { display: none; }
+  /* Print the whole CV, not just the open tab */
+  :root.js .panel[hidden] { display: block !important; }
+  :root.js .panel { animation: none !important; }
   .hero, .footer { background: #fff !important; color: #000 !important; }
   .hero::before { display: none; }
   .hero__name em { -webkit-text-stroke: 0; color: #000; }

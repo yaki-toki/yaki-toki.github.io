@@ -11,11 +11,13 @@
 
   /* ---- Scrollbar width, for the full-bleed bands ---------------------- */
 
-  function measureScrollbar() {
+  function measureChrome() {
     root.style.setProperty('--sbw', (window.innerWidth - root.clientWidth) + 'px');
+    var masthead = document.querySelector('.masthead');
+    if (masthead) root.style.setProperty('--mh', masthead.offsetHeight + 'px');
   }
-  measureScrollbar();
-  window.addEventListener('resize', measureScrollbar);
+  measureChrome();
+  window.addEventListener('resize', measureChrome);
 
   /* Storage can throw in private mode — never let that break the page. */
   function read(key) {
@@ -68,6 +70,81 @@
       root.setAttribute('data-theme', next);
       write(STORE_THEME, next);
     });
+  }
+
+  /* ---- Tabs ----------------------------------------------------------- */
+
+  var tabBar = document.getElementById('tabs');
+
+  if (tabBar) {
+    var tabs = Array.prototype.slice.call(tabBar.querySelectorAll('.tab'));
+    var panels = tabs.map(function (t) {
+      return document.getElementById(t.getAttribute('href').slice(1));
+    });
+
+    tabBar.setAttribute('role', 'tablist');
+    tabs.forEach(function (t, i) {
+      t.setAttribute('role', 'tab');
+      t.setAttribute('aria-controls', panels[i] ? panels[i].id : '');
+    });
+
+    function select(index, focus) {
+      tabs.forEach(function (t, i) {
+        var on = i === index;
+        t.setAttribute('aria-selected', String(on));
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        if (panels[i]) panels[i].hidden = !on;
+      });
+      if (focus) tabs[index].focus();
+      // Keep the active tab in view when the bar scrolls horizontally.
+      if (tabs[index].scrollIntoView) {
+        tabs[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    }
+
+    /* Open whichever panel the URL names, else the first. */
+    function indexForHash() {
+      var id = (location.hash || '').slice(1);
+      if (!id) return 0;
+      for (var i = 0; i < tabs.length; i++) {
+        if (panels[i] && (panels[i].id === id || tabs[i].id === 'tab-' + id)) return i;
+        // A deep link to something inside a panel should open that panel.
+        if (panels[i] && document.getElementById(id) &&
+            panels[i].contains(document.getElementById(id))) return i;
+      }
+      return 0;
+    }
+
+    select(indexForHash(), false);
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        select(i, false);
+        history.replaceState(null, '', t.getAttribute('href'));
+        /* If the reader has scrolled past the tab bar, bring it back to its
+           pinned position (just under the masthead) instead of jumping. */
+        var mh = parseFloat(getComputedStyle(root).getPropertyValue('--mh')) || 44;
+        var target = tabBar.getBoundingClientRect().top + window.scrollY - mh;
+        if (window.scrollY > target) window.scrollTo({ top: target, behavior: 'smooth' });
+      });
+    });
+
+    tabBar.addEventListener('keydown', function (ev) {
+      var current = tabs.indexOf(document.activeElement);
+      if (current < 0) return;
+      var next = null;
+      if (ev.key === 'ArrowRight') next = (current + 1) % tabs.length;
+      else if (ev.key === 'ArrowLeft') next = (current - 1 + tabs.length) % tabs.length;
+      else if (ev.key === 'Home') next = 0;
+      else if (ev.key === 'End') next = tabs.length - 1;
+      if (next === null) return;
+      ev.preventDefault();
+      select(next, true);
+      history.replaceState(null, '', tabs[next].getAttribute('href'));
+    });
+
+    window.addEventListener('hashchange', function () { select(indexForHash(), false); });
   }
 
   /* ---- Scroll reveal -------------------------------------------------- */

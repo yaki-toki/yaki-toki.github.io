@@ -84,30 +84,32 @@
       <div class="hero__grid">
         <div>
           <p class="hero__lead" data-l="en">
-            I design <strong>medium access control</strong> for the next generation of
-            Wi-Fi, and <strong>attention models</strong> that keep working when the
-            network underneath them does not. Both halves of that sentence are the
-            same problem: deciding what to spend scarce capacity on, and when.
+            A wireless link fails in ordinary ways — a collision, a deferred frame,
+            a few hundred milliseconds that never arrive. I work on both sides of
+            that failure: the <strong>MAC that decides who transmits</strong>, and the
+            <strong>models that must keep seeing</strong> when what arrives is damaged.
           </p>
           <p class="hero__lead" data-l="ko">
-            차세대 Wi-Fi의 <strong>매체 접근 제어(MAC)</strong>를 설계하고,
-            그 네트워크가 흔들릴 때도 견디는 <strong>어텐션 모델</strong>을 연구합니다.
-            두 주제는 결국 하나의 문제입니다 — 한정된 자원을 무엇에, 언제 쓸 것인가.
+            무선 링크는 평범한 방식으로 실패합니다 — 충돌 한 번, 미뤄진 프레임 하나,
+            끝내 오지 않는 수백 밀리초. 저는 그 실패의 양쪽을 연구합니다.
+            <strong>누가 전송할지 정하는 MAC</strong>과, 손상된 데이터가 도착해도
+            <strong>계속 보아야 하는 모델</strong>입니다.
           </p>
 
           <p data-l="en">
-            My current work centres on IEEE 802.11bn (Wi-Fi 8) ultra-high reliability:
-            Markov/fixed-point analysis of EMLSR multi-link contention, and constrained
-            multi-agent reinforcement learning that holds p99 deadline guarantees across
-            dense overlapping BSSs. In parallel I build video models — anomaly
-            anticipation, action recognition, WiFi-CSI pose estimation — under the
-            degradation real links actually produce.
+            Right now that means IEEE 802.11bn (Wi-Fi 8) ultra-high reliability — a
+            Markov/fixed-point closure for EMLSR multi-link contention, and constrained
+            multi-agent reinforcement learning that holds p99 deadline targets across
+            dense overlapping BSSs. Alongside it, attention models for anomaly
+            anticipation, action recognition and device-free WiFi-CSI sensing. Reliability
+            is the thread: it is a tail problem in both halves, never an average one.
           </p>
           <p data-l="ko">
-            현재는 IEEE 802.11bn(Wi-Fi 8) 초고신뢰성(UHR)에 집중하고 있습니다.
-            EMLSR 멀티링크 경쟁의 Markov/고정점 해석, 그리고 밀집 OBSS 환경에서 p99 지연
-            보장을 유지하는 제약 기반 다중 에이전트 강화학습이 중심입니다. 동시에 이상 예측,
-            행동 인식, WiFi-CSI 자세 추정 등 실제 링크 열화를 견디는 비디오 모델을 만듭니다.
+            현재는 IEEE 802.11bn(Wi-Fi 8) 초고신뢰성(UHR)이 중심입니다. EMLSR 멀티링크
+            경쟁의 Markov/고정점 폐형, 그리고 밀집 OBSS 환경에서 p99 지연 목표를 지키는
+            제약 기반 다중 에이전트 강화학습을 다룹니다. 그 옆에서 이상 예측, 행동 인식,
+            비접촉 WiFi-CSI 센싱을 위한 어텐션 모델을 만듭니다. 두 갈래를 관통하는 것은
+            신뢰성입니다 — 어느 쪽에서도 평균이 아니라 꼬리 분위의 문제입니다.
           </p>
         </div>
 
@@ -258,6 +260,12 @@
           </span>
         </div>
         <div class="stat">
+          <span class="stat__val">17</span>
+          <span class="stat__key">
+            <span data-l="en">Domestic</span><span data-l="ko">국내 발표</span>
+          </span>
+        </div>
+        <div class="stat">
           <span class="stat__val">5</span>
           <span class="stat__key">
             <span data-l="en">Under review</span><span data-l="ko">투고 중</span>
@@ -283,17 +291,20 @@
             <span class="stat__note">i10 · 1</span>
           </span>
         </div>
-        <div class="stat">
-          <span class="stat__val">3</span>
-          <span class="stat__key">
-            <span data-l="en">Funded projects</span><span data-l="ko">참여 과제</span>
-          </span>
-        </div>
       </div>
     </section>
 
+
+    <nav class="tabs bleed" id="tabs" aria-label="Sections">
+      <a class="tab" id="tab-research"     href="#research"><span data-l="en">Research</span><span data-l="ko">연구</span></a>
+      <a class="tab" id="tab-publications" href="#publications"><span data-l="en">Publications</span><span data-l="ko">논문</span><i>09+05</i></a>
+      <a class="tab" id="tab-domestic"     href="#domestic"><span data-l="en">Domestic</span><span data-l="ko">국내 발표</span><i>17</i></a>
+      <a class="tab" id="tab-work"         href="#work"><span data-l="en">Patents &amp; Projects</span><span data-l="ko">특허 · 과제</span><i>06+03</i></a>
+      <a class="tab" id="tab-about"        href="#education"><span data-l="en">About</span><span data-l="ko">약력</span></a>
+    </nav>
+
     <!-- ================= RESEARCH ================= -->
-    <section class="section reveal" id="research" aria-labelledby="h-research">
+    <section class="section panel" id="research" role="tabpanel" aria-labelledby="tab-research" aria-labelledby="h-research">
       <div class="section__head">
         <span class="section__idx">01</span>
         <h2 class="section__title" id="h-research">
@@ -490,7 +501,7 @@
     </section>
 
     <!-- ================= PUBLICATIONS ================= -->
-    <section class="section reveal" id="publications" aria-labelledby="h-pubs">
+    <section class="section panel" id="publications" role="tabpanel" aria-labelledby="tab-publications" aria-labelledby="h-pubs">
       <div class="section__head">
         <span class="section__idx">02</span>
         <h2 class="section__title" id="h-pubs">
@@ -843,50 +854,178 @@
         </article>
       </div>
 
-      <!-- ---- Domestic ---- -->
+    </section>
+
+
+    <!-- ================= DOMESTIC ================= -->
+    <section class="section panel" id="domestic" role="tabpanel" aria-labelledby="tab-domestic">
+      <div class="section__head">
+        <span class="section__idx">03</span>
+        <h2 class="section__title" id="h-domestic">
+          <span data-l="en">Domestic</span><span data-l="ko">국내 발표</span>
+        </h2>
+        <span class="section__count">17</span>
+      </div>
+      <p data-l="en">Korean Institute of Communications and Information Sciences (KICS)
+         conferences and JCCI. Titles are given as published, in Korean.</p>
+      <p data-l="ko">한국통신학회(KICS) 종합학술발표회 및 통신정보 합동학술대회(JCCI) 발표 논문입니다.</p>
+      <!-- ---- Domestic: verified from the original manuscripts ---- -->
       <div class="pubgroup">
         <h3 class="subhead">
-          <span data-l="en">Selected Domestic Conferences (KICS)</span><span data-l="ko">국내 학술대회 (한국통신학회)</span>
+          <span data-l="en">Domestic — first author</span><span data-l="ko">국내 발표 — 제1저자</span>
         </h3>
 
         <article class="entry">
-          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">Summer</span><span data-l="ko">하계</span></div>
+          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
           <div>
-            <h4 class="entry__title">IW-FedMAPPO: Interference-Weighted Federated Multi-Agent PPO for Ultra-Reliable Coordinated MLO Scheduling in Asymmetric OBSS Wi-Fi 8 Networks</h4>
-            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <h4 class="entry__title">IW-FedMAPPO: 비대칭 OBSS Wi-Fi 8 네트워크에서 초고신뢰 조정 MLO 스케줄링을 위한 간섭 가중 연합 다중 에이전트 근접 정책 최적화</h4>
+            <p class="entry__venue" data-l="en">Interference-Weighted Federated Multi-Agent PPO for Ultra-Reliable Coordinated MLO Scheduling</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
           </div>
         </article>
-
         <article class="entry">
-          <div class="entry__meta"><span class="entry__year">2026</span><span>JCCI</span></div>
+          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">JCCI</span><span data-l="ko">JCCI</span></div>
           <div>
-            <h4 class="entry__title">SEAR: Shared Evidential Anomaly and Risk Detection — Unified Framework for Video Detection and Multi-Horizon Anticipation</h4>
-            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <h4 class="entry__title">SEAR: 공유적 증거 이상 및 위험 탐지 — 비디오 탐지 및 다중 시간 지평 예측 통합 프레임워크</h4>
+            <p class="entry__venue" data-l="en">Shared Evidential Anomaly and Risk Detection</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
           </div>
         </article>
-
         <article class="entry">
-          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">Winter</span><span data-l="ko">동계</span></div>
+          <div class="entry__meta"><span class="entry__year">2026</span><span data-l="en">KICS Winter</span><span data-l="ko">동계통신</span></div>
           <div>
-            <h4 class="entry__title">Adaptive Federated Deep Reinforcement Learning for Multi-AP Wi-Fi Optimization</h4>
-            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <h4 class="entry__title">QA-FedDQN: 독립 배치 다중 AP Wi-Fi 네트워크를 위한 품질 인식 적응적 연합 심층 Q-Network</h4>
+            <p class="entry__venue" data-l="en">Quality-Aware Adaptive Federated Deep Q-Network for Distributed Multi-AP Wi-Fi</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
           </div>
         </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2025</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">PRIME Wi-Fi: Wi-Fi의 멀티링크 효율성을 위한 예측적 리소스 인텔리전스</h4>
+            <p class="entry__venue" data-l="en">Predictive Resource Intelligence for Multi-Link Efficiency in Wi-Fi</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2024</span><span data-l="en">KICS Fall</span><span data-l="ko">추계통신</span></div>
+          <div>
+            <h4 class="entry__title">동적 컨볼루션과 다중 스케일 시공간 주의 메커니즘을 사용한 비디오 분류 모델</h4>
+            <p class="entry__venue" data-l="en">Video classification with dynamic convolution and multi-scale spatio-temporal attention</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2024</span><span data-l="en">JCCI</span><span data-l="ko">JCCI</span></div>
+          <div>
+            <h4 class="entry__title">자율주행을 위한 Unknown Object Detection 연구 동향: Multi-Modal 접근과 불확실성 인식 기법</h4>
+            <p class="entry__venue" data-l="en">Research trends in unknown object detection for autonomous driving</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 김용호, 김건희, 김 환, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2023</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">수직 및 수평 필터를 활용한 이중 생성자 구조를 통한 GAN의 이미지 생성 품질 향상</h4>
+            <p class="entry__venue" data-l="en">Improving GAN image quality with a dual-generator structure</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2023</span><span data-l="en">KICS Winter</span><span data-l="ko">동계통신</span></div>
+          <div>
+            <h4 class="entry__title">5G mMTC 환경에서 2-pair UE NOMA를 이용한 sectorization 랜덤 액세스 절차의 성능 비교</h4>
+            <p class="entry__venue" data-l="en">Sectorized random access with 2-pair UE NOMA in 5G mMTC</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박소민, 김용호, 유철우, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2022</span><span data-l="en">JCCI</span><span data-l="ko">JCCI</span></div>
+          <div>
+            <h4 class="entry__title">다중 클래스 데이터 셋에서의 딥 러닝 성능 개선을 위한 다중 출력 모델 제안</h4>
+            <p class="entry__venue" data-l="en">A multi-output model for deep learning on multi-class datasets</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 김지나, 김용호, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2022</span><span data-l="en">KICS Winter</span><span data-l="ko">동계통신</span></div>
+          <div>
+            <h4 class="entry__title">Multi-Link Operation의 Internal Interference를 위한 적응적 Contention Window 기법</h4>
+            <p class="entry__venue" data-l="en">Adaptive contention window for internal interference in multi-link operation</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 김병찬, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">GAN Data augmentation을 위한 검증 및 설명 가능한 VX-GAN 모델</h4>
+            <p class="entry__venue" data-l="en">VX-GAN: a validation and explainable GAN model for data augmentation</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">JCCI</span><span data-l="ko">JCCI</span></div>
+          <div>
+            <h4 class="entry__title">CNN 알고리즘을 이용한 소형 임베디드 인물 판별 시스템 모델</h4>
+            <p class="entry__venue" data-l="en">Face recognition model for small embedded systems based on CNN</p>
+            <p class="entry__authors"><span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="pubgroup">
+        <h3 class="subhead">
+          <span data-l="en">Domestic — co-author</span><span data-l="ko">국내 발표 — 공저</span>
+        </h3>
 
         <article class="entry">
-          <div class="entry__meta"><span class="entry__year">2025</span><span data-l="en">Summer</span><span data-l="ko">하계</span></div>
+          <div class="entry__meta"><span class="entry__year">2023</span><span data-l="en">KICS Fall</span><span data-l="ko">추계통신</span></div>
           <div>
-            <h4 class="entry__title">PRIME Wi-Fi: Predictive Resource Intelligence for Multi-Link Efficiency in Wi-Fi</h4>
-            <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
+            <h4 class="entry__title">UAV를 활용한 통합 시맨틱 객체 인식 기반 도로 밀집도 이상 영역 탐지</h4>
+            <p class="entry__venue" data-l="en">Road-density anomaly detection from UAV semantic object recognition</p>
+            <p class="entry__authors">김 환, <span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">KICS Fall</span><span data-l="ko">추계통신</span></div>
+          <div>
+            <h4 class="entry__title">SDN 환경에서 서비스별 네트워크 요구사항에 따른 우선순위 결정 기법</h4>
+            <p class="entry__venue" data-l="en">Service-aware prioritization by network requirement in SDN</p>
+            <p class="entry__authors">우기문, 김형빈, <span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">사용자별 가중치 표준 편차를 활용한 Federated Learning 성능 향상 기법</h4>
+            <p class="entry__venue" data-l="en">FedSD: federated learning using per-user weight standard deviation</p>
+            <p class="entry__authors">김형빈, 김용호, 우기문, <span class="me">김지하</span>, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">NHANES 데이터를 이용한 생활 패턴 기반의 우울증 예측 머신러닝 기법</h4>
+            <p class="entry__venue" data-l="en">Lifestyle-based depression prediction from NHANES data</p>
+            <p class="entry__authors">김용호, <span class="me">김지하</span>, 우기문, 김형빈, 박현희*</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="entry__meta"><span class="entry__year">2021</span><span data-l="en">KICS Summer</span><span data-l="ko">하계통신</span></div>
+          <div>
+            <h4 class="entry__title">MEC 환경에서 5G-V2X 기반 사고 예방 시스템 제안</h4>
+            <p class="entry__venue" data-l="en">A 5G-V2X accident-prevention system in MEC environments</p>
+            <p class="entry__authors">우기문, 김형빈, 김용호, <span class="me">김지하</span>, 박현희*</p>
           </div>
         </article>
       </div>
     </section>
 
+    <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work">
     <!-- ================= PATENTS ================= -->
-    <section class="section reveal" id="patents" aria-labelledby="h-patents">
+    <section class="section" id="patents" aria-labelledby="h-patents">
       <div class="section__head">
-        <span class="section__idx">03</span>
+        <span class="section__idx">04</span>
         <h2 class="section__title" id="h-patents">
           <span data-l="en">Patents</span><span data-l="ko">특허</span>
         </h2>
@@ -976,9 +1115,9 @@
     </section>
 
     <!-- ================= PROJECTS ================= -->
-    <section class="section reveal" id="projects" aria-labelledby="h-projects">
+    <section class="section" id="projects" aria-labelledby="h-projects">
       <div class="section__head">
-        <span class="section__idx">04</span>
+        <span class="section__idx">05</span>
         <h2 class="section__title" id="h-projects">
           <span data-l="en">Projects</span><span data-l="ko">연구 과제</span>
         </h2>
@@ -1077,10 +1216,12 @@
       </div>
     </section>
 
+    </div>
+
     <!-- ================= EDUCATION ================= -->
-    <section class="section reveal" id="education" aria-labelledby="h-edu">
+    <section class="section panel" id="education" role="tabpanel" aria-labelledby="tab-about" aria-labelledby="h-edu">
       <div class="section__head">
-        <span class="section__idx">05</span>
+        <span class="section__idx">06</span>
         <h2 class="section__title" id="h-edu">
           <span data-l="en">Education</span><span data-l="ko">학력</span>
         </h2>
