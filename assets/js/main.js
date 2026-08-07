@@ -135,9 +135,16 @@
         if (panels[i]) panels[i].hidden = !on;
       });
       if (focus) tabs[index].focus();
-      // Keep the active tab in view when the bar scrolls horizontally.
-      if (tabs[index].scrollIntoView) {
-        tabs[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      /* Keep the active tab within the bar's own horizontal scroll. Using
+         scrollIntoView here would scroll the document as well, which nudged
+         the page down on first load. */
+      var el = tabs[index];
+      var left = el.offsetLeft;
+      var right = left + el.offsetWidth;
+      if (left < tabBar.scrollLeft) {
+        tabBar.scrollLeft = Math.max(0, left - 12);
+      } else if (right > tabBar.scrollLeft + tabBar.clientWidth) {
+        tabBar.scrollLeft = right - tabBar.clientWidth + 12;
       }
     }
 
@@ -184,6 +191,13 @@
     });
 
     window.addEventListener('hashchange', function () { select(indexForHash(), false); });
+  }
+
+  /* ---- Print ----------------------------------------------------------- */
+
+  var printBtn = document.getElementById('print-btn');
+  if (printBtn) {
+    printBtn.addEventListener('click', function () { window.print(); });
   }
 
   /* ---- Scroll reveal -------------------------------------------------- */

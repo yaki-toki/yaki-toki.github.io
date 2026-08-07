@@ -746,25 +746,113 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
 
 /* ---- Print ------------------------------------------------------------ */
 
+/* ---- Accent pill (print) ---------------------------------------------- */
+
+.pill--go { color: #fff; background: var(--sig); border-color: var(--sig); }
+.pill--go:hover { background: var(--sig-2); border-color: var(--sig-2); color: #14100C; }
+
+.printonly { display: none; }
+
+/* ---- Print — the whole CV on paper, no chrome, no ink-heavy figures ---- */
+
 @media print {
-  :root {
-    --paper: #fff; --paper-2: #fff; --paper-3: #f2f2f2;
-    --ink: #fff; --ink-2: #fff; --on-ink: #000; --on-ink-dim: #444;
-    --text: #000; --text-2: #333; --text-3: #555;
-    --rule: #ccc; --rule-2: #888; --sig: #000; --sig-2: #000; --sig-wash: transparent;
+  @page { margin: 14mm 14mm 15mm; }
+
+  /* Must outrank :root[data-theme="light"|"dark"], or a reader printing in
+     dark mode gets light text forced onto a white page. */
+  :root,
+  :root[data-theme="light"],
+  :root[data-theme="dark"] {
+    --paper: #fff; --paper-2: #fff; --paper-3: #fff;
+    --ink: #fff; --ink-2: #fff; --on-ink: #000; --on-ink-dim: #333;
+    --text: #000; --text-2: #222; --text-3: #444;
+    --rule: #bbb; --rule-2: #666; --sig: #000; --sig-2: #000; --sig-wash: transparent;
+    --cat-1: #000; --cat-2: #444; --cat-3: #777; --cat-4: #222;
   }
-  body::after, .masthead, .footer__links, .skip-link, .pill, .tabs, .tsel { display: none; }
-  /* Print the whole CV, not just the open tab */
+
+  html, body { background: #fff !important; }
+  body { font-size: 9.6pt; line-height: 1.42; }
+
+  /* Interactive chrome and atmosphere have no business on paper */
+  body::after, .masthead, .tabs, .tsel, .skip-link, .pill,
+  .footer__links, .hero::before { display: none !important; }
+
+  /* Illustrative figures cost pages and repeat what the lists already say */
+  .tfig, .chart, .ptl, .traj, .pillar__fig { display: none !important; }
+
+  /* Every tab, topic and panel prints — not just what is on screen */
   :root.js .panel[hidden],
-  :root.js .tcopy[hidden],
-  :root.js .tfig[hidden] { display: block !important; }
-  :root.js .panel, :root.js .tcopy, :root.js .tfig { animation: none !important; }
+  :root.js .tcopy[hidden] { display: block !important; }
+  :root.js .panel, :root.js .tcopy { animation: none !important; }
+  /* Figures stay out on paper — they cost pages and repeat the lists.
+     Specificity has to beat the unhide rules above. */
+  :root.js .tfig,
+  :root.js .tfig[hidden] { display: none !important; }
+
   .hero, .footer { background: #fff !important; color: #000 !important; }
-  .hero::before { display: none; }
+  .hero { padding-block: 0 0.5rem; }
+  .bleed { margin-inline: 0; padding-inline: 0; }
+  .shell { width: 100%; }
+
+  /* Letterhead */
+  .eyebrow { color: #444; margin-bottom: 0.35rem; }
+  .eyebrow::before { display: none; }
+  .hero__name { font-size: 26pt; letter-spacing: -0.03em; margin-bottom: 0.1rem; }
   .hero__name em { -webkit-text-stroke: 0; color: #000; }
-  .section, .hero { padding-block: 1.2rem; break-inside: avoid; }
-  .entry, .patent, .timeline__item, .chart, .stats { break-inside: avoid; }
-  .pillar { transform: none !important; }
+  .hero__ko { font-size: 10pt; margin-top: 0.3em; letter-spacing: 0.1em; color: #333; }
+  .hero__grid { gap: 1rem; margin-top: 0.7rem; padding-top: 0.6rem;
+                grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .hero__lead { font-size: 11pt; line-height: 1.3; margin-bottom: 0.4rem; }
+  .hero p:not(.hero__lead) { font-size: 9.2pt; }
+  .identity__row { padding-block: 0.18rem; font-size: 8.6pt; }
+
+  /* All four topics print in sequence, each clearly separated */
+  :root.js .tcopy + .tcopy { margin-top: 0.85rem; }
+  .tcopy { break-inside: avoid; }
+
+  .stats { grid-template-columns: repeat(6, 1fr); margin-top: 0.8rem; break-inside: avoid; }
+  .stat { padding: 0.5rem 0.4rem 0.4rem 0; }
+  .stat__val { font-size: 17pt; }
+  .stat__key, .stat__note { font-size: 6.6pt; margin-top: 0.25rem; }
+
+  /* Each tab starts a fresh page so the printout reads as sections */
+  .panel { break-before: page; }
+  .panel:first-of-type { break-before: auto; }
+  .section { padding-block: 0 0.7rem; }
+  .section + .section { border-top: 0; padding-top: 0.9rem; }
+  .section__head { margin-bottom: 0.7rem; padding-bottom: 0.35rem;
+                   border-bottom-width: 1.5px; break-after: avoid; }
+  .section__title { font-size: 15pt; }
+  .subhead { margin-bottom: 0.4rem; break-after: avoid; }
+  .pubgroup + .pubgroup { margin-top: 1rem; }
+
+  .entry, .patent, .timeline__item {
+    break-inside: avoid; padding: 0.45rem 0 0.45rem 0; gap: 0.15rem 1rem;
+    grid-template-columns: 5.2rem minmax(0, 1fr);
+  }
+  .entry::before, .patent::before, .timeline__item::before { display: none; }
+  .entry__year { font-size: 12pt; }
+  .entry__title, .timeline__title { font-size: 10pt; margin-bottom: 0.15rem; }
+  .patent__title { font-size: 9.4pt; }
+  .entry__authors, .entry__venue, .timeline__org, .timeline__body { font-size: 8.8pt; }
+  .entry__authors .me { box-shadow: none; text-decoration: underline; }
+  .results { gap: 0.25rem; margin-top: 0.3rem; }
+  .result { font-size: 7pt; padding: 0.1rem 0.3rem; border: 1px solid #ccc; }
+  .flag { color: #000; background: none; border: 1px solid #000; }
+
+  .pillars { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+  .pillar { transform: none !important; padding: 0.5rem; break-inside: avoid;
+            box-shadow: none !important; }
+  .pillar__num { position: static; background: none; color: #000; padding: 0; }
+  .pillar__title { font-size: 9.6pt; }
+  .pillar__body { font-size: 8.6pt; }
+
   details.abstract { display: none; }
-  a { border-bottom: 0; }
+  a { border-bottom: 0; color: #000; }
+
+  .printonly { display: block; font-family: var(--mono); font-size: 7.4pt;
+               color: #444; letter-spacing: 0.06em; margin: 0.8rem 0 0;
+               padding-top: 0.4rem; border-top: 1px solid #bbb; }
+  .footer { padding-block: 0.5rem 0; margin: 0; }
+  .footer__note { color: #444; }
 }
