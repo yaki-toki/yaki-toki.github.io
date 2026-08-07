@@ -436,8 +436,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (min-width: 46rem) { .stats { grid-template-columns: repeat(6, 1fr); } }
 
 .stat {
-  padding: clamp(1.1rem, 0.8rem + 1vw, 1.6rem) 0.9rem clamp(1.1rem, 0.8rem + 1vw, 1.5rem) 0;
+  padding: clamp(1.1rem, 0.8rem + 1vw, 1.6rem) 0.7rem clamp(1.1rem, 0.8rem + 1vw, 1.5rem);
   border-right: 1px solid oklch(94% 0.014 85 / 0.12);
+  text-align: center;
 }
 .stat:last-child { border-right: 0; }
 
@@ -811,7 +812,7 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
   .tcopy { break-inside: avoid; }
 
   .stats { grid-template-columns: repeat(6, 1fr); margin-top: 0.8rem; break-inside: avoid; }
-  .stat { padding: 0.5rem 0.4rem 0.4rem 0; }
+  .stat { padding: 0.5rem 0.4rem 0.4rem; }
   .stat__val { font-size: 17pt; }
   .stat__key, .stat__note { font-size: 6.6pt; margin-top: 0.25rem; }
 
