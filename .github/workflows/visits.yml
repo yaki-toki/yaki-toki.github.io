@@ -1,0 +1,41 @@
+name: Update visit log
+
+on:
+  schedule:
+    # 15:30 UTC = 00:30 KST, so a full Seoul day has closed before we read it.
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visits
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull counts and render the chart
+        env:
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+        run: node scripts/update-visits.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- assets/data/visits.json index.html; then
+            echo "No change today."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/visits.json index.html
+          git commit -m "chore: update visit log"
+          git push

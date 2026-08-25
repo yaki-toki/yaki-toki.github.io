@@ -143,7 +143,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .subhead, .identity__key, .entry__meta, .patent__no, .tag, .result, .flag,
 .pillar__num, .footer__note, .stat__key, .stat__note, .chart__legend,
 .chart text, .ptl text, .traj__years, .traj__bar, .tsel__label,
-.chart__sub, .traj__name small {
+.chart__sub, .traj__name small,
+.visits text, .visits__title, .visits__sub, .visits__empty {
   font-family: var(--mono);
   font-variant-numeric: tabular-nums;
 }
@@ -728,6 +729,26 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
                    border-bottom-color: oklch(94% 0.014 85 / 0.28); }
 .footer__links a:hover { color: var(--sig-2); border-bottom-color: var(--sig-2); }
 
+/* ---- Visit log -------------------------------------------------------- */
+/* Written into index.html by scripts/update-visits.mjs at commit time, so it
+   renders with JavaScript disabled like the rest of the page. The footer is an
+   ink band under both themes, so this reads against --ink, not --paper. */
+
+.visits { margin-top: clamp(1.8rem, 1.2rem + 2vw, 2.8rem);
+          padding-top: clamp(1.1rem, 0.8rem + 1vw, 1.6rem);
+          border-top: 1px solid oklch(94% 0.014 85 / 0.18); }
+.visits__cap { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem;
+               align-items: baseline; margin-bottom: 0.9rem; }
+.visits__title { font-size: var(--t-xs); color: var(--on-ink);
+                 letter-spacing: 0.16em; text-transform: uppercase; }
+.visits__sub { font-size: var(--t-xs); color: var(--on-ink-dim); letter-spacing: 0.08em; }
+.visits__fig { display: block; width: 100%; height: auto; overflow: visible; }
+.visits__axis { stroke: var(--on-ink-dim); stroke-width: 1; stroke-opacity: 0.34; }
+.visits__bar { fill: var(--sig-2); transition: fill var(--dur) var(--ease); }
+.visits__bar:hover { fill: var(--on-ink); }
+.visits__lab { fill: var(--on-ink-dim); font-size: 10px; letter-spacing: 0.08em; }
+.visits__empty { font-size: var(--t-xs); color: var(--on-ink-dim); letter-spacing: 0.1em; }
+
 /* ---- Motion ----------------------------------------------------------- */
 
 /* Scoped to :root.js — without JS every section stays visible, so the CV is
@@ -779,7 +800,7 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
   .footer__links, .hero::before { display: none !important; }
 
   /* Illustrative figures cost pages and repeat what the lists already say */
-  .tfig, .chart, .ptl, .traj, .pillar__fig { display: none !important; }
+  .tfig, .chart, .ptl, .traj, .pillar__fig, .visits { display: none !important; }
 
   /* Every tab, topic and panel prints — not just what is on screen */
   :root.js .panel[hidden],
