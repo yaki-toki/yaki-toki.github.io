@@ -386,7 +386,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .tfig[data-topic="04"] .t-wave--3 { animation: drift 4.4s ease-in-out infinite; }
   .tfig[data-topic="04"] .t-scan { animation: scan 5.6s linear infinite; }
   .tfig[data-topic="04"] .t-pose { animation: sway 5.6s ease-in-out infinite;
-                                   transform-origin: 640px 82px; transform-box: view-box; }
+                                   transform-origin: 640px 75px; transform-box: view-box; }
   .tfig[data-topic="04"] .t-joint--s { animation: jointPulse 5.6s ease-in-out infinite; }
   .tfig[data-topic="04"] .t-joint--s:nth-of-type(2n) { animation-delay: 0.7s; }
   .tfig[data-topic="04"] .t-joint--s:nth-of-type(3n) { animation-delay: 1.4s; }
