@@ -67,7 +67,9 @@ Only completed days are logged: the job runs at 00:30 KST and reads through
 
 **Setup.** The workflow needs a repository secret `GOATCOUNTER_API_TOKEN` — a
 GoatCounter API token with *Read statistics* permission. Set the GoatCounter site
-timezone to Asia/Seoul so its day boundaries match the ones in the log.
+timezone to Asia/Seoul so its day boundaries match the ones in the log. Until that
+secret exists the scheduled run skips with a notice instead of failing; once it
+exists, a rejected token or an unreachable API does fail the run.
 
 To change how much is shown or fetched, edit `CHART_DAYS` and `WINDOW_DAYS` at the
 top of the script. For fewer commits, drop the cron to weekly — the counts stay

@@ -17,18 +17,37 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # Not being set up yet is not a failure. Without this the nightly run
+      # would go red every night until the secret exists. A token that is
+      # present but rejected still fails loudly, which is the case worth an alert.
+      - name: Check for the API token
+        id: guard
+        env:
+          TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo 'configured=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'configured=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::GOATCOUNTER_API_TOKEN is not set — nothing to collect yet. Add the secret to start logging.'
+          fi
 
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+        if: steps.guard.outputs.configured == 'true'
+
+      - uses: actions/setup-node@v7
+        if: steps.guard.outputs.configured == 'true'
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Pull counts and render the chart
+        if: steps.guard.outputs.configured == 'true'
         env:
           GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
         run: node scripts/update-visits.mjs
 
       - name: Commit if anything changed
+        if: steps.guard.outputs.configured == 'true'
         run: |
           if git diff --quiet -- assets/data/visits.json index.html; then
             echo "No change today."
