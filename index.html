@@ -690,6 +690,28 @@
             <h4 class="entry__title">Dynamic Transmission and Delay Optimization Random Access for Reduced Power Consumption</h4>
             <p class="entry__authors"><span class="me">J. Kim</span>, Y. Kim, S. Park, and H. Park</p>
             <p class="entry__venue"><b>IEEE Access</b>, vol. 12, pp. 55033–55050, April 2024</p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                Massive machine-type communications congest the random-access channel and burn power
+                on repeated preamble transmissions. DTDO-RA adjusts the backoff indicator (BI)
+                according to the number of transmissions, and uses reinforcement learning — Q-learning
+                and DDPG — to tune the BI together with the maximum number of preamble transmissions
+                (Max Tx) as the network state changes. Widening the backoff range under heavy traffic
+                keeps the procedure succeeding: the success rate, which falls at 10,000 UEs under the
+                standard procedure, holds until 15,000 UEs. At 15,000 UEs a larger BI cuts transmit
+                power by about 98% (3.71 to 0.072 mJ) at the cost of longer access delay, while
+                letting Max Tx widen the backoff range lowers the delay by up to 4.3× relative to BI
+                adjustment. Simulations run to 50,000 UEs and also show that shrinking Max Tx too far
+                raises power rather than saving it.
+              </p>
+            </details>
+            <div class="results">
+              <span class="result">tx power <b>−98.06%</b> at 15k UEs</span>
+              <span class="result">success-rate knee <b>10k → 15k</b> UEs</span>
+              <span class="result"><b>4.3×</b> lower delay than BI tuning</span>
+              <span class="result">Q-learning · DDPG · 50k UEs</span>
+            </div>
           </div>
         </article>
 
@@ -699,6 +721,27 @@
             <h4 class="entry__title">Limited Discriminator GAN using explainable AI model for overfitting problem</h4>
             <p class="entry__authors"><span class="me">J. Kim</span> and H. Park</p>
             <p class="entry__venue"><b>ICT Express</b>, vol. 9, no. 2, pp. 241–246, 2023</p>
+            <details class="abstract">
+              <summary><span data-l="en">Abstract</span><span data-l="ko">초록</span></summary>
+              <p class="abstract__body">
+                GANs are widely used to augment scarce data, but a discriminator that leans too hard on
+                the training set overfits, and the generator ends up reproducing images that look like
+                the training images — augmentation that adds nothing. LDGAN opens the discriminator
+                with LIME to show which image regions drive its real/fake decision, and finds that an
+                unconstrained discriminator relies on the whole image, background included. It then
+                limits the discriminator's training with a threshold, set either on the discriminator's
+                mean loss (about 0.5) or on the generator's loss, so that the decision rests on the
+                object rather than the background and the generated images stay diverse. Of 500 images
+                generated per model, 254 from DCGAN show usable eye and nose regions, against 324 and
+                360 under the two LDGAN limits.
+              </p>
+            </details>
+            <div class="results">
+              <span class="result">eye/nose regions in <b>360</b>/500 (DCGAN 254)</span>
+              <span class="result">D-loss limit <b>324</b>/500</span>
+              <span class="result">D-loss threshold <b>0.5</b></span>
+              <span class="result">LIME · CIFAR-10 · Dogs vs. Cats</span>
+            </div>
           </div>
         </article>
       </div>
