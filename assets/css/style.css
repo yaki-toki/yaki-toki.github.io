@@ -272,8 +272,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .identity__val a:hover { color: var(--sig-2); border-bottom-color: var(--sig-2); }
 
 /* ---- Topic selector, swappable copy and figure ------------------------
-   The four topics drive both the intro copy and the diagram. Without JS the
-   selector is hidden and all four copy blocks and figures render in full. */
+   The topics drive both the intro copy and the diagram. Without JS the
+   selector is hidden and every copy block and figure renders in full. */
 
 .tsel { display: none; margin-top: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
 :root.js .tsel { display: block; }
@@ -328,7 +328,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 @keyframes topicIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-/* Marks shared by the four diagrams */
+/* Marks shared by the diagrams */
 .tfig .t-lab { fill: var(--on-ink-dim); font-family: var(--mono);
                font-size: 9px; letter-spacing: 0.14em; opacity: 0.7; }
 .tfig .t-lab--a { fill: var(--sig-2); opacity: 1; }
@@ -339,7 +339,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .tfig .t-radio { fill: none; stroke: var(--sig-2); stroke-width: 1.5; }
 .tfig .t-curve { fill: none; stroke: var(--on-ink); stroke-width: 2;
                  opacity: 0.72; stroke-linecap: round; stroke-linejoin: round; }
-.tfig .t-curve--thin { stroke-width: 1.3; opacity: 0.55; }
 .tfig .t-fill { fill: var(--sig-2); opacity: 0.2; }
 .tfig .t-axis { stroke: oklch(94% 0.014 85 / 0.22); stroke-width: 1; }
 .tfig .t-th { stroke: var(--sig-2); stroke-width: 1.3; stroke-dasharray: 4 4; }
@@ -348,11 +347,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .tfig .t-dot { fill: var(--sig-2); }
 .tfig .t-frame { fill: none; stroke: var(--on-ink); stroke-width: 1; opacity: 0.3; }
 .tfig .t-frame--bad { stroke-dasharray: 3 3; opacity: 0.55; stroke: var(--sig-2); }
-.tfig .t-arrow { stroke: var(--on-ink-dim); stroke-width: 1.4; opacity: 0.6; }
-.tfig .t-arrowhead { fill: var(--on-ink-dim); opacity: 0.6; }
-.tfig .t-bone { stroke: var(--sig-2); stroke-width: 2.4; stroke-linecap: round; }
-.tfig .t-joint { fill: var(--sig-2); }
-.tfig .t-joint--s { opacity: 0.75; }
 
 /* 02 — the annealing pair: the loose state fades out as the tight one fades
    in, so the tail is seen being pulled back inside the deadline. */
@@ -361,9 +355,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 /* 03 — playhead and the score it draws */
 .tfig .t-playhead { stroke: var(--sig-2); stroke-width: 1.4; opacity: 0; }
 .tfig .t-score { stroke-dasharray: 940; stroke-dashoffset: 0; }
-
-/* 04 — a scan band over the CSI traces */
-.tfig .t-scan { fill: var(--sig-2); opacity: 0; }
 
 @media (prefers-reduced-motion: no-preference) {
   .tfig[data-topic="01"] .t-radio { animation: radioSlide 7.2s cubic-bezier(0.6, 0, 0.4, 1) infinite; }
@@ -378,18 +369,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .tfig[data-topic="03"] .t-dot { animation: markerHit 7s linear infinite; }
   .tfig[data-topic="03"] .t-frame--bad { animation: dropout 2.4s steps(1, end) infinite; }
   .tfig[data-topic="03"] .t-frame--bad:nth-of-type(2n) { animation-delay: 0.8s; }
-
-  /* 04 — traces drift at their own rates, a scan band crosses them, and the
-     pose keeps being re-estimated */
-  .tfig[data-topic="04"] .t-wave--1 { animation: drift 5.2s ease-in-out infinite; }
-  .tfig[data-topic="04"] .t-wave--2 { animation: drift 6.8s ease-in-out infinite reverse; }
-  .tfig[data-topic="04"] .t-wave--3 { animation: drift 4.4s ease-in-out infinite; }
-  .tfig[data-topic="04"] .t-scan { animation: scan 5.6s linear infinite; }
-  .tfig[data-topic="04"] .t-pose { animation: sway 5.6s ease-in-out infinite;
-                                   transform-origin: 640px 75px; transform-box: view-box; }
-  .tfig[data-topic="04"] .t-joint--s { animation: jointPulse 5.6s ease-in-out infinite; }
-  .tfig[data-topic="04"] .t-joint--s:nth-of-type(2n) { animation-delay: 0.7s; }
-  .tfig[data-topic="04"] .t-joint--s:nth-of-type(3n) { animation-delay: 1.4s; }
 
   .tfig[data-topic="01"] .t-on { animation: pktPulse 3.6s var(--ease) infinite; }
   .tfig[data-topic="01"] .t-on:nth-of-type(3n) { animation-delay: 1.2s; }
@@ -416,15 +395,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   74%, 100% { opacity: 1; r: 5; }
 }
 @keyframes dropout { 0%, 70% { opacity: 0.55; } 78% { opacity: 0.12; } 86%, 100% { opacity: 0.55; } }
-@keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-11px); } }
-@keyframes scan {
-  0% { transform: translateX(0); opacity: 0; }
-  10% { opacity: 0.16; }
-  85% { opacity: 0.16; }
-  100% { transform: translateX(318px); opacity: 0; }
-}
-@keyframes sway { 0%, 100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
-@keyframes jointPulse { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
 
 
 /* ---- Stat band — oversized numerals, still on ink --------------------- */
@@ -828,7 +798,7 @@ details.abstract[open] > summary::before { transform: rotate(45deg); }
   .hero p:not(.hero__lead) { font-size: 9.2pt; }
   .identity__row { padding-block: 0.18rem; font-size: 8.6pt; }
 
-  /* All four topics print in sequence, each clearly separated */
+  /* All topics print in sequence, each clearly separated */
   :root.js .tcopy + .tcopy { margin-top: 0.85rem; }
   .tcopy { break-inside: avoid; }
 
