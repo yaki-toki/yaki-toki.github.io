@@ -1,14 +1,17 @@
 /* Jiha Kim — academic homepage */
 
 :root {
-  --text: #202124;
-  --muted: #60656d;
-  --faint: #8a9099;
-  --line: #d9dce1;
-  --line-dark: #a9aeb6;
-  --link: #234f9b;
-  --background: #ffffff;
-  --soft: #f6f7f8;
+  --text: #1d2422;
+  --muted: #5e6864;
+  --faint: #818a86;
+  --line: #d8d8d0;
+  --line-dark: #a4aaa5;
+  --link: #1e5d55;
+  --background: #fffefa;
+  --soft: #f1f0e9;
+  --wash: #e9efeb;
+  --ink: #1c2927;
+  --accent: #c75a3a;
   --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
           "Segoe UI", Helvetica, Arial, sans-serif;
   --serif: Georgia, "Times New Roman", "Noto Serif KR", serif;
@@ -99,7 +102,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* Introduction */
 .hero {
-  padding-block: clamp(3.5rem, 8vw, 6.5rem) clamp(3rem, 6vw, 5rem);
+  position: relative;
+  padding-block: clamp(4.5rem, 10vw, 8rem) clamp(3.5rem, 7vw, 6rem);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: clamp(4.5rem, 10vw, 8rem);
+  width: clamp(3.5rem, 9vw, 7.5rem);
+  height: 0.45rem;
+  background: var(--accent);
 }
 .eyebrow {
   margin-bottom: 1rem;
@@ -109,7 +122,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .hero__name {
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   font-family: var(--serif);
-  font-size: clamp(3.2rem, 8vw, 5.8rem);
+  font-size: clamp(3.6rem, 9vw, 7.2rem);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 0.95;
@@ -126,12 +139,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.8fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.7fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: start;
 }
 .hero__lead {
-  max-width: 34ch;
+  max-width: 31ch;
   margin-bottom: 1rem;
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2.7vw, 2rem);
@@ -163,27 +176,31 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   overflow-x: auto;
   min-height: 3.4rem;
   align-items: center;
-  background: rgba(255, 255, 255, 0.96);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  box-shadow: 0 0 0 100vmax var(--ink);
+  clip-path: inset(0 -100vmax);
+  border: 0;
   scrollbar-width: none;
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
   flex: none;
-  color: var(--muted);
+  color: #aebbb7;
   font-size: 0.86rem;
   text-decoration: none;
   white-space: nowrap;
 }
-.tab:hover, .tab[aria-current="true"] { color: var(--text); }
-.tab i { margin-left: 0.25rem; color: var(--faint); font-size: 0.72rem; font-style: normal; }
+.tab:hover, .tab[aria-current="true"] { color: #fff; }
+.tab[aria-current="true"]::before { content: "•"; margin-right: 0.4rem; color: #e78362; }
+.tab i { margin-left: 0.25rem; color: #778783; font-size: 0.72rem; font-style: normal; }
 
 /* Sections */
 .panel { display: block !important; }
 .section {
+  position: relative;
+  isolation: isolate;
   display: grid;
-  grid-template-columns: 12rem minmax(0, 1fr);
+  grid-template-columns: 10rem minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 5rem);
   padding-block: clamp(4rem, 8vw, 7rem);
   border-bottom: 1px solid var(--line);
@@ -197,7 +214,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .section__idx {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--faint);
+  color: var(--accent);
   font-size: 0.76rem;
 }
 .section__title {
@@ -236,25 +253,45 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .pubgroup + .pubgroup { margin-top: 3.5rem; }
 
 /* Research topics */
-.pillars { border-top: 1px solid var(--line-dark); }
-.pillar {
-  display: grid;
-  grid-template-columns: 2.25rem minmax(11rem, 0.75fr) minmax(0, 1.35fr);
-  gap: 1.5rem;
-  padding-block: 1.5rem;
-  border-bottom: 1px solid var(--line);
+#research::before,
+#projects::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(50% - 50vw);
+  background: var(--wash);
 }
-.pillar__num { color: var(--faint); font-size: 0.78rem; }
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+.pillar {
+  display: block;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--background);
+  border: 0;
+}
+.pillar:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(14rem, 0.8fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+}
+.pillar__num { display: block; margin-bottom: 1.8rem; color: var(--accent); font-size: 0.78rem; }
+.pillar:first-child .pillar__num { margin: 0; }
 .pillar__fig { display: none; }
-.pillar__title { margin: 0; font-size: 1.08rem; }
+.pillar__title { margin: 0 0 0.85rem; font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.7rem); font-weight: 400; }
 .pillar__body { margin: 0; color: var(--muted); font-size: 0.94rem; }
 .pillar__tags {
-  grid-column: 3;
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.75rem;
-  margin-top: -0.6rem;
+  margin-top: 1.2rem;
 }
+.pillar:first-child .pillar__tags { grid-column: 3; }
 .tag { color: var(--faint); font-size: 0.75rem; }
 .tag + .tag::before { content: "·"; margin-right: 0.75rem; }
 .traj, .chart, .ptl { display: none; }
@@ -334,6 +371,137 @@ details.abstract[open] > summary::before { content: "−"; }
 .timeline { border-top: 1px solid var(--line-dark); }
 .timeline__body { max-width: 64ch; }
 
+/* Every body of work gets its own reading rhythm. */
+.pubgroup--journals > .entry {
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  padding-block: clamp(1.8rem, 4vw, 3rem);
+}
+.pubgroup--journals .entry__year {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.05em;
+}
+.pubgroup--journals .entry__title {
+  max-width: 38ch;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+  font-weight: 400;
+}
+
+.pubgroup--conferences,
+.pubgroup--domestic {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.5rem;
+}
+.pubgroup--conferences .subhead,
+.pubgroup--domestic .subhead { grid-column: 1 / -1; }
+.pubgroup--conferences .entry,
+.pubgroup--domestic .entry {
+  display: block;
+  min-width: 0;
+  padding-block: 1.35rem;
+}
+.pubgroup--conferences .entry__meta,
+.pubgroup--domestic .entry__meta {
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+.pubgroup--conferences .entry__year,
+.pubgroup--domestic .entry__year { font-size: 1.05rem; }
+.pubgroup--conferences .entry__title,
+.pubgroup--domestic .entry__title { font-size: 0.96rem; }
+
+.pubgroup--review {
+  margin-inline: -2rem;
+  padding: 2rem;
+  background: var(--ink);
+  color: #f4f6f4;
+}
+.pubgroup--review .subhead { color: #9eafaa; }
+.pubgroup--review .subhead::after,
+.pubgroup--review .entry { border-color: #43514e; }
+.pubgroup--review .entry__year,
+.pubgroup--review .entry__title,
+.pubgroup--review .entry__authors .me,
+.pubgroup--review .entry__venue b,
+.pubgroup--review .result b { color: #fff; }
+.pubgroup--review .entry__meta,
+.pubgroup--review .entry__authors,
+.pubgroup--review .entry__venue,
+.pubgroup--review details.abstract > summary,
+.pubgroup--review .abstract__body,
+.pubgroup--review .result { color: #aebbb7; }
+.pubgroup--review .flag { border-color: #687672; color: #d7dedb; }
+
+#patents > div:last-child {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.5rem;
+}
+#patents .patent {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1rem;
+}
+#patents .patent__title { font-family: var(--serif); font-weight: 400; }
+
+#projects .timeline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+#projects .timeline__item {
+  grid-column: span 2;
+  display: block;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  border: 0;
+  background: var(--background);
+}
+#projects .timeline__item .entry__meta {
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+#projects .project--proposal {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 2rem;
+  background: var(--accent);
+  color: #fff;
+}
+#projects .project--proposal .entry__meta { display: block; margin: 0; color: #f5cfbf; }
+#projects .project--proposal .entry__year { color: #fff; font-size: 1.45rem; }
+#projects .project--proposal .timeline__title {
+  max-width: 36ch;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-weight: 400;
+}
+#projects .project--proposal .timeline__org,
+#projects .project--proposal .timeline__body { color: #fff4ef; }
+
+#education .timeline {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 3rem;
+  border-top: 0;
+}
+#education .timeline__item {
+  display: block;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--text);
+  border-bottom: 0;
+}
+#education .timeline__item:last-child { border-color: var(--line-dark); }
+#education .entry__meta { flex-direction: row; align-items: baseline; margin-bottom: 1.5rem; }
+#education .timeline__title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; }
+
 /* The work panel contains two complete sections. */
 #work { border-bottom: 1px solid var(--line); }
 #work > .section:last-child { border-bottom: 0; }
@@ -357,10 +525,13 @@ details.abstract[open] > summary::before { content: "−"; }
 @media (max-width: 56rem) {
   .hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .identity { max-width: 36rem; }
-  .section { grid-template-columns: 9rem minmax(0, 1fr); gap: 2.5rem; }
-  .pillar { grid-template-columns: 2rem 1fr; gap: 0.75rem 1rem; }
-  .pillar__body, .pillar__tags { grid-column: 2; }
-  .pillar__tags { margin-top: -0.5rem; }
+  .section { grid-template-columns: 8rem minmax(0, 1fr); gap: 2.5rem; }
+  .pillar:first-child { grid-template-columns: 2rem minmax(11rem, 0.85fr) minmax(0, 1.15fr); gap: 1rem; }
+  #projects .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #projects .timeline__item { grid-column: span 1; }
+  #projects .project--proposal { grid-column: 1 / -1; }
+  #projects .timeline__item:last-child { grid-column: 1 / -1; }
+  #education .timeline { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 @media (max-width: 42rem) {
@@ -368,6 +539,7 @@ details.abstract[open] > summary::before { content: "−"; }
   .masthead__name span { display: none; }
   .pill { padding-inline: 0.35rem; }
   .hero { padding-block: 3rem; }
+  .hero::after { top: 3rem; width: 2.8rem; }
   .hero__name { margin-bottom: 2.5rem; }
   .tabs { gap: 1.15rem; min-height: 3.1rem; }
   .tab { font-size: 0.8rem; }
@@ -380,13 +552,29 @@ details.abstract[open] > summary::before { content: "−"; }
   .section > .pubgroup,
   .section > .timeline,
   .section > div:not(.section__head) { grid-column: auto; }
-  .pillar { display: block; padding-block: 1.25rem; }
+  .pillars { grid-template-columns: 1fr; }
+  .pillar, .pillar:first-child { display: block; grid-column: auto; padding: 1.35rem; }
   .pillar__num { display: block; margin-bottom: 0.35rem; }
   .pillar__title { margin-bottom: 0.5rem; }
   .pillar__tags { margin-top: 0.7rem; }
+  .pillar:first-child .pillar__tags { grid-column: auto; }
   .entry, .patent, .timeline__item { grid-template-columns: 1fr; gap: 0.5rem; }
   .entry__meta { flex-direction: row; align-items: baseline; }
   .entry__year { font-size: 1.2rem; }
+  .pubgroup--journals > .entry { grid-template-columns: 1fr; gap: 0.75rem; }
+  .pubgroup--journals .entry__year { font-size: 1.65rem; }
+  .pubgroup--conferences,
+  .pubgroup--domestic { grid-template-columns: 1fr; }
+  .pubgroup--review { margin-inline: 0; padding: 1.35rem; }
+  .pubgroup--review .entry { grid-template-columns: 1fr; }
+  #patents > div:last-child { grid-column: auto; grid-template-columns: 1fr; gap: 0; }
+  #patents .patent { grid-template-columns: 3.25rem minmax(0, 1fr); }
+  #projects .timeline { grid-template-columns: 1fr; }
+  #projects .timeline__item,
+  #projects .timeline__item:last-child,
+  #projects .project--proposal { grid-column: auto; display: block; }
+  #projects .project--proposal .entry__meta { display: flex; margin-bottom: 1rem; }
+  #education .timeline { grid-template-columns: 1fr; }
   .footer__grid { display: block; }
   .footer__links { margin-top: 1rem; }
 }
@@ -421,6 +609,42 @@ details.abstract[open] > summary::before { content: "−"; }
   }
   .entry__title, .patent__title, .timeline__title { font-size: 9.2pt; }
   .entry__authors, .entry__venue, .timeline__org, .timeline__body { font-size: 8pt; }
+  .pubgroup--conferences,
+  .pubgroup--domestic,
+  #patents > div:last-child,
+  #projects .timeline,
+  #education .timeline { display: block; border: 0; background: transparent; }
+  .pubgroup--review { margin: 0; padding: 0; background: transparent; color: var(--text); }
+  .pubgroup--review .entry__year,
+  .pubgroup--review .entry__title,
+  .pubgroup--review .entry__authors .me,
+  .pubgroup--review .entry__venue b { color: var(--text); }
+  .pubgroup--review .entry__meta,
+  .pubgroup--review .entry__authors,
+  .pubgroup--review .entry__venue { color: var(--muted); }
+  .pubgroup--conferences .entry,
+  .pubgroup--domestic .entry,
+  #patents .patent {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.8rem;
+  }
+  #projects .timeline__item,
+  #projects .project--proposal,
+  #education .timeline__item {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.8rem;
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+  }
+  #projects .project--proposal .entry__meta { display: flex; color: var(--faint); }
+  #projects .project--proposal .entry__year,
+  #projects .project--proposal .timeline__title { color: var(--text); font-size: 9.2pt; }
+  #projects .project--proposal .timeline__org,
+  #projects .project--proposal .timeline__body { color: var(--muted); }
   .printonly { display: block; margin-top: 0.5rem; font-size: 7pt; }
   .footer { padding-block: 0.5rem 0; }
 }
