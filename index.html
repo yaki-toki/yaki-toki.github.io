@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,15 +14,8 @@
 <meta property="og:url" content="https://yaki-toki.github.io/">
 <meta name="twitter:card" content="summary">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/assets/css/style.css">
-
-<!-- Marks that JS is live, so the scroll-reveal styles apply. Without it every
-     section renders visible — the CV must not depend on a script. -->
-<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="/assets/css/style.css?v=20260928b">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='88'%20font-family='Georgia,serif'%3EK%3C/text%3E%3C/svg%3E">
 
@@ -61,9 +54,6 @@
       <button class="pill" id="lang-toggle" type="button" aria-pressed="false">
         <span data-l="en">한국어</span><span data-l="ko">English</span>
       </button>
-      <button class="pill" id="theme-toggle" type="button" aria-label="Toggle colour theme">
-        <span data-l="en">Theme</span><span data-l="ko">테마</span>
-      </button>
       <button class="pill pill--go" id="print-btn" type="button">
         <span data-l="en">Print CV</span><span data-l="ko">CV 인쇄</span>
       </button>
@@ -84,46 +74,12 @@
         <span class="hero__ko" data-l="ko">김지하</span>
       </h1>
 
-      <div class="tsel" role="group">
-        <span class="tsel__label">
-          <span data-l="en">Research topics</span><span data-l="ko">연구 주제</span>
-        </span>
-        <div class="tsel__row">
-        <button class="tsel__btn" type="button" data-topic="01">
-          <span class="tsel__n">01</span>
-          <span data-l="en">Wi-Fi 8 multi-link MAC</span><span data-l="ko">Wi-Fi 8 멀티링크 MAC</span>
-        </button>
-        <button class="tsel__btn" type="button" data-topic="02">
-          <span class="tsel__n">02</span>
-          <span data-l="en">Constrained reinforcement learning</span><span data-l="ko">제약 기반 강화학습</span>
-        </button>
-        <button class="tsel__btn" type="button" data-topic="03">
-          <span class="tsel__n">03</span>
-          <span data-l="en">Video understanding</span><span data-l="ko">비디오 이해</span>
-        </button>
-        </div>
-      </div>
-
       <div class="hero__grid">
         <div class="hero__copy">
-          <div class="tcopy" data-topic="01">
-            <p class="hero__lead" data-l="en">Multi-link contention stops being tractable the moment one radio has to serve three bands.</p>
-            <p class="hero__lead" data-l="ko">라디오 하나가 세 대역을 감당하는 순간, 멀티링크 경쟁은 풀리지 않는 문제가 됩니다.</p>
-            <p data-l="en">Under the EMLSR active-link constraint the queues couple across links, so single-link Bianchi analysis no longer transfers. I build Markov/fixed-point closures that stay analytically auditable — exact under saturated STR, an availability-based approximation under EMLSR with its validity range made explicit — and drive the contention window from observables the MAC already has: collision rate, blocked ratio, queue backlog, head-of-line excess.</p>
-            <p data-l="ko">EMLSR의 단일 활성 링크 제약 아래에서는 큐가 링크 간에 결합되어, 단일 링크 Bianchi 해석이 그대로 옮겨가지 않습니다. 분석 가능성을 유지하는 Markov/고정점 폐형을 세우고 — 포화 STR에서는 엄밀하게, EMLSR에서는 유효 범위를 명시한 가용성 기반 근사로 — MAC이 이미 관측하는 값(충돌률, 차단 비율, 큐 적체, HOL 초과)으로 경쟁 윈도우를 제어합니다.</p>
-          </div>
-          <div class="tcopy" data-topic="02">
-            <p class="hero__lead" data-l="en">Ultra-high reliability is a promise about the worst one percent, not about the average.</p>
-            <p class="hero__lead" data-l="ko">초고신뢰성은 평균이 아니라 최악의 1%에 대한 약속입니다.</p>
-            <p data-l="en">So the tail belongs in the objective. I carry p99 and p99.9 deadline-violation rates as Lyapunov drift-plus-penalty duals, price cross-BSS congestion once per beacon, and weight federated aggregation by measured interference rather than a plain mean — because averaging dilutes exactly the access points that need the most help.</p>
-            <p data-l="ko">그래서 꼬리 분위를 목적함수에 넣습니다. p99·p99.9 지연 위반율을 Lyapunov drift-plus-penalty의 쌍대변수로 다루고, 비컨마다 BSS 간 혼잡 가격을 한 번 산출하며, 연합 집성은 단순 평균이 아니라 측정된 간섭에 비례해 가중합니다 — 평균은 정작 가장 도움이 필요한 AP의 갱신을 희석시키기 때문입니다.</p>
-          </div>
-          <div class="tcopy" data-topic="03">
-            <p class="hero__lead" data-l="en">Deployed video arrives compressed, dropped and late. Models are usually trained as if it did not.</p>
-            <p class="hero__lead" data-l="ko">실제 운용 환경의 영상은 압축되고, 유실되고, 늦게 도착합니다. 모델은 대개 그렇지 않은 것처럼 학습됩니다.</p>
-            <p data-l="en">My doctoral work makes attention degradation-aware and explainable: simulate packet loss, jitter and compression on the input, then teach spatial and temporal attention to weight what actually survived. Applied to weakly-supervised anomaly detection — where anticipation and detection share one representation — and to action recognition under a real compute budget.</p>
-            <p data-l="ko">학위 연구는 어텐션을 열화 인지적이고 설명 가능하게 만드는 데 있습니다. 입력에 패킷 손실·지터·압축을 시뮬레이션한 뒤, 공간·시간 어텐션이 살아남은 정보에 가중치를 두도록 학습시킵니다. 예측과 탐지가 하나의 표현을 공유하는 약지도 이상 탐지, 그리고 실제 연산 예산 안에서의 행동 인식에 적용합니다.</p>
-          </div>
+          <p class="hero__lead" data-l="en">I study reliable wireless access and robust video understanding under real system constraints.</p>
+          <p class="hero__lead" data-l="ko">실제 시스템의 제약 안에서 신뢰할 수 있는 무선 접속과 비디오 이해 방법을 연구합니다.</p>
+          <p data-l="en">My work spans IEEE 802.11 multi-link MAC, constrained reinforcement learning for network control, and degradation-aware video models. I focus on methods that remain measurable, explainable, and deployable rather than optimizing benchmark averages alone.</p>
+          <p data-l="ko">주요 연구 주제는 IEEE 802.11 멀티링크 MAC, 네트워크 제어를 위한 제약 기반 강화학습, 그리고 열화 환경을 고려한 비디오 모델입니다. 단순한 평균 성능보다 측정 가능하고, 설명할 수 있으며, 실제로 적용할 수 있는 방법을 만드는 데 관심이 있습니다.</p>
         </div>
 
         <div class="identity">
@@ -180,7 +136,7 @@
         </div>
       </div>
 
-      <div class="tfigs">
+      <div class="tfigs" hidden aria-hidden="true">
         <figure class="tfig" data-topic="01">
           <svg viewBox="0 0 900 150" role="img"
                aria-label="Three frequency bands — 6, 5 and 2.4 gigahertz — carrying transmissions over time, with a single active radio moving between them.">
@@ -314,7 +270,7 @@
         </figure>
       </div>
 
-      <div class="stats">
+      <div class="stats" hidden aria-hidden="true">
         <div class="stat">
           <span class="stat__val">10</span>
           <span class="stat__key">
@@ -366,7 +322,7 @@
     </nav>
 
     <!-- ================= RESEARCH ================= -->
-    <section class="section panel" id="research" role="tabpanel" aria-labelledby="tab-research" aria-labelledby="h-research">
+    <section class="section panel" id="research" aria-labelledby="h-research">
       <div class="section__head">
         <span class="section__idx">01</span>
         <h2 class="section__title" id="h-research">
@@ -563,7 +519,7 @@
     </section>
 
     <!-- ================= PUBLICATIONS ================= -->
-    <section class="section panel" id="publications" role="tabpanel" aria-labelledby="tab-publications" aria-labelledby="h-pubs">
+    <section class="section panel" id="publications" aria-labelledby="h-pubs">
       <div class="section__head">
         <span class="section__idx">02</span>
         <h2 class="section__title" id="h-pubs">
@@ -964,7 +920,7 @@
 
 
     <!-- ================= DOMESTIC ================= -->
-    <section class="section panel" id="domestic" role="tabpanel" aria-labelledby="tab-domestic">
+    <section class="section panel" id="domestic" aria-labelledby="h-domestic">
       <div class="section__head">
         <span class="section__idx">03</span>
         <h2 class="section__title" id="h-domestic">
@@ -1127,7 +1083,7 @@
       </div>
     </section>
 
-    <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work">
+    <div class="panel" id="work">
     <!-- ================= PATENTS ================= -->
     <section class="section" id="patents" aria-labelledby="h-patents">
       <div class="section__head">
@@ -1334,7 +1290,7 @@
     </div>
 
     <!-- ================= EDUCATION ================= -->
-    <section class="section panel" id="education" role="tabpanel" aria-labelledby="tab-about" aria-labelledby="h-edu">
+    <section class="section panel" id="education" aria-labelledby="h-edu">
       <div class="section__head">
         <span class="section__idx">06</span>
         <h2 class="section__title" id="h-edu">
@@ -1393,8 +1349,8 @@
   <footer class="footer bleed">
     <div class="footer__grid">
       <p class="footer__note">
-        <span data-l="en">Last updated August 2026 · Yongin, Republic of Korea</span>
-        <span data-l="ko">2026년 8월 기준 · 대한민국 용인</span>
+        <span data-l="en">Last updated September 2026 · Yongin, Republic of Korea</span>
+        <span data-l="ko">2026년 9월 기준 · 대한민국 용인</span>
       </p>
       <nav class="footer__links" aria-label="Contact and profiles">
         <a href="mailto:yaki5896@mju.ac.kr">Email</a>
@@ -1418,7 +1374,7 @@
 
 </div>
 
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=20260928b" defer></script>
 
 <!-- Visitor counting. No cookies, no personal data, ~3KB async.
      Change the site code here and scripts/update-visits.mjs follows. -->
