@@ -353,7 +353,34 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role="tabpanel"]:
 .pillar:first-child .pillar__num { background: rgba(255, 255, 255, 0.12); color: #d1e0ff; }
 .pillar:nth-child(3) .pillar__num { background: #d8efed; color: var(--cyan); }
 .pillar:nth-child(4) .pillar__num { background: #e9d7fe; color: #6941c6; }
-.pillar__fig { display: none; }
+.pillar__fig {
+  display: block;
+  width: 10rem;
+  max-width: 62%;
+  height: auto;
+  margin: -4.15rem 0 1.6rem auto;
+  color: #98a2b3;
+  overflow: visible;
+}
+.pillar__fig .s {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.pillar__fig .f { fill: var(--accent); }
+.pillar__fig .fd { fill: var(--accent-soft); }
+.pillar:first-child .pillar__fig { color: #b2ccff; }
+.pillar:first-child .pillar__fig .f { fill: #84adff; }
+.pillar:first-child .pillar__fig .fd { fill: rgba(255, 255, 255, 0.18); }
+.pillar:nth-child(3) .pillar__fig { color: #46a6ad; }
+.pillar:nth-child(3) .pillar__fig .f { fill: var(--cyan); }
+.pillar:nth-child(3) .pillar__fig .fd { fill: #b9e2df; }
+.pillar:nth-child(4) .pillar__fig { color: #9e77ed; }
+.pillar:nth-child(4) .pillar__fig .f { fill: #7f56d9; }
+.pillar:nth-child(4) .pillar__fig .fd { fill: #d9d6fe; }
 .pillar__title { margin-bottom: 0.8rem; font-size: clamp(1.15rem, 2vw, 1.55rem); font-weight: 720; letter-spacing: -0.025em; }
 .pillar__body { margin: 0; color: var(--muted); font-size: 0.94rem; }
 .pillar:first-child .pillar__body { color: #d0d9ea; }
@@ -699,6 +726,7 @@ details.abstract[open] > summary::before { content: "−"; }
   .pillar:nth-child(3),
   .pillar:nth-child(4) { grid-column: auto; display: block; }
   .pillar__num { margin-bottom: 1.25rem; }
+  .pillar__fig { margin-top: -3.4rem; margin-bottom: 1.35rem; }
   .pubgroup--journals,
   .pubgroup--conferences,
   .pubgroup--domestic,
@@ -767,7 +795,7 @@ details.abstract[open] > summary::before { content: "−"; }
     box-shadow: none;
     break-inside: avoid;
   }
-  .pillar__num { display: none; }
+  .pillar__num, .pillar__fig { display: none; }
   .pillar__title, .entry__title, .patent__title, .timeline__title,
   #projects .project--lead .timeline__title { color: #111; font-size: 9.2pt; }
   .pillar__body, .entry__authors, .entry__venue, .timeline__org, .timeline__body,
