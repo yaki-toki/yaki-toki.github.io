@@ -36,7 +36,14 @@
   }
 
   var printButton = document.getElementById('print-btn');
-  if (printButton) printButton.addEventListener('click', function () { window.print(); });
+  if (printButton) printButton.addEventListener('click', function () {
+    // Wait for the same sans-serif font metrics used by the page before printing.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { window.print(); });
+    } else {
+      window.print();
+    }
+  });
 
   var tabList = document.getElementById('tabs');
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('#tabs [role="tab"]'));
