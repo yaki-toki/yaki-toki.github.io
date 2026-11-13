@@ -81,6 +81,9 @@ service. Only validated metrics and the successful check timestamp are stored in
 `assets/data/scholar.json`; the profile HTML is not stored. The public page shows
 the last successful check date. An unavailable or changed Scholar response keeps
 the previous metrics/date and reports a failed workflow instead of recording zero.
+On 13 November 2026, the local fetch succeeded but the GitHub-hosted runner
+received HTTP 403. Therefore scheduled Scholar refresh is configured but is **not
+currently operational from GitHub**; list-based counters work independently.
 Scholar can restrict automated access, and GitHub schedules may be delayed or
 disabled after prolonged repository inactivity; this is not a real-time guarantee.
 
