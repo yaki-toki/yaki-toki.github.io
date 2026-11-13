@@ -40,6 +40,19 @@ both languages. When adding text, add both variants or neither.
 **Colours, type scale and spacing** are CSS custom properties at the top of
 `style.css`. Change them there rather than in individual rules.
 
+## Research history
+
+The Projects section contains eight national R&D projects, six documented Innopia
+industry research entries, one KISTA standard-patent support program, and one
+existing applied research topic. National participation dates follow the personal
+NTIS records checked on 7 October 2026. Industry entries were reconciled with
+named research-team records, reports, and authored correspondence on 13 November 2026.
+
+Industry record dates are evidence dates, not individual participation periods.
+Contract dates are explicitly labeled separately. Do not infer personal start/end
+dates from either, or double-count the earlier media recommendation overview.
+Private contracts, reports, and email links remain outside this public repository.
+
 ## Visit log
 
 Daily visitor counts are collected by [GoatCounter](https://www.goatcounter.com)
