@@ -74,26 +74,24 @@ These attributes override the group's default status but do not rewrite visible
 text or move articles. Generated regions use `metrics:*` comments; do not edit
 their charts directly. Counter spans use `data-count`.
 
-Daily at approximately **10:17 KST**, the same workflow checks the public
+**Google Scholar automatic fetching is disabled by owner preference.** The
 [Google Scholar profile](https://scholar.google.com/citations?user=PpU-8aAAAAAJ&hl=en)
-once for all-time citations, h-index, and i10-index. It requires no secret or paid
-service. Only validated metrics and the successful check timestamp are stored in
-`assets/data/scholar.json`; the profile HTML is not stored. The public page shows
-the last successful check date. An unavailable or changed Scholar response keeps
-the previous metrics/date and reports a failed workflow instead of recording zero.
-On 13 November 2026, the local fetch succeeded but the GitHub-hosted runner
-received HTTP 403. Therefore scheduled Scholar refresh is configured but is **not
-currently operational from GitHub**; list-based counters work independently.
-Scholar can restrict automated access, and GitHub schedules may be delayed or
-disabled after prolonged repository inactivity; this is not a real-time guarantee.
+was last checked on 13 November 2026: 63 all-time citations, h-index 5, and
+i10-index 1. These verified values and the successful check timestamp remain in
+`assets/data/scholar.json`. List updates reuse this snapshot without changing its
+date or contacting Scholar. The GitHub runner returned HTTP 403 during the initial
+fetch check; no recurring retries or external API service are configured.
 
-Use the workflow's **Run workflow** button to refresh manually. Locally:
+The workflow runs on relevant content pushes or via **Run workflow**; both only
+recount the local records and reuse the Scholar snapshot. Locally:
 
 ```sh
 python3 -m unittest discover -s scripts -p test_metrics.py
 python3 scripts/update-metrics.py           # local record counts and cached Scholar
-python3 scripts/update-metrics.py --scholar # also refresh Scholar once
 ```
+
+The optional local `--scholar` flag remains available for an explicitly requested
+future one-time check, but no GitHub workflow invokes it.
 
 The bot explicitly requests a Pages rebuild because commits made with
 `GITHUB_TOKEN` do not start ordinary push workflows. Content-writing workflows
