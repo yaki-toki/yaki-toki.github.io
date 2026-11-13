@@ -53,6 +53,49 @@ Contract dates are explicitly labeled separately. Do not infer personal start/en
 dates from either, or double-count the earlier media recommendation overview.
 Private contracts, reports, and email links remain outside this public repository.
 
+## Automatic research metrics
+
+The cards, tab counts, section counts, and publication/patent charts are generated
+from the actual articles in `index.html` by `scripts/update-metrics.py`. Add or
+remove records in the appropriate section, then push: **Update research metrics**
+recounts them and rebuilds GitHub Pages automatically. No manual counter edits are
+needed. This does not discover or add new publications automatically.
+
+- Published papers: international journals (including accepted work) plus international conferences.
+- Domestic: all domestic presentations, including co-authored papers.
+- Review/revision: manuscripts in `pubgroup--review`.
+- Patent applications: one per unique application number in the patent list.
+- Project totals and group counts also follow the project articles.
+
+Move a manuscript to the journal group when accepted and update its visible venue
+status. Optional article `data-status` values are `published`, `accepted`, `review`,
+`revision`, `rejected`, or `withdrawn`; the last two are excluded from counts.
+These attributes override the group's default status but do not rewrite visible
+text or move articles. Generated regions use `metrics:*` comments; do not edit
+their charts directly. Counter spans use `data-count`.
+
+Daily at approximately **10:17 KST**, the same workflow checks the public
+[Google Scholar profile](https://scholar.google.com/citations?user=PpU-8aAAAAAJ&hl=en)
+once for all-time citations, h-index, and i10-index. It requires no secret or paid
+service. Only validated metrics and the successful check timestamp are stored in
+`assets/data/scholar.json`; the profile HTML is not stored. The public page shows
+the last successful check date. An unavailable or changed Scholar response keeps
+the previous metrics/date and reports a failed workflow instead of recording zero.
+Scholar can restrict automated access, and GitHub schedules may be delayed or
+disabled after prolonged repository inactivity; this is not a real-time guarantee.
+
+Use the workflow's **Run workflow** button to refresh manually. Locally:
+
+```sh
+python3 -m unittest discover -s scripts -p test_metrics.py
+python3 scripts/update-metrics.py           # local record counts and cached Scholar
+python3 scripts/update-metrics.py --scholar # also refresh Scholar once
+```
+
+The bot explicitly requests a Pages rebuild because commits made with
+`GITHUB_TOKEN` do not start ordinary push workflows. Content-writing workflows
+share a concurrency group to avoid concurrent edits.
+
 ## Visit log
 
 Daily visitor counts are collected by [GoatCounter](https://www.goatcounter.com)

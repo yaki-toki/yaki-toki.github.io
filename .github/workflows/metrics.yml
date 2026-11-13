@@ -1,0 +1,63 @@
+name: Update research metrics
+
+on:
+  schedule:
+    # 01:17 UTC = 10:17 KST. Scheduled runs can be delayed by GitHub.
+    - cron: '17 1 * * *'
+  push:
+    branches: [master]
+    paths:
+      - index.html
+      - assets/data/scholar.json
+      - scripts/update-metrics.py
+      - scripts/test_metrics.py
+      - .github/workflows/metrics.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: portfolio-content
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Check metrics logic
+        run: python3 -m unittest discover -s scripts -p test_metrics.py
+      - name: Count current portfolio entries
+        run: python3 scripts/update-metrics.py
+      - name: Refresh Google Scholar
+        id: scholar
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python3 scripts/update-metrics.py --scholar
+      - name: Save updated metrics
+        run: |
+          if git diff --quiet -- index.html assets/data/scholar.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html assets/data/scholar.json
+          git commit -m 'chore: refresh research metrics'
+          git pull --rebase origin master
+          git push origin HEAD:master
+      # GITHUB_TOKEN commits do not trigger the usual push-based Pages build.
+      - name: Rebuild GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Report Scholar failure after preserving existing metrics
+        if: steps.scholar.outcome == 'failure'
+        run: |
+          echo '::error::Google Scholar could not be refreshed. Last verified metrics and date were retained.'
+          exit 1
